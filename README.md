@@ -1,2 +1,4 @@
 # Quick code examples site
-WORK IN PROGRESS
+
+### Learning resources
+- What is Gatsby https://www.mediacurrent.com/what-is-gatsby.js/
