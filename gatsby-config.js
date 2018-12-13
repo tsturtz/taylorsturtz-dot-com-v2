@@ -1,12 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Starter Blog',
-    author: 'Kyle Mathews',
-    description: 'A starter blog demonstrating what Gatsby can do.',
-    siteUrl: 'https://gatsby-starter-blog-demo.netlify.com/',
+    title: 'Simple Code Examples',
+    author: 'Nothing Too Crazy',
+    description: 'A blog of sorts to quickly provide simple code examples for all the devs out there tryna make stuff work.',
+    siteUrl: 'https://simplecodeexamples.netlify.com',
   },
-  pathPrefix: '/gatsby-starter-blog',
   plugins: [
+    // markdown file support
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -14,6 +14,7 @@ module.exports = {
         name: 'pages',
       },
     },
+    // markdown file parsing
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -36,20 +37,24 @@ module.exports = {
         ],
       },
     },
+    // image manipulation
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    // google analytics
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-130928418-1`,
       },
     },
+    // creates RSS feed
     `gatsby-plugin-feed`,
+    // this makes the site a PWA ⚡️
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Simple Code Examples`,
+        short_name: `Code`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
@@ -57,8 +62,11 @@ module.exports = {
         icon: `src/assets/gatsby-icon.png`,
       },
     },
+    // offline support (service worker) - this must come AFTER gatsby-plugin-manifest
     `gatsby-plugin-offline`,
+    // support for server render head data
     `gatsby-plugin-react-helmet`,
+    // definitions for text base CSS rules
     {
       resolve: 'gatsby-plugin-typography',
       options: {

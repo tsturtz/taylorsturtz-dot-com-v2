@@ -1,13 +1,14 @@
 {
-  "name": "gatsby-starter-blog",
-  "description": "Starter Gatsby Blog",
+  "name": "simple-code-examples",
+  "description": "A blog of sorts to quickly provide simple code examples for all the devs out there tryna make stuff work.",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Nothing Too Crazy <nothingtoocray@gmail.com>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby-starter-blog/issues"
+    "url": "https://github.com/nothingtoocrazy/simple-code-examples"
   },
   "dependencies": {
     "gatsby": "^2.0.19",
+    "gatsby-cli": "^2.4.6",
     "gatsby-plugin-feed": "^2.0.8",
     "gatsby-plugin-google-analytics": "^2.0.5",
     "gatsby-plugin-manifest": "^2.0.5",
@@ -24,8 +25,8 @@
     "gatsby-transformer-remark": "^2.1.6",
     "gatsby-transformer-sharp": "^2.1.3",
     "prismjs": "^1.15.0",
-    "react": "^16.6",
-    "react-dom": "^16.6",
+    "react": "16.6.3",
+    "react-dom": "16.6.3",
     "react-helmet": "^5.2.0",
     "react-typography": "^0.16.13",
     "typeface-merriweather": "0.0.43",
@@ -39,15 +40,31 @@
     "gh-pages": "^1.2.0",
     "prettier": "^1.14.2"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://github.com/nothingtoocrazy/simple-code-examples",
   "keywords": [
-    "gatsby"
+    "simple",
+    "code",
+    "html",
+    "css",
+    "js",
+    "javascript",
+    "angular",
+    "vue",
+    "react",
+    "php",
+    "laravel",
+    "golang",
+    "node",
+    "java",
+    "programming",
+    "development",
+    "examples"
   ],
   "license": "MIT",
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/nothingtoocrazy/simple-code-examples.git"
   },
   "scripts": {
     "dev": "gatsby develop",

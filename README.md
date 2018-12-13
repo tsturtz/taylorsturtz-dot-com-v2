@@ -1,2 +1,2 @@
 # Quick code examples site
-WORK IN PROGRESS
+Started with [**Gatsby Starter Blog**](https://github.com/gatsbyjs/gatsby-starter-blog) (https://github.com/gatsbyjs/gatsby-starter-blog)
