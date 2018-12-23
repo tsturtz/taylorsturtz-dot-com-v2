@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: 'Simple Code Examples',
+    title: 'Simple Code Blog',
     author: 'Nothing Too Crazy',
     description: 'A blog of sorts to quickly provide simple code examples for all the devs out there tryna make stuff work.',
-    siteUrl: 'https://simplecodeexamples.netlify.com',
+    siteUrl: 'https://nothingtoocrazy.netlify.com',
   },
   plugins: [
     // markdown file support
@@ -59,7 +59,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Simple Code Examples`,
+        name: `Simple Code Blog`,
         short_name: `Simple Code`,
         start_url: `/`,
         background_color: `#ffffff`,

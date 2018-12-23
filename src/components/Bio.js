@@ -11,10 +11,7 @@ class Bio extends React.Component {
   render() {
     return (
       <div
-        style={{
-          display: 'flex',
-          marginBottom: rhythm(2.5),
-        }}
+        style={{ display: 'flex' }}
       >
         <img
           src={profilePic}
@@ -27,8 +24,8 @@ class Bio extends React.Component {
           }}
         />
         <p>
-          Assembled by <strong>Nothing Too Crazy</strong><br />
-          <a href="https://github.com/nothingtoocrazy">
+          A collection of thoughts by <strong>Nothing Too Crazy</strong> devs<br />
+          <a href="https://github.com/nothingtoocrazy" className="greenlink">
             Check us out on GitHub
           </a>
         </p>
