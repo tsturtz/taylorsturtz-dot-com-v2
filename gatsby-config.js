@@ -20,6 +20,12 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_blank"
+            }
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 590,
@@ -54,7 +60,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Simple Code Examples`,
-        short_name: `Code`,
+        short_name: `Simple Code`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
