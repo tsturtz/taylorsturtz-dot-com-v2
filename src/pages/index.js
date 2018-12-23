@@ -34,7 +34,7 @@ class BlogIndex extends React.Component {
                   {title}
                 </Link>
               </h3>
-              <small>{node.frontmatter.date} &bull; <a href={node.frontmatter.author_github}>{node.frontmatter.author}</a></small>
+              <small>{node.frontmatter.date} &bull; <a href={node.frontmatter.author_github} target="_blank">{node.frontmatter.author}</a></small>
               <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
             </div>
           )

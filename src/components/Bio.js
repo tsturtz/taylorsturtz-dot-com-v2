@@ -25,7 +25,7 @@ class Bio extends React.Component {
         />
         <p>
           A collection of thoughts by <strong>Nothing Too Crazy</strong> devs<br />
-          <a href="https://github.com/nothingtoocrazy" className="greenlink">
+          <a href="https://github.com/nothingtoocrazy" className="greenlink" target="_blank">
             Check us out on GitHub
           </a>
         </p>

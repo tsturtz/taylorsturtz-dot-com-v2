@@ -29,7 +29,7 @@ class BlogPostTemplate extends React.Component {
             marginTop: rhythm(-1),
           }}
         >
-          {post.frontmatter.date} &bull; <a href={post.frontmatter.author_github}>{post.frontmatter.author}</a>
+          {post.frontmatter.date} &bull; <a href={post.frontmatter.author_github} target="_blank">{post.frontmatter.author}</a>
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
