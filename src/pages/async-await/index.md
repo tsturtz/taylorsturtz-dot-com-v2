@@ -6,15 +6,15 @@ date: "2018-12-21T06:06:56.911Z"
 ---
 <span style="display: none">Async</span>`async` and <span style="display: none">await</span>`await` are JavaScript ES8 (ECMAScript 2017) keywords that allow for working with asynchronous functions in a procedural way and avoiding [callback hell](http://callbackhell.com/). The code syntax is much more readable and pleasant to write comparitively.
 
-To understand the use case and benefits of async / await syntax, you'll need to understand asynchronous
+To understand the use case and benefits of `async`/`await` syntax, you'll need to understand asynchronous
 programming and promises (also known as futures) in JS.
 [Here](https://eloquentjavascript.net/11_async.html) and
 [here](https://developers.google.com/web/fundamentals/primers/promises) are a couple of great articles to get caught up.
 
 #### Quick n' dirty post alert
-> The goal of this post and others like it is to provide a light introduction and reference to a coding topic
+> The goal of this post is to provide a short introduction and reference to a coding topic
 > so that it is possible to implement basic functionality quickly.
-> For deeper discovery, check out the additional resources linked at the bottom of this post.
+> For deeper discovery, check out the additional resources linked at the [bottom of this page](#bottom-of-page).
 
 ---
 ## Basic example

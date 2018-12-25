@@ -29,10 +29,16 @@ class BlogPostTemplate extends React.Component {
             marginTop: rhythm(-1),
           }}
         >
-          {post.frontmatter.date} &bull; <a href={post.frontmatter.author_github} target="_blank">{post.frontmatter.author}</a>
+          {post.frontmatter.date}
+          &nbsp;&bull;&nbsp;
+          <a href={post.frontmatter.author_github} target="_blank">
+          {post.frontmatter.author}</a>
+          &nbsp;&bull;&nbsp;
+          {`${post.timeToRead} min read`}
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
+          id="bottom-of-page"
           style={{
             marginBottom: rhythm(1),
           }}
@@ -82,6 +88,7 @@ export const pageQuery = graphql`
       id
       excerpt
       html
+      timeToRead
       frontmatter {
         title
         author

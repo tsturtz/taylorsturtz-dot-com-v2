@@ -34,7 +34,13 @@ class BlogIndex extends React.Component {
                   {title}
                 </Link>
               </h3>
-              <small>{node.frontmatter.date} &bull; <a href={node.frontmatter.author_github} target="_blank">{node.frontmatter.author}</a></small>
+              <small>
+                {node.frontmatter.date}
+                &nbsp;&bull;&nbsp;
+                <a href={node.frontmatter.author_github} target="_blank">{node.frontmatter.author}</a>
+                &nbsp;&bull;&nbsp;
+                {`${node.timeToRead} min read`}
+              </small>
               <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
             </div>
           )
@@ -61,6 +67,7 @@ export const pageQuery = graphql`
           fields {
             slug
           }
+          timeToRead
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             author
