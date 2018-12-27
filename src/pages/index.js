@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { Link, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 
@@ -34,13 +34,34 @@ class BlogIndex extends React.Component {
                   {title}
                 </Link>
               </h3>
-              <small>
+              <small style={{ marginRight: rhythm(1 / 4) }}>
                 {node.frontmatter.date}
-                &nbsp;&bull;&nbsp;
-                <a href={node.frontmatter.author_github} target="_blank">{node.frontmatter.author}</a>
                 &nbsp;&bull;&nbsp;
                 {`${node.timeToRead} min read`}
               </small>
+              {node.frontmatter.tags && node.frontmatter.tags.length > 0 &&
+                <Fragment>
+                  {node.frontmatter.tags.map((tag, idx) => {
+                    return (
+                      <span
+                        key={idx}
+                        style={{
+                          fontFamily: 'Montserrat, sans-serif',
+                          fontSize: rhythm(1 / 4),
+                          borderRadius: rhythm(10),
+                          padding: '.2rem .5rem',
+                          marginRight: '.3rem',
+                          backgroundColor: '#36B5A2',
+                          color: '#fff',
+                          verticalAlign: 'middle',
+                          boxShadow: '1px 1px 0px 0px #00ffda',
+                        }}
+                      >{tag}
+                      </span>
+                    )
+                  })}
+                </Fragment>
+              }
               <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
             </div>
           )
@@ -69,10 +90,9 @@ export const pageQuery = graphql`
           }
           timeToRead
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            author
-            author_github
             title
+            date(formatString: "MMMM DD, YYYY")
+            tags
           }
         }
       }

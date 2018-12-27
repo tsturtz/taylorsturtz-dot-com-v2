@@ -1,8 +1,14 @@
 ---
-title: Async / Await in JavaScript
-author: Taylor Sturtz
-author_github: https://github.com/tsturtz
-date: "2018-12-21T06:06:56.911Z"
+title: Async/Await Comparitive Examples
+date: "2018-12-21"
+author:
+ - name: Taylor Sturtz
+   github: https://github.com/tsturtz
+   twitter: taylorsturtz
+tags:
+ - JavaScript
+ - ES6
+ - ES8
 ---
 <span style="display: none">Async</span>`async` and <span style="display: none">await</span>`await` are JavaScript ES8 (ECMAScript 2017) keywords that allow for working with asynchronous functions in a procedural way and avoiding [callback hell](http://callbackhell.com/). The code syntax is much more readable and pleasant to write comparitively.
 
@@ -11,10 +17,10 @@ programming and promises (also known as futures) in JS.
 [Here](https://eloquentjavascript.net/11_async.html) and
 [here](https://developers.google.com/web/fundamentals/primers/promises) are a couple of great articles to get caught up.
 
-#### Quick n' dirty post alert
+#### Quick n' dirty code alert
 > The goal of this post is to provide a short introduction and reference to a coding topic
 > so that it is possible to implement basic functionality quickly.
-> For deeper discovery, check out the additional resources linked at the [bottom of this page](#bottom-of-page).
+> For deeper discovery, check out the additional resources linked at the [bottom of this page](#additional-resources).
 
 ---
 ## Basic example
@@ -38,7 +44,7 @@ We could catch the return value with `.then()`:
     })
   }
 ```
-But here's what `async`/`await` syntax looks like:
+✅But here's what `async`/`await` syntax looks like:
 ```javascript
   const yourFunc = async () => {
     // return value is assigned to const when completed.
@@ -70,7 +76,7 @@ You could chain a `.catch()` onto your function call as another callback:
       })
   }
 ```
-Or you could just wrap the whole thing in a `try`/`catch` block:
+✅Or you could just wrap the whole thing in a `try`/`catch` block:
 ```javascript
   const yourFunc = async () => {
     try {
@@ -82,26 +88,60 @@ Or you could just wrap the whole thing in a `try`/`catch` block:
   }
 ```
 
-## Refactor an axios call
+## Axios example *(HTTP request library)*
 
-*.then()* and *.catch()*:
+A simple example but this time instead of the `asyncFunc` we used above, we are using an actual HTTP request. Here we're using `.post()` but the concept is the same with any method.
+
+`.then()` and `.catch()`:
 ```javascript
   const postUser = (userObj) => {
     axios.post('/users', userObj)
-    .then((response) => {
-      // do something with response
-    })
-    .catch((err) => {
-      console.warn(err)
-    })
+      .then((response) => {
+        // do something with response
+      })
+      .catch((err) => {
+        console.warn(err)
+      })
   }
 ```
-*Async*/*await* in a *try*/*catch* block:
+✅`async`/`await` in a `try`/`catch` block:
 ```javascript
   const postUser = async (userObj) => {
     try {
       const response = await axios.post('/users', userObj)
       // do something with response
+    } catch (err) {
+      console.warn(err)
+    }
+  }
+```
+
+## Fetch example *(native HTTP request API)*
+
+Axios is very common, but if you want or need to use the native fetch API, here's a simple example.
+
+`.then()`, `.then()`, and `.catch()`:
+```javascript
+  const getUsers = () => {
+    fetch('/users')
+      .then((response) => {
+        return response.json()
+      })
+      .then((json) => {
+        // do something with response json
+      })
+      .catch((err) => {
+        console.warn(err)
+      })
+  }
+```
+✅`async`/`await` in a `try`/`catch` block (notice there are two promises we need to account for):
+```javascript
+  const getUsers = async () => {
+    try {
+      const response = await fetch('/users')
+      const json = await response.json()
+      // do something with response json
     } catch (err) {
       console.warn(err)
     }

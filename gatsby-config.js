@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Simple Code Blog',
+    title: 'Nothing Too Crazy Blog',
     author: 'Nothing Too Crazy',
-    description: 'A blog of sorts to quickly provide simple code examples for all the devs out there tryna make stuff work.',
+    description: 'A blog to provide simple code examples and explanations for all the devs out there tryna make stuff happen',
     siteUrl: 'https://nothingtoocrazy.netlify.com',
   },
   plugins: [
@@ -59,13 +59,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Simple Code Blog`,
-        short_name: `Simple Code`,
+        name: `Nothing Too Crazy`,
+        short_name: `NTC Blog`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/assets/gatsby-icon.png`,
+        icon: `src/assets/ntc-icon.png`,
       },
     },
     // offline support (service worker) - this must come AFTER gatsby-plugin-manifest

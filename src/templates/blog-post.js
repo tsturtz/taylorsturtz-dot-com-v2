@@ -25,20 +25,44 @@ class BlogPostTemplate extends React.Component {
           style={{
             ...scale(-1 / 5),
             display: 'block',
-            marginBottom: rhythm(1),
+            marginBottom: rhythm(0),
             marginTop: rhythm(-1),
           }}
         >
           {post.frontmatter.date}
           &nbsp;&bull;&nbsp;
-          <a href={post.frontmatter.author_github} target="_blank">
-          {post.frontmatter.author}</a>
+          {console.log(post.frontmatter.author)}
+          <a href={post.frontmatter.author[0].github} target="_blank">
+          {post.frontmatter.author[0].name}</a>
           &nbsp;&bull;&nbsp;
           {`${post.timeToRead} min read`}
         </p>
+        {post.frontmatter.tags && post.frontmatter.tags.length > 0 &&
+          <div style={{ marginBottom: rhythm(1) }}>
+            {post.frontmatter.tags.map((tag, idx) => {
+              return (
+                <span
+                  key={idx}
+                  style={{
+                    fontFamily: 'Montserrat, sans-serif',
+                    fontSize: rhythm(1 / 4),
+                    borderRadius: rhythm(10),
+                    padding: '.2rem .5rem',
+                    marginRight: '.3rem',
+                    backgroundColor: '#36B5A2',
+                    color: '#fff',
+                    verticalAlign: 'middle',
+                    boxShadow: '1px 1px 0px 0px #00ffda',
+                  }}
+                >{tag}
+                </span>
+              )
+            })}
+          </div>
+        }
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
-          id="bottom-of-page"
+          id="additional-resources"
           style={{
             marginBottom: rhythm(1),
           }}
@@ -91,9 +115,13 @@ export const pageQuery = graphql`
       timeToRead
       frontmatter {
         title
-        author
-        author_github
         date(formatString: "MMMM DD, YYYY")
+        author {
+          name
+          github
+          twitter
+        }
+        tags
       }
     }
   }

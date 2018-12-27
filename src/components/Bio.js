@@ -24,8 +24,8 @@ class Bio extends React.Component {
           }}
         />
         <p style={{ marginBottom: 0 }}>
-          A collection of thoughts by <strong>Nothing Too Crazy</strong> devs<br />
-          <a href="https://github.com/nothingtoocrazy" className="greenlink" target="_blank">
+          A collection of thoughts by a collection of devs<br />
+          <a href="https://github.com/nothingtoocrazy" className="greenNTC" target="_blank">
             Check us out on GitHub
           </a>
         </p>
