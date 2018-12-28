@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 
@@ -29,11 +29,26 @@ class BlogPostTemplate extends React.Component {
             marginTop: rhythm(-1),
           }}
         >
-          {post.frontmatter.date}
+          {post.frontmatter.authors && post.frontmatter.authors.length > 0 &&
+            <Fragment>by&nbsp;
+              {post.frontmatter.authors.map((author, idx) => {
+                return (
+                  <Fragment>
+                    <a
+                      key={idx}
+                      href={author.github}
+                      target="_blank"
+                    >{author.name}
+                    </a>
+                    {(idx < post.frontmatter.authors.length - 2) ? `, ` : ''}
+                    {(idx === post.frontmatter.authors.length - 2) ? `${post.frontmatter.authors.length > 2 ? ',' : ''} and ` : ''}
+                  </Fragment>
+                )
+              })}
+            </Fragment>
+          }
           &nbsp;&bull;&nbsp;
-          {console.log(post.frontmatter.author)}
-          <a href={post.frontmatter.author[0].github} target="_blank">
-          {post.frontmatter.author[0].name}</a>
+          {post.frontmatter.date}
           &nbsp;&bull;&nbsp;
           {`${post.timeToRead} min read`}
         </p>
@@ -45,10 +60,10 @@ class BlogPostTemplate extends React.Component {
                   key={idx}
                   style={{
                     fontFamily: 'Montserrat, sans-serif',
-                    fontSize: rhythm(1 / 4),
+                    fontSize: rhythm(1 / 3),
                     borderRadius: rhythm(10),
                     padding: '.2rem .5rem',
-                    marginRight: '.3rem',
+                    marginRight: '.4rem',
                     backgroundColor: '#36B5A2',
                     color: '#fff',
                     verticalAlign: 'middle',
@@ -116,7 +131,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
-        author {
+        authors {
           name
           github
           twitter

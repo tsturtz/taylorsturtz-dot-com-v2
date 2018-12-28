@@ -34,7 +34,7 @@ class BlogIndex extends React.Component {
                   {title}
                 </Link>
               </h3>
-              <small style={{ marginRight: rhythm(1 / 4) }}>
+              <small style={{ marginRight: rhythm(1 / 3) }}>
                 {node.frontmatter.date}
                 &nbsp;&bull;&nbsp;
                 {`${node.timeToRead} min read`}
@@ -47,10 +47,10 @@ class BlogIndex extends React.Component {
                         key={idx}
                         style={{
                           fontFamily: 'Montserrat, sans-serif',
-                          fontSize: rhythm(1 / 4),
+                          fontSize: rhythm(1 / 3),
                           borderRadius: rhythm(10),
                           padding: '.2rem .5rem',
-                          marginRight: '.3rem',
+                          marginRight: '.4rem',
                           backgroundColor: '#36B5A2',
                           color: '#fff',
                           verticalAlign: 'middle',
