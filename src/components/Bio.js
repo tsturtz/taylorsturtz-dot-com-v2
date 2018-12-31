@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 // Import typefaces
 import 'typeface-montserrat'
 import 'typeface-merriweather'
 
-import profilePic from './nothingtoocrazy.svg'
+import profilePic from '../assets/nothingtoocrazy.svg'
 import { rhythm } from '../utils/typography'
 
 class Bio extends React.Component {
@@ -13,16 +14,18 @@ class Bio extends React.Component {
       <div
         style={{ display: 'flex', alignItems: 'center' }}
       >
-        <img
-          src={profilePic}
-          alt={`Nothing Too Crazy`}
-          style={{
-            marginRight: rhythm(1 / 2),
-            marginBottom: 0,
-            width: rhythm(3.5),
-            height: rhythm(3.5),
-          }}
-        />
+        <Link to={'/'}>
+          <img
+            src={profilePic}
+            alt={`Nothing Too Crazy`}
+            style={{
+              marginRight: rhythm(1 / 2),
+              marginBottom: 0,
+              width: rhythm(3.5),
+              height: rhythm(3.5),
+            }}
+          />
+        </Link>
         <p style={{ marginBottom: 0 }}>
           A collection of thoughts by a collection of devs<br />
           <a href="https://github.com/nothingtoocrazy" className="greenNTC" target="_blank">

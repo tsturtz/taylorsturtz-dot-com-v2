@@ -7,6 +7,9 @@ a:hover {
 h4 {
   color: #36B5A2 !important;
 }
+h3 {
+  font-size: 1.3rem;
+}
 
 /**
  * Based on copypasta from Dan Abramov (Based on copypasta from Remy Bach and Sarah Drasner)
@@ -159,4 +162,12 @@ pre[data-line] {
 .gatsby-highlight pre[class*="language-"] {
   float: left;
   min-width: 100%;
+}
+
+/* prevent bash highlighting for simple cmd line stuff (using ```console or ```dosini doesn't highlight comments properly) */
+.language-bash .token.function {
+  color: inherit;
+}
+.language-bash .token.operator {
+  color: inherit;
 }

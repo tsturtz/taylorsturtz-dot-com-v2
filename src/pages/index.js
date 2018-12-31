@@ -23,6 +23,31 @@ class BlogIndex extends React.Component {
         <Bio />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
+
+          let tags = []
+          if (node.frontmatter.tags && node.frontmatter.tags.length > 0) {
+            tags = node.frontmatter.tags.sort().map((tag, idx) => {
+              return (
+                <span
+                  key={idx}
+                  style={{
+                    fontFamily: 'Montserrat, sans-serif',
+                    fontSize: rhythm(1 / 3),
+                    borderRadius: rhythm(10),
+                    padding: '.2rem .5rem',
+                    marginRight: '.4rem',
+                    backgroundColor: '#36B5A2',
+                    color: '#fff',
+                    verticalAlign: 'middle',
+                    boxShadow: '1px 1px 0px 0px #00ffda',
+                    whiteSpace: 'nowrap',
+                  }}
+                >{tag}
+                </span>
+              )
+            })
+          }
+
           return (
             <div key={node.fields.slug}>
               <h3
@@ -39,29 +64,9 @@ class BlogIndex extends React.Component {
                 &nbsp;&bull;&nbsp;
                 {`${node.timeToRead} min read`}
               </small>
-              {node.frontmatter.tags && node.frontmatter.tags.length > 0 &&
-                <Fragment>
-                  {node.frontmatter.tags.map((tag, idx) => {
-                    return (
-                      <span
-                        key={idx}
-                        style={{
-                          fontFamily: 'Montserrat, sans-serif',
-                          fontSize: rhythm(1 / 3),
-                          borderRadius: rhythm(10),
-                          padding: '.2rem .5rem',
-                          marginRight: '.4rem',
-                          backgroundColor: '#36B5A2',
-                          color: '#fff',
-                          verticalAlign: 'middle',
-                          boxShadow: '1px 1px 0px 0px #00ffda',
-                        }}
-                      >{tag}
-                      </span>
-                    )
-                  })}
-                </Fragment>
-              }
+              <div>
+                {tags}
+              </div>
               <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
             </div>
           )

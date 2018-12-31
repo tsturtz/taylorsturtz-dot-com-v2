@@ -1,0 +1,189 @@
+---
+title: Use Node Environment Variables in JS Apps with Webpack
+date: "2018-12-31"
+authors:
+  - name: Taylor Sturtz
+    github: https://github.com/tsturtz
+    twitter: https://twitter.com/taylorsturtz
+tags:
+  - JavaScript
+  - Webpack
+  - CI / CD
+  - DevOps
+  - Node.js
+---
+For applications that are developed locally and deployed to multiple server environments (staging, production, etc.), environment variables are essential. Common uses are conditionally executing code based on environment flags or storing base URLs for APIs with matching environments.
+
+You may also want to store specific values in environment variables for security reasons. *This is critical in server-side code, but may also be useful on the client-side if you do not want to commit certain values to source code, for example.* 🚨**But of course, never store secret/sensitive information in client-side code.**
+
+> #### This guide assumes some stuff
+> **You have Node.js and a package manager such as npm or yarn installed.**
+>
+> **You're using webpack (with or without React).**
+>> You can of course [define environment variables in Angular](https://theinfogrid.com/tech/developers/angular/environment-variables-angular/) but the process is a bit different than what is explained below. You can [define environment variables in Vue](https://cli.vuejs.org/guide/mode-and-env.html#using-env-variables-in-client-side-code) as well and even though Vue uses webpack -- it's very **frameworky** about how to do things.
+>
+> **You're are able to manage your environment variables on the server.**
+>> Whether you're building your app directly on the server or using a CI service such as [Travis CI](https://docs.travis-ci.com/), [CircleCI](https://circleci.com/docs/), or [GitLab CI/CD](https://docs.gitlab.com/ee/ci/) (where you'll need to configure deployment steps), you'll need to know how to set your environment variables per environment.
+
+👍 Let's get into it...
+
+---
+## Local environment variables
+### Define your variables in a .env file
+
+1. Create a **.env** file **in your project's root directory**
+```bash
+touch .env
+```
+1. Add a `.env` entry to your project's .gitignore file
+```bash{1}
+# FILE: /.gitignore
+.env # Environment variables for local development.
+```
+1. Add your environment variables in your **.env** file as `KEY=value` pairs
+```bash{1}
+# FILE: /.env
+# Individual variables
+SERVER_ENV=local
+MY_API_BASE_URL=https://my-api.com/dev
+# If you prefer to use just one environment variable in your config you can
+# define a JSON object that you can then parse in your webpack config.
+# NOTE: For this to work, the JSON must be formatted this way (inline).
+CONFIG_JSON={"server_env": "local", "urls": {"my_api_base_url": "https://my-api.com/dev"}}
+```
+> ### ⚠️ If you are using create-react-app (and you have not ejected)
+>> The above should work except for one caveat: **variables defined in your .env file must be prefixed with** `REACT_APP_`  **in order to use them in your app.**
+>> See the [create-react-app official docs](https://facebook.github.io/create-react-app/docs/adding-custom-environment-variables) for more info.
+
+When naming your variables, try to be explicit so they don't conflict with default CI environment variables, ie: [Travis CI](https://docs.travis-ci.com/user/environment-variables/#default-environment-variables), [Circle CI](https://circleci.com/docs/2.0/env-vars/#built-in-environment-variables), and [GitLab CI](https://docs.gitlab.com/ee/ci/variables/#predefined-variables-environment-variables) predefined variables. I prefer to use `SERVER_ENV` rather than `ENV` or `NODE_ENV` to avoid confusion. `NODE_ENV` is used in express.js back-ends and it's used in many webpack setups to define the bundle type (limited to dev server or production build), not the server environment.
+
+If you are working with other developers you'll need to share your **.env** file and make sure changes are updated everywhere.
+
+### Use the variables defined in your .env in your application
+
+1. Install the [dotenv](https://github.com/motdotla/dotenv) node package
+```bash
+# Install with npm
+npm i dotenv
+# or with yarn if that's your thing
+yarn add dotenv
+```
+1. Paste this bit of code near the top of your webpack config. The `isCiBuild` bit prevents webpack from unnecessarily requiring dotenv in CI environments.
+```js{1}
+// FILE: /webpack.config.js
+    // We can check if webpack is building in a CI environment because services
+    // like Travis CI set default environment variables and `CI` is one of them.
+    const isCiBuild = !!process.env.CI
+    if(!isCiBuild) {
+      require('dotenv').config()
+    }
+```
+1. Add [DefinePlugin](https://webpack.js.org/plugins/define-plugin/) to your webpack config. *If you're not sure how to add plugins to your webpack config, see the [Plugins](https://webpack.js.org/concepts/plugins/) webpack docs.* This example shows how to assign individual environment variables as well as parsed JSON variables.
+```js{1,9-14}
+// FILE: /webpack.config.js
+    {
+      // ... other webpack config stuff
+      plugins: [
+        // ... other plugins if you have any
+        new webpack.DefinePlugin({
+          // ... any other global vars
+          VERSION: JSON.stringify('1.2.3'), // just an example of a global variable you could add
+          // pull in your individual .env vars
+          SERVER_ENV: JSON.stringify(process.env.SERVER_ENV),
+          MY_API_BASE_URL: JSON.stringify(process.env.MY_API_BASE_URL),
+          // OR parse your JSON vars if you used this method
+          SERVER_ENV: JSON.stringify(JSON.parse(process.env.CONFIG_JSON).server_env),
+          MY_API_BASE_URL: JSON.stringify(JSON.parse(process.env.CONFIG_JSON).urls.my_api_base_url),
+        }),
+      ]
+    }
+```
+1. Use your new variables in your application.
+```js
+    console.log(`version: ${VERSION}`) // '1.2.3'
+    console.log(`version: ${SERVER_ENV}`) // 'local'
+    if (SERVER_ENV !== 'production') {
+      // this code will NOT run on production
+    } else {
+      // this code will run on production
+    }
+```
+*If you're not familiar with the syntax below, check out [my other post](/async-await/) about `async`/`await`*.
+```js{3-4}
+    const getUsers = async () => {
+      try {
+        // transpiles to fetch('https://my-api.com/dev/users')
+        const response = await fetch(`${MY_API_BASE_URL}/users`)
+        const json = await response.json()
+        return json
+      } catch (err) {
+        console.warn(err)
+      }
+    }
+```
+*If all went well* implementing the steps above, we have now configured webpack to use environment variables as global application variables in our webpack build! 🎉
+
+![Works on my machine!](./works-on-my-machine.jpg)
+
+### Bonus step
+If you're using eslint you can add your global variables to your **.eslintrc** config file which will allow you to use your globals freely without eslint yelling at you:
+```js{1}
+// FILE: /.eslintrc
+{
+  // ...eslint rules and config options
+  "globals": {
+    "VERSION": true,
+    "SERVER_ENV": true,
+    "MY_API_BASE_URL": true,
+  }
+}
+```
+
+---
+## Setting environment variables on the server
+
+There are a number of ways to set environment variables and your configuration is going to be unique to your project. I'll briefly discuss a couple options...
+
+> Whichever method you chose just make sure that **environment variables are set *before* running the webpack build script because webpack will transpile those values into your JS bundle which can then be deployed.**
+
+### Setting values directly on the server
+
+If you're not using CI/CD, you can install Node.js and explicitly set your environment variables on each server. You can set environment variables through the process global variable as follows:
+```console
+process.env['SERVER_ENV'] = 'production'
+```
+
+### Set values in your CI service interface
+
+In the project settings of your CI service you'll find a place to add environment variables. For static values that you don't want to commit to your source code, this is a great place to store and manage them. They will be applied to all deployments unless you are more specific by some other means (like setting the same variable in a configuration file).
+
+Travis CI | Circle CI | GitLab CI
+--- | --- | ---
+![Travis CI Environment Variables UI](./travis-ci-env-vars.png) | ![Circle CI Environment Variables UI](./circle-ci-env-vars.png) | ![GitLab CI Environment Variables UI](./gitlab-ci-env-vars.png)
+
+> **GitLab CI** is unique in that it allows for *specifying variables for each environment (staging, production, etc)* in the UI and then specify which environment to use for each job in a configuration file.
+
+### Setting values in a CI config file
+
+CI services all allow you to write configuration files written in YAML that you'll need to set up uniquely for your project. You will need to define jobs to run that set environment variables *based on which branch you are pushing to and which server you are deploying to*.
+
+---
+
+## 🎉 That's it!
+
+Now that webpack can understand your server configuration and your new local **.env** file, you can easily manage environment variables anywhere you need to.
+
+![We did it!](./seinfeld-dance.gif)
+
+For more info about setting environment variables in other types of client-side apps or to configure CI deployment steps, check out the resources below.
+
+#### Additional resources
+
+- https://12factor.net/config
+- https://theinfogrid.com/tech/developers/angular/environment-variables-angular/
+- https://cli.vuejs.org/guide/mode-and-env.html#using-env-variables-in-client-side-code
+- https://facebook.github.io/create-react-app/docs/adding-custom-environment-variables
+- https://brettdewoody.com/secure-environment-variables-with-travis/
+- https://blog.travis-ci.com/2017-09-12-build-stages-order-and-conditions
+- https://circleci.com/docs/2.0/env-vars/
+- https://docs.gitlab.com/ee/ci/variables/

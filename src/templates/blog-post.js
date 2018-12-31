@@ -6,12 +6,37 @@ import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import { rhythm, scale } from '../utils/typography'
 
+import profilePic from '../assets/profile-pics/taylorsturtz-avatar.png'
+
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
     const siteDescription = post.excerpt
     const { previous, next } = this.props.pageContext
+
+    let tags = []
+    if (post.frontmatter.tags && post.frontmatter.tags.length > 0) {
+      tags = post.frontmatter.tags.sort().map((tag, idx) => {
+        return (
+          <span
+            key={idx}
+            style={{
+              fontFamily: 'Montserrat, sans-serif',
+              fontSize: rhythm(1 / 3),
+              borderRadius: rhythm(10),
+              padding: '.2rem .5rem',
+              marginRight: '.4rem',
+              backgroundColor: '#36B5A2',
+              color: '#fff',
+              verticalAlign: 'middle',
+              boxShadow: '1px 1px 0px 0px #00ffda',
+            }}
+          >{tag}
+          </span>
+        )
+      })
+    }
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -20,7 +45,7 @@ class BlogPostTemplate extends React.Component {
           meta={[{ name: 'description', content: siteDescription }]}
           title={`${post.frontmatter.title} | ${siteTitle}`}
         />
-        <h1>{post.frontmatter.title}</h1>
+        <h1 style={{ marginBottom: rhythm(1) }}>{post.frontmatter.title}</h1>
         <p
           style={{
             ...scale(-1 / 5),
@@ -29,48 +54,47 @@ class BlogPostTemplate extends React.Component {
             marginTop: rhythm(-1),
           }}
         >
-          {post.frontmatter.authors && post.frontmatter.authors.length > 0 &&
-            <Fragment>by&nbsp;
-              {post.frontmatter.authors.map((author, idx) => {
-                return (
-                  <Fragment>
-                    <a
-                      key={idx}
-                      href={author.github}
-                      target="_blank"
-                    >{author.name}
-                    </a>
-                    {(idx < post.frontmatter.authors.length - 2) ? `, ` : ''}
-                    {(idx === post.frontmatter.authors.length - 2) ? `${post.frontmatter.authors.length > 2 ? ',' : ''} and ` : ''}
-                  </Fragment>
-                )
-              })}
-            </Fragment>
-          }
-          &nbsp;&bull;&nbsp;
           {post.frontmatter.date}
           &nbsp;&bull;&nbsp;
           {`${post.timeToRead} min read`}
         </p>
-        {post.frontmatter.tags && post.frontmatter.tags.length > 0 &&
-          <div style={{ marginBottom: rhythm(1) }}>
-            {post.frontmatter.tags.map((tag, idx) => {
+        <div style={{ marginBottom: rhythm(1) }}>
+          {tags}
+        </div>
+        {post.frontmatter.authors && post.frontmatter.authors.length > 0 &&
+          <div style={{ display: 'flex', alignItems: 'center', marginBottom: rhythm(1.5) }}>
+            {post.frontmatter.authors.map((author, idx) => {
               return (
-                <span
-                  key={idx}
-                  style={{
-                    fontFamily: 'Montserrat, sans-serif',
-                    fontSize: rhythm(1 / 3),
-                    borderRadius: rhythm(10),
-                    padding: '.2rem .5rem',
-                    marginRight: '.4rem',
-                    backgroundColor: '#36B5A2',
-                    color: '#fff',
-                    verticalAlign: 'middle',
-                    boxShadow: '1px 1px 0px 0px #00ffda',
-                  }}
-                >{tag}
-                </span>
+                <Fragment key={idx}>
+                  <img
+                    src={profilePic}
+                    alt={author.name}
+                    style={{
+                      marginRight: rhythm(1 / 2),
+                      marginBottom: 0,
+                      width: rhythm(2),
+                      height: rhythm(2),
+                    }}
+                  />
+                  <div style={{ paddingRight: rhythm(1) }}>
+                    <p style={{ marginBottom: 0 }}>{author.name}</p>
+                    <p style={{ marginBottom: 0 }}>
+                      <a
+                        key={idx}
+                        href={author.github}
+                        target="_blank"
+                      >GitHub
+                      </a>
+                      &nbsp;&bull;&nbsp;
+                      <a
+                        key={idx}
+                        href={author.twitter}
+                        target="_blank"
+                      >Twitter
+                      </a>
+                    </p>
+                  </div>
+                </Fragment>
               )
             })}
           </div>
@@ -80,8 +104,10 @@ class BlogPostTemplate extends React.Component {
           id="additional-resources"
           style={{
             marginBottom: rhythm(1),
+            display: 'none'
           }}
         />
+        <hr style={{ marginBottom: rhythm(1.5), marginTop: rhythm(1.5) }} />
         <Bio />
 
         <ul
