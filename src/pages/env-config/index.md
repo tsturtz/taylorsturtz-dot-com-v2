@@ -14,16 +14,16 @@ tags:
 ---
 For applications that are developed locally and deployed to multiple server environments (staging, production, etc.), environment variables are essential. Common uses are conditionally executing code based on environment flags or storing base URLs for APIs with matching environments.
 
-You may also want to store specific values in environment variables for security reasons. *This is critical in server-side code, but may also be useful on the client-side if you do not want to commit certain values to source code, for example.* 🚨**But of course, never store secret/sensitive information in client-side code.**
+You may also want to store specific values in environment variables for security reasons. *This is critical in server-side code, but may also be useful on the client-side if you do not want to commit certain values to source code, for example.* **But of course, never store secret/sensitive information in client-side code.**
 
 > #### This guide assumes some stuff
 > **You have Node.js and a package manager such as npm or yarn installed.**
 >
 > **You're using webpack (with or without React).**
->> You can of course [define environment variables in Angular](https://theinfogrid.com/tech/developers/angular/environment-variables-angular/) but the process is a bit different than what is explained below. You can [define environment variables in Vue](https://cli.vuejs.org/guide/mode-and-env.html#using-env-variables-in-client-side-code) as well and even though Vue uses webpack -- it's very **frameworky** about how to do things.
+>> You can of course define [environment variables in Angular](https://theinfogrid.com/tech/developers/angular/environment-variables-angular/) but the process is a bit different than what is explained below. You can define [environment variables in Vue](https://cli.vuejs.org/guide/mode-and-env.html#using-env-variables-in-client-side-code) as well and even though Vue uses webpack -- it's very **frameworky** about how to do things.
 >
-> **You're are able to manage your environment variables on the server.**
->> Whether you're building your app directly on the server or using a CI service such as [Travis CI](https://docs.travis-ci.com/), [CircleCI](https://circleci.com/docs/), or [GitLab CI/CD](https://docs.gitlab.com/ee/ci/) (where you'll need to configure deployment steps), you'll need to know how to set your environment variables per environment.
+> **You're are able to manage your server/deployment configuration.**
+>> Whether you're building your app directly on the server or using a CI service such as [Travis CI](https://docs.travis-ci.com/), [CircleCI](https://circleci.com/docs/), or [GitLab CI/CD](https://docs.gitlab.com/ee/ci/), you'll need to know how to set your environment variables per environment.
 
 👍 Let's get into it...
 
@@ -31,16 +31,16 @@ You may also want to store specific values in environment variables for security
 ## Local environment variables
 ### Define your variables in a .env file
 
-1. Create a **.env** file **in your project's root directory**
+1. Create a **.env** file **in your project's root directory**.
 ```bash
 touch .env
 ```
-1. Add a `.env` entry to your project's .gitignore file
+1. Add a `.env` entry to your project's .gitignore file.
 ```bash{1}
 # FILE: /.gitignore
 .env # Environment variables for local development.
 ```
-1. Add your environment variables in your **.env** file as `KEY=value` pairs
+1. Add your environment variables in your **.env** file as key / value pairs, like so:
 ```bash{1}
 # FILE: /.env
 # Individual variables
@@ -51,11 +51,11 @@ MY_API_BASE_URL=https://my-api.com/dev
 # NOTE: For this to work, the JSON must be formatted this way (inline).
 CONFIG_JSON={"server_env": "local", "urls": {"my_api_base_url": "https://my-api.com/dev"}}
 ```
-> ### ⚠️ If you are using create-react-app (and you have not ejected)
+When naming your variables, try to be explicit so they don't conflict with other Node variables like CI defaults, ie: [Travis CI](https://docs.travis-ci.com/user/environment-variables/#default-environment-variables), [Circle CI](https://circleci.com/docs/2.0/env-vars/#built-in-environment-variables), and [GitLab CI predefined variables](https://docs.gitlab.com/ee/ci/variables/#predefined-variables-environment-variables).
+
+> ⚠️ **If you are using create-react-app (and you have not ejected)**
 >> The above should work except for one caveat: **variables defined in your .env file must be prefixed with** `REACT_APP_`  **in order to use them in your app.**
 >> See the [create-react-app official docs](https://facebook.github.io/create-react-app/docs/adding-custom-environment-variables) for more info.
-
-When naming your variables, try to be explicit so they don't conflict with default CI environment variables, ie: [Travis CI](https://docs.travis-ci.com/user/environment-variables/#default-environment-variables), [Circle CI](https://circleci.com/docs/2.0/env-vars/#built-in-environment-variables), and [GitLab CI](https://docs.gitlab.com/ee/ci/variables/#predefined-variables-environment-variables) predefined variables. I prefer to use `SERVER_ENV` rather than `ENV` or `NODE_ENV` to avoid confusion. `NODE_ENV` is used in express.js back-ends and it's used in many webpack setups to define the bundle type (limited to dev server or production build), not the server environment.
 
 If you are working with other developers you'll need to share your **.env** file and make sure changes are updated everywhere.
 
@@ -72,7 +72,7 @@ yarn add dotenv
 ```js{1}
 // FILE: /webpack.config.js
     // We can check if webpack is building in a CI environment because services
-    // like Travis CI set default environment variables and `CI` is one of them.
+    // like Travis CI set default environment variables like "CI".
     const isCiBuild = !!process.env.CI
     if(!isCiBuild) {
       require('dotenv').config()
@@ -184,6 +184,5 @@ For more info about setting environment variables in other types of client-side 
 - https://cli.vuejs.org/guide/mode-and-env.html#using-env-variables-in-client-side-code
 - https://facebook.github.io/create-react-app/docs/adding-custom-environment-variables
 - https://brettdewoody.com/secure-environment-variables-with-travis/
-- https://blog.travis-ci.com/2017-09-12-build-stages-order-and-conditions
 - https://circleci.com/docs/2.0/env-vars/
 - https://docs.gitlab.com/ee/ci/variables/
