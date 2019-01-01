@@ -11,6 +11,7 @@ tags:
   - CI / CD
   - DevOps
   - Node.js
+  - React
 ---
 For applications that are developed locally and deployed to multiple server environments (staging, production, etc.), environment variables are essential. Common uses are conditionally executing code based on environment flags or storing base URLs for APIs with matching environments.
 
@@ -161,7 +162,7 @@ Travis CI | Circle CI | GitLab CI
 --- | --- | ---
 ![Travis CI Environment Variables UI](./travis-ci-env-vars.png) | ![Circle CI Environment Variables UI](./circle-ci-env-vars.png) | ![GitLab CI Environment Variables UI](./gitlab-ci-env-vars.png)
 
-> **GitLab CI** is unique in that it allows for *specifying variables for each environment (staging, production, etc)* in the UI and then specify which environment to use for each job in a configuration file.
+> **GitLab** is unique in that it allows for *specifying variables for each environment (staging, production, etc)* in the UI and then specify which environment to use for each job in a configuration file.
 
 ### Setting values in a CI config file
 
@@ -171,7 +172,7 @@ CI services all allow you to write configuration files written in YAML that you'
 
 ## 🎉 That's it!
 
-Now that webpack can understand your server configuration and your new local **.env** file, you can easily manage environment variables anywhere you need to.
+Now that webpack can understand your server configuration and your new local **.env** file, you can manage environment variables anywhere you need to and use them in your apps.
 
 ![We did it!](./seinfeld-dance.gif)
 
