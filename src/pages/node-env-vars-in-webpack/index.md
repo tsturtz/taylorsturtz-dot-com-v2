@@ -26,7 +26,7 @@ We'll go over the steps to implement environment variables for local development
 > **You're are able to manage your server/deployment configuration.**
 >> Whether you're building your app directly on the server or using a CI service such as [Travis CI](https://docs.travis-ci.com/), [CircleCI](https://circleci.com/docs/), or [GitLab CI/CD](https://docs.gitlab.com/ee/ci/), you'll need to know how to set your environment variables per environment.
 
-👍 Let's get into it...
+👍 Let's get into it..
 
 ---
 ## Local environment variables
