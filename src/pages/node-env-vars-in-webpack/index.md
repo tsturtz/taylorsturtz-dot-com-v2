@@ -13,9 +13,9 @@ tags:
   - Node.js
   - React
 ---
-For applications that are developed locally and deployed to multiple server environments (staging, production, etc.), environment variables are essential. Common uses are conditionally executing code based on environment flags or storing base URLs for APIs with matching environments.
+For applications that are developed locally and deployed to multiple server environments (staging, production, etc.), environment variables are essential. Common uses are conditionally executing code based on environment flags or storing base URLs for APIs with matching environments. You may also want to store specific values in environment variables for security reasons -- this is critical in server-side code, but may also be useful on the client-side if you do not want to commit certain values to source code, for example. **But of course, never store secret/sensitive information in client-side code.**
 
-You may also want to store specific values in environment variables for security reasons. *This is critical in server-side code, but may also be useful on the client-side if you do not want to commit certain values to source code, for example.* **But of course, never store secret/sensitive information in client-side code.**
+We'll go over the steps to implement environment variables for local development (and briefly touch on how you might implement them on the server), and then set up your webpack configuration to parse them.
 
 > #### This guide assumes some stuff
 > **You have Node.js and a package manager such as npm or yarn installed.**
@@ -143,20 +143,24 @@ If you're using eslint you can add your global variables to your **.eslintrc** c
 ---
 ## Setting environment variables on the server
 
-There are a number of ways to set environment variables and your configuration is going to be unique to your project. I'll briefly discuss a couple options...
+There are a number of ways to set environment variables and your configuration is going to be unique to your project.
 
 > Whichever method you chose just make sure that **environment variables are set *before* running the webpack build script because webpack will transpile those values into your JS bundle which can then be deployed.**
 
-### Setting values directly on the server
+### Use Docker/Kubernetes
 
-If you're not using CI/CD, you can install Node.js and explicitly set your environment variables on each server. You can set environment variables through the process global variable as follows:
+![I don't know](./i-dont-know-unfrozen-caveman-lawyer.gif)
+
+### Directly on the server
+
+You can install Node.js and set your environment variables on the server. You can set environment variables through the process global variable as follows:
 ```console
 process.env['SERVER_ENV'] = 'production'
 ```
 
-### Set values in your CI service interface
+### In your CI service interface
 
-In the project settings of your CI service you'll find a place to add environment variables. For static values that you don't want to commit to your source code, this is a great place to store and manage them. They will be applied to all deployments unless you are more specific by some other means (like setting the same variable in a configuration file).
+In the project settings of your CI service you'll find a place to add environment variables. For static values this is a great place to store and manage them.
 
 Travis CI | Circle CI | GitLab CI
 --- | --- | ---
@@ -164,15 +168,15 @@ Travis CI | Circle CI | GitLab CI
 
 > **GitLab** is unique in that it allows for *specifying variables for each environment (staging, production, etc)* in the UI and then specify which environment to use for each job in a configuration file.
 
-### Setting values in a CI config file
+### In a CI config file
 
-CI services all allow you to write configuration files written in YAML that you'll need to set up uniquely for your project. You will need to define jobs to run that set environment variables *based on which branch you are pushing to and which server you are deploying to*.
+CI services all allow you to write YAML configuration files that provide deployment instructions. You will need to define jobs to run that set environment variables *based on which branch you are pushing to and which server you are deploying to*.
 
 ---
 
 ## 🎉 That's it!
 
-Now that webpack can understand your server configuration and your new local **.env** file, you can manage environment variables anywhere you need to and use them in your apps.
+Now that webpack can understand your server configuration and your new local **.env** file, you can use environment variables in your app and easily manage them locally and on your server.
 
 ![We did it!](./seinfeld-dance.gif)
 
