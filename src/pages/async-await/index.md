@@ -10,6 +10,8 @@ tags:
   - ES6 (2015)
   - ES8 (2017)
 ---
+
+---
 <span style="display: none">Async</span>`async` and <span style="display: none">await</span>`await` are JavaScript ES8 (ECMAScript 2017) keywords that allow for working with asynchronous functions in a procedural way and avoiding [callback hell](http://callbackhell.com/). The syntax is much more readable and pleasant to write comparitively.
 
 To understand the use case and benefits of `async`/`await` syntax, you'll need to understand asynchronous
@@ -44,6 +46,8 @@ const yourFunc = () => {
   })
 }
 ```
+!['Nah'](./drake-nah.jpg)
+
 ✅ But here's what `async`/`await` syntax looks like:
 ```js{1,3}
 const yourFunc = async () => {
@@ -52,6 +56,8 @@ const yourFunc = async () => {
   console.log(response) // 'Done!'
 }
 ```
+!['Nah'](./drake-yeah.jpg)
+
 Both are functionally the same, but the syntax of the latter is very straightforward and best of all, no more nesting async function calls inside of callbacks! 🎉
 ## Catching errors
 Let's make our `asyncFunc` (from above) reject its promise instead...

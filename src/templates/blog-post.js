@@ -62,7 +62,7 @@ class BlogPostTemplate extends React.Component {
           {tags}
         </div>
         {post.frontmatter.authors && post.frontmatter.authors.length > 0 &&
-          <div style={{ display: 'flex', alignItems: 'center', marginBottom: rhythm(1.5) }}>
+          <div style={{ display: 'flex', alignItems: 'center', marginBottom: rhythm(1) }}>
             {post.frontmatter.authors.map((author, idx) => {
               return (
                 <Fragment key={idx}>
@@ -76,7 +76,7 @@ class BlogPostTemplate extends React.Component {
                       height: rhythm(2),
                     }}
                   />
-                  <div style={{ paddingRight: rhythm(1) }}>
+                  <div style={{ paddingRight: rhythm(1), lineHeight: '1.5' }}>
                     <p style={{ marginBottom: 0 }}>{author.name}</p>
                     <p style={{ marginBottom: 0 }}>
                       <a

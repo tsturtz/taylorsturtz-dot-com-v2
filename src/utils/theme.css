@@ -1,5 +1,8 @@
-img {
+img, span.gatsby-resp-image-background-image {
   border-radius: 10px !important;
+}
+.small-img {
+  width: 100px;
 }
 a:hover {
   color: #4D3E82;
