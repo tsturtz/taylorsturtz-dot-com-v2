@@ -3,9 +3,9 @@
 
 ### Possible Topics:
 - Implement google recaptcha on different environments with instruction on how to make dev captcha work for QA (so it passes automated tests). Focus on showing the React implementation?
-- Building a widget that can be inserted via <script> tags anywhere.
+- Building a widget that can be inserted via `<script>` tags anywhere.
 - Code splitting with webpack.
-- Lazy loading. React.lazy?
+- Lazy loading. `React.lazy`?
 - Consistent semantic variable/function naming. Redux/redux-saga focus?
 - How to implement sockets in redux-sagas. (Event-emitters, etc).
 

@@ -54,7 +54,7 @@ MY_API_BASE_URL=https://my-api.com/dev
 # NOTE: For this to work, the JSON must be formatted this way (inline).
 CONFIG_JSON={"server_env": "local", "urls": {"my_api_base_url": "https://my-api.com/dev"}}
 ```
-When naming your variables, try to be explicit so they don't conflict with other Node variables like CI defaults, ie: [Travis CI](https://docs.travis-ci.com/user/environment-variables/#default-environment-variables), [Circle CI](https://circleci.com/docs/2.0/env-vars/#built-in-environment-variables), and [GitLab CI predefined variables](https://docs.gitlab.com/ee/ci/variables/#predefined-variables-environment-variables).
+When naming your variables, try to be explicit so they don't conflict with other Node variables like CI defaults (ie, these predefined variables: [Travis CI](https://docs.travis-ci.com/user/environment-variables/#default-environment-variables), [Circle CI](https://circleci.com/docs/2.0/env-vars/#built-in-environment-variables), and [GitLab CI](https://docs.gitlab.com/ee/ci/variables/#predefined-variables-environment-variables)).
 
 > ⚠️ **If you are using create-react-app (and you have not ejected)**
 >> The above should work except for one caveat: **variables defined in your .env file must be prefixed with** `REACT_APP_`  **in order to use them in your app.**
