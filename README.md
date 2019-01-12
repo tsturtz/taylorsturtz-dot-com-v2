@@ -1,6 +1,8 @@
 # Nothing Too Crazy Blog
 *A collection of thoughts by a collection of devs.*
 
+> **Please feel free** to create a post about any software topic you want (could be related to engineering, devops, design, qa, development process, etc). Also feel free to edit this readme to add topics to consider. 🙌 You're awesome. We're awesome.
+
 ### Possible Topics:
 - Implement google recaptcha on different environments with instruction on how to make dev captcha work for QA (so it passes automated tests). Focus on showing the React implementation?
 - Building a widget that can be inserted via `<script>` tags anywhere.
@@ -26,8 +28,8 @@ gatsby develop
 6. Replace the frontmatter at the top (everything above the first `---`) and replace the markdown content with your post markdown.
 7. Pull from and push your code to the `master` branch. [Netlify](https://www.netlify.com/) will auto-deploy any commits to `master`. Head to https://nothingtoocrazy.netlify.com to see your post live!
 
-🙌 You're awesome. We're awesome.
-
 ---
 
-*Started with [**Gatsby Starter Blog**](https://github.com/gatsbyjs/gatsby-starter-blog)*
+*Forked from [**Gatsby Starter Blog**](https://github.com/gatsbyjs/gatsby-starter-blog)*
+
+*Borrowed and slightly modified the code syntax theme from [@gaearon](https://github.com/gaearon) (which is based on [@sdras](https://github.com/sdras)'s Night Owl theme).*

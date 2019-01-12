@@ -1,6 +1,6 @@
 ---
 title: Use Node Environment Variables in JS Apps with Webpack
-date: "2018-12-31"
+date: "2019-01-12"
 authors:
   - name: Taylor Sturtz
     github: https://github.com/tsturtz
@@ -17,7 +17,7 @@ tags:
 ---
 For applications that are developed locally and deployed to multiple server environments (staging, production, etc.), environment variables are essential. Common uses are conditionally executing code based on environment flags or storing base URLs for APIs with matching environments. You may also want to store specific values in environment variables for security reasons -- this is critical in server-side code, but may also be useful on the client-side if you do not want to commit certain values to source code, for example. **But of course, never store secret/sensitive information in client-side code.**
 
-We'll set up your webpack configuration to parse environment variables as globals in your app and go over the steps to implement a **.env** file for local development. Then we'll briefly touch on how you might implement your variables on the server.
+We'll set up your webpack configuration to parse environment variables as globals in your app and go over the steps to implement a **.env** file to define [environment variables locally](#local-environment-variables). Then we'll briefly touch on how you might implement [environment variables on the server](#server-environment-variables).
 
 > #### This guide assumes some stuff
 > **You have Node.js and a package manager such as npm or yarn installed.**
@@ -115,8 +115,7 @@ yarn add dotenv
 ```js{3-4}
     const getUsers = async () => {
       try {
-        // transpiles to fetch('https://my-api.com/dev/users')
-        const response = await fetch(`${MY_API_BASE_URL}/users`)
+        const response = await fetch(`${MY_API_BASE_URL}/users`) // transpiles to fetch('https://my-api.com/dev/users')
         const json = await response.json()
         return json
       } catch (err) {
@@ -128,12 +127,12 @@ yarn add dotenv
 
 ![Works on my machine!](./works-on-my-machine.jpg)
 
-### Bonus step
-If you're using eslint you can add your global variables to your **.eslintrc** config file which will allow you to use your globals freely without eslint yelling at you:
+### Bonus - linter globals
+You can add your global variables to your **.eslintrc** or **.jshintrc** config file which will allow you to use your globals freely without your linters yelling at you:
 ```js{1}
-// FILE: /.eslintrc
+// FILE: /.eslintrc or /.jshintrc
 {
-  // ...eslint rules and config options
+  // ...
   "globals": {
     "VERSION": true,
     "SERVER_ENV": true,
@@ -141,26 +140,32 @@ If you're using eslint you can add your global variables to your **.eslintrc** c
   }
 }
 ```
+You can achieve the same thing on a per-file basis if you put a comment at the top of your file like this:
+```js
+/* globals VERSION, SERVER_ENV, MY_API_BASE_URL */
+```
 
 ---
-## Setting environment variables on the server
+## Server environment variables
 
 There are a number of ways to set environment variables and your configuration is going to be unique to your project.
 
 > Whichever method you chose just make sure that **environment variables are set *before* running the webpack build script because webpack will transpile those values into your JS bundle which can then be deployed.**
 
-### Use Docker/Kubernetes
-
-![I don't know](./i-dont-know-unfrozen-caveman-lawyer.gif)
-
-*...yet* 😉
-
 ### Directly on the server
 
-You can install Node.js and set your environment variables on the server. You can set environment variables through the process global variable as follows:
+You can install Node.js on each server and set your environment variables via the process global variable like so:
 ```console
-process.env['SERVER_ENV'] = 'production'
+process.env.SERVER_ENV = 'production'
 ```
+or install the [dotenv](https://github.com/motdotla/dotenv) package:
+```bash
+# Install with npm
+npm i dotenv
+# or with yarn if that's your thing
+yarn add dotenv
+```
+and manually maintain a **.env** file on each server.
 
 ### In your CI service interface
 
@@ -175,6 +180,12 @@ Travis CI | Circle CI | GitLab CI
 ### In a CI config file
 
 CI services all allow you to write YAML configuration files that provide deployment instructions. You will need to define jobs to run that set environment variables *based on which branch you are pushing to and which server you are deploying to*.
+
+### Use Docker/Kubernetes
+
+![I don't know](./i-dont-know-unfrozen-caveman-lawyer.gif)
+
+*...yet* 😉
 
 ---
 
