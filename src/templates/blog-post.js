@@ -14,7 +14,7 @@ class BlogPostTemplate extends React.Component {
     const siteTitle = this.props.data.site.siteMetadata.title
     const siteDescription = post.excerpt
     const { previous, next } = this.props.pageContext
-    console.log('ENV VAR TEST - ', process.env.TEST);
+    console.log('ENV VAR TEST - ', process.env.TEST_ENV_VAR);
     let tags = []
     if (post.frontmatter.tags && post.frontmatter.tags.length > 0) {
       tags = post.frontmatter.tags.sort().map((tag, idx) => {
@@ -78,20 +78,15 @@ class BlogPostTemplate extends React.Component {
                   />
                   <div style={{ paddingRight: rhythm(1), lineHeight: '1.5' }}>
                     <p style={{ marginBottom: 0 }}>{author.name}</p>
-                    <p style={{ marginBottom: 0 }}>
-                      <a
-                        key={idx}
-                        href={author.github}
-                        target="_blank"
-                      >GitHub
-                      </a>
+                    <p style={{ marginBottom: 0, fontSize: rhythm(.4), color: '#ababab', fontStyle: 'italic' }}>
+                      {author.title}
+                      {author.company ? ' at ' : ''}
+                      {author.company}
+                    </p>
+                    <p style={{ marginBottom: 0, fontSize: rhythm(.4), fontStyle: 'italic' }}>
+                      <a href={author.github} target="_blank">GitHub</a>
                       &nbsp;&bull;&nbsp;
-                      <a
-                        key={idx}
-                        href={author.twitter}
-                        target="_blank"
-                      >Twitter
-                      </a>
+                      <a href={author.twitter} target="_blank">Twitter</a>
                     </p>
                   </div>
                 </Fragment>
@@ -154,6 +149,8 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         authors {
           name
+          title
+          company
           github
           twitter
         }

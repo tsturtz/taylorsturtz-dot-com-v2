@@ -3,6 +3,8 @@ title: Use Node Environment Variables in JS Apps with Webpack
 date: "2019-01-12"
 authors:
   - name: Taylor Sturtz
+    title: Software Developer
+    company: Ytel
     github: https://github.com/tsturtz
     twitter: https://twitter.com/taylorsturtz
 tags:
@@ -24,7 +26,7 @@ We'll set up your webpack configuration to parse environment variables as global
 >> You can of course define [environment variables in Angular](https://theinfogrid.com/tech/developers/angular/environment-variables-angular/) but the process is a bit different than what is explained below. You can define [environment variables in Vue](https://cli.vuejs.org/guide/mode-and-env.html#using-env-variables-in-client-side-code) as well and even though Vue uses webpack -- it's very **frameworky** about how to do things.
 >
 > **You're are able to manage your server/deployment configuration.**
->> Whether you're building your app directly on the server or using a CI service such as [Travis CI](https://docs.travis-ci.com/), [CircleCI](https://circleci.com/docs/), or [GitLab CI/CD](https://docs.gitlab.com/ee/ci/), you'll need to know how to set your environment variables per environment.
+>> Whether you're building your app directly on the server or using a CI service such as [Travis CI](https://docs.travis-ci.com/), [Circle CI](https://circleci.com/docs/), or [GitLab CI/CD](https://docs.gitlab.com/ee/ci/), you'll need to know how to set your environment variables per environment.
 
 👍 Let's get into it..
 
@@ -52,7 +54,16 @@ MY_API_BASE_URL=https://my-api.com/dev
 # NOTE: For this to work, the JSON must be formatted this way (inline).
 CONFIG_JSON={"server_env": "local", "urls": {"my_api_base_url": "https://my-api.com/dev"}}
 ```
-When naming your variables, try to be explicit so they don't conflict with other Node variables like CI defaults (ie, these predefined variables: [Travis CI](https://docs.travis-ci.com/user/environment-variables/#default-environment-variables), [Circle CI](https://circleci.com/docs/2.0/env-vars/#built-in-environment-variables), and [GitLab CI](https://docs.gitlab.com/ee/ci/variables/#predefined-variables-environment-variables)).
+
+Since you will not commit your **.env** file to version control, you may want to create another file (which you will commit) called **.env.example** with dummy values just to indicate which variables your application expects. For example:
+```bash{1}
+# FILE: /.env.example
+SERVER_ENV=(environment_here)
+MY_API_BASE_URL=(url_here)
+CONFIG_JSON={"server_env": "environment_here", "urls": {"my_api_base_url": "url_here"}}
+```
+
+When naming your variables, try to be explicit so they don't conflict with other Node variables (like CI built-in variables, ie: [Travis CI](https://docs.travis-ci.com/user/environment-variables/#default-environment-variables), [Circle CI](https://circleci.com/docs/2.0/env-vars/#built-in-environment-variables), and [GitLab CI](https://docs.gitlab.com/ee/ci/variables/#predefined-variables-environment-variables)).
 
 > ⚠️ **If you are using create-react-app (and you have not ejected)**
 >> The above should work except for one caveat: **variables defined in your .env file must be prefixed with** `REACT_APP_`  **in order to use them in your app.**
