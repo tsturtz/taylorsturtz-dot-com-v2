@@ -14,7 +14,7 @@ class BlogPostTemplate extends React.Component {
     const siteTitle = this.props.data.site.siteMetadata.title
     const siteDescription = post.excerpt
     const { previous, next } = this.props.pageContext
-    console.log('ENV VAR TEST - ', process.env.TEST_ENV_VAR);
+    console.log('ENV VAR TEST - ', process.env.GATSBY_TEST_ENV_VAR);
     let tags = []
     if (post.frontmatter.tags && post.frontmatter.tags.length > 0) {
       tags = post.frontmatter.tags.sort().map((tag, idx) => {
