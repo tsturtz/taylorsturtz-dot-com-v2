@@ -13,8 +13,6 @@ tags:
   - Node.js
   - React
 ---
-
----
 For applications that are developed locally and deployed to multiple server environments (staging, production, etc.), environment variables are essential. Common uses are conditionally executing code based on environment flags or storing base URLs for APIs with matching environments. You may also want to store specific values in environment variables for security reasons -- this is critical in server-side code, but may also be useful on the client-side if you do not want to commit certain values to source code, for example. **But of course, never store secret/sensitive information in client-side code.**
 
 We'll set up your webpack configuration to parse environment variables as globals in your app and go over the steps to implement a **.env** file to define [environment variables locally](#local-environment-variables). Then we'll briefly touch on how you might implement [environment variables on the server](#server-environment-variables).

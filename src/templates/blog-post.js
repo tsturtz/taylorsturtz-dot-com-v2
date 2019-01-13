@@ -14,7 +14,7 @@ class BlogPostTemplate extends React.Component {
     const siteTitle = this.props.data.site.siteMetadata.title
     const siteDescription = post.excerpt
     const { previous, next } = this.props.pageContext
-
+    console.log('ENV VAR TEST - ', process.env.TEST);
     let tags = []
     if (post.frontmatter.tags && post.frontmatter.tags.length > 0) {
       tags = post.frontmatter.tags.sort().map((tag, idx) => {
@@ -99,16 +99,11 @@ class BlogPostTemplate extends React.Component {
             })}
           </div>
         }
+        <hr />
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr
-          id="additional-resources"
-          style={{
-            marginBottom: rhythm(1),
-            display: 'none'
-          }}
-        />
-        <hr style={{ marginBottom: rhythm(1.5), marginTop: rhythm(1.5) }} />
+        <div id="additional-resources" style={{ display: 'none' }} />
         <Bio />
+        <hr style={{ marginBottom: rhythm(1.5), marginTop: rhythm(1.5) }} />
 
         <ul
           style={{

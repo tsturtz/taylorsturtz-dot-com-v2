@@ -10,8 +10,6 @@ tags:
   - ES6 (2015)
   - ES8 (2017)
 ---
-
----
 <span style="display: none">Async</span>`async` and <span style="display: none">await</span>`await` are JavaScript ES8 (ECMAScript 2017) keywords that allow for working with asynchronous functions in a procedural way and avoiding [callback hell](http://callbackhell.com/). The syntax is much more readable and pleasant to write comparitively.
 
 To understand the use case and benefits of `async`/`await` syntax, you'll need to understand asynchronous
