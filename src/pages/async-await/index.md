@@ -3,6 +3,8 @@ title: Async/Await Comparitive Examples
 date: "2018-12-21"
 authors:
   - name: Taylor Sturtz
+    title: Software Developer
+    company: Ytel
     github: https://github.com/tsturtz
     twitter: https://twitter.com/taylorsturtz
 tags:
