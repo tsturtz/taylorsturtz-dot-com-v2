@@ -156,7 +156,7 @@ const getUsers = async () => {
 
 #### Additional resources
 
-- https://eloquentjavascript.net/11_async.html
-- https://developers.google.com/web/fundamentals/primers/promises
-- https://javascript.info/async-await
-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
+- *Asynchronous Programming* https://eloquentjavascript.net/11_async.html
+- *Google Guide to Promises* https://developers.google.com/web/fundamentals/primers/promises
+- *Promises and async/await* https://javascript.info/async-await
+- *MDN async docs* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function

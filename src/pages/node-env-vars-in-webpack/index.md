@@ -1,5 +1,5 @@
 ---
-title: Use Node Environment Variables in JS Apps with Webpack
+title: Use Node Environment Variables in Client-side Apps with Webpack
 date: "2019-01-12"
 authors:
   - name: Taylor Sturtz
@@ -26,7 +26,7 @@ We'll set up your webpack configuration to parse environment variables as global
 >> You can of course define [environment variables in Angular](https://theinfogrid.com/tech/developers/angular/environment-variables-angular/) but the process is a bit different than what is explained below. You can define [environment variables in Vue](https://cli.vuejs.org/guide/mode-and-env.html#using-env-variables-in-client-side-code) as well and even though Vue uses webpack -- it's very **frameworky** about how to do things.
 >
 > **You're are able to manage your server/deployment configuration.**
->> Whether you're building your app directly on the server or using a CI service such as [Travis CI](https://docs.travis-ci.com/), [Circle CI](https://circleci.com/docs/), or [GitLab CI/CD](https://docs.gitlab.com/ee/ci/), you'll need to know how to set your environment variables per environment.
+>> Whether you're building your app directly on the server, or using a CI/CD service (such as [Netlify](https://www.netlify.com/docs/continuous-deployment/#build-environment-variables), [Heroku](https://devcenter.heroku.com/articles/config-vars), [Travis CI](https://docs.travis-ci.com/), [Circle CI](https://circleci.com/docs/), or [GitLab](https://docs.gitlab.com/ee/ci/)), you'll need to know how to set your environment variables per environment.
 
 👍 Let's get into it..
 
@@ -65,9 +65,9 @@ CONFIG_JSON={"server_env": "environment_here", "urls": {"my_api_base_url": "url_
 
 When naming your variables, try to be explicit so they don't conflict with other Node variables (like CI built-in variables, ie: [Travis CI](https://docs.travis-ci.com/user/environment-variables/#default-environment-variables), [Circle CI](https://circleci.com/docs/2.0/env-vars/#built-in-environment-variables), and [GitLab CI](https://docs.gitlab.com/ee/ci/variables/#predefined-variables-environment-variables)).
 
-> ⚠️ **If you are using create-react-app (and you have not ejected)**
->> The above should work except for one caveat: **variables defined in your .env file must be prefixed with** `REACT_APP_`  **in order to use them in your app.**
->> See the [create-react-app official docs](https://facebook.github.io/create-react-app/docs/adding-custom-environment-variables) for more info.
+> ⚠️ ATTN: **create-react-app** and **Gatsby** users!
+>> The above should work except for one caveat: **variables defined in your .env file must be prefixed with** `REACT_APP_` or `GATSBY_`  **in order to use them in your app.**
+>>> See the [create-react-app docs](https://facebook.github.io/create-react-app/docs/adding-custom-environment-variables) or the [gatsby docs](https://www.gatsbyjs.org/docs/environment-variables/#client-side-javascript) for more info.
 
 If you are working with other developers you'll need to share your **.env** file and make sure changes are updated everywhere.
 
@@ -80,11 +80,10 @@ npm i dotenv
 # or with yarn if that's your thing
 yarn add dotenv
 ```
-1. Paste this bit of code near the top of your webpack config. The `isCiBuild` bit prevents webpack from unnecessarily requiring dotenv in CI environments.
+1. Paste this bit of code near the top of your webpack config. The `isCiBuild` bit prevents webpack from unnecessarily requiring dotenv in CI environments (be sure to check that CI is a built in variable in your service).
 ```js{1}
 // FILE: /webpack.config.js
-    // We can check if webpack is building in a CI environment because services
-    // like Travis CI set default environment variables like "CI".
+    // If we're using Travis CI for example, we can check if webpack is building our app in a CI environment.
     const isCiBuild = !!process.env.CI
     if(!isCiBuild) {
       require('dotenv').config()
@@ -208,10 +207,11 @@ For more info about setting environment variables in other types of client-side 
 
 #### Additional resources
 
-- https://12factor.net/config
-- https://theinfogrid.com/tech/developers/angular/environment-variables-angular/
-- https://cli.vuejs.org/guide/mode-and-env.html#using-env-variables-in-client-side-code
-- https://facebook.github.io/create-react-app/docs/adding-custom-environment-variables
-- https://brettdewoody.com/secure-environment-variables-with-travis/
-- https://circleci.com/docs/2.0/env-vars/
-- https://docs.gitlab.com/ee/ci/variables/
+- *Twelve-Factor App methodology* https://12factor.net/config
+- *Using Env Variables in Angular* https://theinfogrid.com/tech/developers/angular/environment-variables-angular/
+- *Using Env Variables in Vue* https://cli.vuejs.org/guide/mode-and-env.html#using-env-variables-in-client-side-code
+- *Netlify Env Variables* https://www.netlify.com/docs/continuous-deployment/#build-environment-variables
+- *Heroku Env Variables* https://devcenter.heroku.com/articles/config-vars
+- *Travis CI Env Variables* https://brettdewoody.com/secure-environment-variables-with-travis/
+- *Circle CI Env Variables* https://circleci.com/docs/2.0/env-vars/
+- *GitLab Env Variables* https://docs.gitlab.com/ee/ci/variables/
