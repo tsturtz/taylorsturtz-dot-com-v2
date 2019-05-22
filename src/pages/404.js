@@ -17,7 +17,7 @@ class NotFoundPage extends React.Component {
             }}
             to={'/'}
           >
-            Nothing Too Crazy Blog
+            Taylor Sturtz Blog
           </Link>
         </h1>
         {/* <Bio /> */}

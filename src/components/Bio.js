@@ -5,7 +5,7 @@ import { Link } from 'gatsby'
 import 'typeface-montserrat'
 import 'typeface-merriweather'
 
-import profilePic from '../assets/nothingtoocrazy.svg'
+import profilePic from '../assets/profile-pics/taylorsturtz-avatar.png'
 import { rhythm } from '../utils/typography'
 
 class Bio extends React.Component {
@@ -17,20 +17,24 @@ class Bio extends React.Component {
         <Link to={'/'}>
           <img
             src={profilePic}
-            alt={`Nothing Too Crazy`}
+            alt={`Taylor Sturtz`}
             style={{
               marginRight: rhythm(1 / 2),
               marginBottom: 0,
-              width: rhythm(3.5),
-              height: rhythm(3.5),
+              width: rhythm(2.3),
+              height: rhythm(2.3),
             }}
           />
         </Link>
         <p style={{ marginBottom: 0, marginLeft: '10px', lineHeight: '1.5' }}>
-          <span style={{ paddingBottom: '5px' }}>A collection of thoughts by a collection of devs</span><br />
-          <a href="https://github.com/nothingtoocrazy" className="greenNTC" target="_blank">
-            Check us out on GitHub
-          </a>
+          <span style={{ paddingBottom: '5px' }}>👋Hi, I'm Taylor. I try to write my web dev experiences here.</span><br />
+          <span>
+            <code style={{ color: 'rgb(105, 105, 105)' }}>npx taylorsturtz</code>
+            &nbsp;|&nbsp;
+            <a href="https://github.com/tsturtz" className="greenTheme" target="_blank">
+              check me out on GitHub
+            </a>
+          </span>
         </p>
       </div>
     )

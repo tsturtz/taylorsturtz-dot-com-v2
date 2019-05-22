@@ -1,10 +1,10 @@
 {
-  "name": "nothing-too-crazy-blog",
-  "description": "A blog to provide simple code examples and explanations for all the devs out there tryna make stuff happen",
+  "name": "taylor-sturtz-blog",
+  "description": "Musings about web software.",
   "version": "1.0.0",
-  "author": "Nothing Too Crazy <nothingtoocray@gmail.com>",
+  "author": "Taylor Sturtz <taylorsturtz@gmail.com>",
   "bugs": {
-    "url": "https://github.com/nothingtoocrazy/simple-code-examples"
+    "url": "https://github.com/tsturtz"
   },
   "dependencies": {
     "gatsby": "^2.0.19",
@@ -42,7 +42,7 @@
     "gh-pages": "^1.2.0",
     "prettier": "^1.14.2"
   },
-  "homepage": "https://github.com/nothingtoocrazy/simple-code-examples",
+  "homepage": "https://taylorsturtz.com",
   "keywords": [
     "simple",
     "code",
@@ -66,7 +66,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nothingtoocrazy/simple-code-examples.git"
+    "url": "git+https://github.com/tsturtz.git"
   },
   "scripts": {
     "dev": "gatsby develop",

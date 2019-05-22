@@ -3,10 +3,10 @@ if (process.env.NODE_ENV === 'development') {
 }
 module.exports = {
   siteMetadata: {
-    title: 'Nothing Too Crazy Blog',
-    author: 'Nothing Too Crazy',
-    description: 'A blog to provide simple code examples and explanations for all the devs out there tryna make stuff happen',
-    siteUrl: 'https://nothingtoocrazy.netlify.com',
+    title: 'Musings about web software',
+    author: 'Taylor Sturtz',
+    description: 'Musings about web software.',
+    siteUrl: 'https://taylorsturtz.com',
   },
   plugins: [
     // markdown file support
@@ -63,13 +63,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Nothing Too Crazy`,
-        short_name: `NTC Blog`,
+        name: `Taylor Sturtz Blog`,
+        short_name: `TS Blog`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/assets/ntc-icon.png`,
+        icon: `src/assets/profile-pics/taylorsturtz-avatar.png`,
       },
     },
     // offline support (service worker) - this must come AFTER gatsby-plugin-manifest

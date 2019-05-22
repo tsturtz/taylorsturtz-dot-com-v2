@@ -97,7 +97,6 @@ class BlogPostTemplate extends React.Component {
         <hr />
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <div id="additional-resources" style={{ display: 'none' }} />
-        <Bio />
         <hr style={{ marginBottom: rhythm(1.5), marginTop: rhythm(1.5) }} />
 
         <ul

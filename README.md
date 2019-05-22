@@ -1,5 +1,5 @@
-# Nothing Too Crazy Blog
-*A collection of thoughts by a collection of devs.*
+# Taylor Sturtz Blog
+*Musings about web software.*
 
 > **Please feel free** to create a post about any software topic you want (could be related to engineering, devops, design, qa, development process, etc). Also feel free to edit this readme to add topics to consider.
 
@@ -21,13 +21,13 @@ npm i --global gatsby-cli
 4. Run the following to run the project locally and view at [localhost:8000](http://localhost:8000/):
 ```bash
 npm run dev
-#or
+# or
 gatsby develop
 ```
 5. In the **/pages** directory, copy-pasta a folder that has a `index.md` file in it (name the new folder the desired URL slug of your post).
 6. Replace the frontmatter at the top (everything above the first `---`) and replace the markdown content with your post markdown.
 7. Pull from and push your code to the `master` branch. You can create feature branches if you want.
-8. Create a PR to the `deploy` branch. Once it gets merged, [Netlify](https://www.netlify.com/) will auto-deploy to [nothingtoocrazy.netlify.com](https://nothingtoocrazy.netlify.com).
+8. Create a PR to the `deploy` branch. Once it gets merged, [Netlify](https://www.netlify.com/) will auto-deploy to [taylorsturtz.com](https://taylorsturtz.com).
 
 🙌 You're awesome. We're awesome.
 
