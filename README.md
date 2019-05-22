@@ -1,5 +1,5 @@
 # Taylor Sturtz Blog
-*Musings about web software.*
+*Musings about web dev*
 
 > **Please feel free** to create a post about any software topic you want (could be related to engineering, devops, design, qa, development process, etc). Also feel free to edit this readme to add topics to consider.
 

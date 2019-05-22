@@ -21,13 +21,12 @@ class Bio extends React.Component {
             style={{
               marginRight: rhythm(1 / 2),
               marginBottom: 0,
-              width: rhythm(2.3),
-              height: rhythm(2.3),
+              width: rhythm(3),
             }}
           />
         </Link>
         <p style={{ marginBottom: 0, marginLeft: '10px', lineHeight: '1.5' }}>
-          <span style={{ paddingBottom: '5px' }}>👋Hi, I'm Taylor. I try to write my web dev experiences here.</span><br />
+          <span style={{ paddingBottom: '5px' }}>👋Hi, I'm Taylor. I write about my web dev experiences here.</span><br />
           <span>
             <code style={{ color: 'rgb(105, 105, 105)' }}>npx taylorsturtz</code>
             &nbsp;|&nbsp;

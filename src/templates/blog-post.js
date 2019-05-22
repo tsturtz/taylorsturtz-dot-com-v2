@@ -31,6 +31,7 @@ class BlogPostTemplate extends React.Component {
               color: '#fff',
               verticalAlign: 'middle',
               boxShadow: '1px 1px 0px 0px #00ffda',
+              whiteSpace: 'nowrap',
             }}
           >{tag}
           </span>
