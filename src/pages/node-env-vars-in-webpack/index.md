@@ -19,7 +19,7 @@ For applications that are developed locally and deployed to multiple server envi
 
 We'll set up your webpack configuration to parse environment variables as globals in your app and go over the steps to implement a **.env** file to define [environment variables locally](#local-environment-variables). Then we'll briefly touch on how you might implement [environment variables on the server](#server-environment-variables).
 
-> #### This guide assumes some stuff
+> #### The following assumes some stuff
 > **You have Node.js and a package manager such as npm or yarn installed.**
 >
 > **You're using webpack (with or without React).**

@@ -16,6 +16,7 @@ class Layout extends React.Component {
             ...scale(1),
             marginBottom: rhythm(1),
             marginTop: 0,
+            lineHeight: '3rem',
           }}
         >
           <Link
