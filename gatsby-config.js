@@ -54,7 +54,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: `UA-130928418-1`,
+        trackingId: `UA-130928418-2`,
       },
     },
     // creates RSS feed
