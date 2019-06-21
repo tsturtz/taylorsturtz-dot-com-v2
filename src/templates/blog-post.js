@@ -6,7 +6,7 @@ import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import { rhythm, scale } from '../utils/typography'
 
-import profilePic from '../assets/profile-pics/taylorsturtz-avatar.png'
+import profilePic from '../assets/profile-pics/taylorsturtz-mischief.png'
 
 class BlogPostTemplate extends React.Component {
   render() {
