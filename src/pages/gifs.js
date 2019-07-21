@@ -25,6 +25,8 @@ const gifUrls = [
   { alt: 'Last Man on Earth - Tandy - What?!', url: 'https://media.giphy.com/media/xgTlO6K7ZllZu/giphy.gif' },
   { alt: 'Last Man on Earth - Tandy - You dirty dog', url: 'https://media.giphy.com/media/l4hLzQ8GC0lmWd4SA/giphy.gif' },
   { alt: 'Last Man on Earth - Tandy - I\'d love to!', url: 'https://media.giphy.com/media/3o8doPV2heuYjdN2Fy/giphy.gif' },
+  { alt: 'Kanye Smile then Serious', url: 'https://media1.tenor.com/images/6e1865c19c66b4f57b3e4e72f6b98134/tenor.gif' },
+  { alt: 'Oh damn', url: 'https://img.buzzfeed.com/buzzfeed-static/static/2017-12/6/14/asset/buzzfeed-prod-fastlane-03/anigif_sub-buzz-28578-1512589716-2.gif' },
 ]
 
 class GifsPage extends Component {
