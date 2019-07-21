@@ -18,6 +18,22 @@ h3 {
   color: #36B5A2;
 }
 
+.no-list-style {
+  list-style-type: none;
+  width: 25%;
+}
+.no-list-style > img {
+  padding: 0 10px;
+  transition: all 300ms;
+  cursor: pointer;
+}
+.no-list-style > img:hover {
+  transform: scale(1.75);
+  position: relative;
+  z-index: 501;
+  /* box-shadow: 0px 0px 15px 5px #FFF; */
+}
+
 /**
  * Based on copypasta from Dan Abramov (Based on copypasta from Remy Bach and Sarah Drasner)
  */

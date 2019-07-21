@@ -17,9 +17,10 @@ class NotFoundPage extends React.Component {
             }}
             to={'/'}
           >
-            Taylor Sturtz Blog
+            Musings about web dev
           </Link>
         </h1>
+        <h3 style={{ marginTop: 0 }}>(Taylor Sturtz's blog)</h3>
         {/* <Bio /> */}
         <hr style={{ marginTop: '2rem' }} />
         <h2>😱 404 Not Found</h2>
