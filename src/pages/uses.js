@@ -9,7 +9,7 @@ class UsesPage extends PureComponent {
   render() {
     return (
       <Layout location={this.props.location} style={{ background: 'black' }}>
-        <h1 style={{ color: '#4D3E82', textAlign: 'center' }}>
+        <h1 style={{ color: '#4D3E82', textAlign: 'center', fontFamily: 'Montserrat, sans-serif' }}>
           I'm not influencial enough to have a /uses page 🙃
         </h1>
         <hr style={{ marginTop: '2rem' }} />

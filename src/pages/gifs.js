@@ -59,7 +59,7 @@ class GifsPage extends Component {
     const { copiedUrl, copiedAlt, dimmer } = this.state;
     return (
       <Layout location={this.props.location} style={{ background: 'black' }}>
-        <h1 style={{ color: '#4D3E82', textAlign: 'center' }}>
+        <h1 style={{ color: '#4D3E82', textAlign: 'center', fontFamily: 'Montserrat, sans-serif' }}>
           A Choice (👌) Collection of GIFs
         </h1>
         <hr style={{ marginTop: '2rem' }} />
