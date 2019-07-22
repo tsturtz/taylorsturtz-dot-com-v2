@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Link } from 'gatsby'
 
 // Import typefaces
@@ -8,7 +8,7 @@ import 'typeface-merriweather'
 import profilePic from '../assets/profile-pics/taylorsturtz-mischief.png'
 import { rhythm } from '../utils/typography'
 
-class Bio extends React.Component {
+class Bio extends Component {
   render() {
     return (
       <div

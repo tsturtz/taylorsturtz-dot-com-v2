@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, Component } from 'react'
 import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 
@@ -8,7 +8,7 @@ import { rhythm, scale } from '../utils/typography'
 
 import profilePic from '../assets/profile-pics/taylorsturtz-mischief.png'
 
-class BlogPostTemplate extends React.Component {
+class BlogPostTemplate extends Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title

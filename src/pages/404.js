@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 import { Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Bio from '../components/Bio'
 import lostGif from '../assets/lost.gif'
 
-class NotFoundPage extends React.Component {
+class NotFoundPage extends PureComponent {
   render() {
     return (
       <Layout location={this.props.location} style={{ background: 'black' }}>

@@ -5,7 +5,6 @@ import Masonry from 'react-masonry-component'
 
 import { rhythm } from '../utils/typography'
 import Layout from '../components/Layout'
-import Bio from '../components/Bio'
 import profilePic from '../assets/profile-pics/taylorsturtz-mischief.png'
 
 const masonryOptions = { transitionDuration: 0 }
