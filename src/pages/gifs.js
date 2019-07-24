@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'gatsby'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import Masonry from 'react-masonry-component'
+import 'typeface-montserrat'
 
 import { rhythm } from '../utils/typography'
 import Layout from '../components/Layout'

@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import { Link } from 'gatsby'
+import 'typeface-montserrat'
 
 import { rhythm } from '../utils/typography'
 import Layout from '../components/Layout'
