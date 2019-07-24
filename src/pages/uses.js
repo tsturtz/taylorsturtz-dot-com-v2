@@ -11,7 +11,7 @@ class UsesPage extends PureComponent {
     return (
       <Layout location={this.props.location} style={{ background: 'black' }}>
         <h1 style={{ color: '#4D3E82', textAlign: 'center', fontFamily: 'Montserrat, sans-serif' }}>
-          I'm not influencial enough to have a /uses page 🙃
+          I'm not influential enough to have a /uses page 🙃
         </h1>
         <hr style={{ marginTop: '2rem' }} />
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 10px' }}>
