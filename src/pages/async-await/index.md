@@ -19,7 +19,6 @@ programming and promises (also known as futures) in JS.
 [Here](https://eloquentjavascript.net/11_async.html) and
 [here](https://developers.google.com/web/fundamentals/primers/promises) are a couple of great articles to get caught up.
 
-> #### Quick n' dirty code alert
 > The goal of this post is to provide a short introduction and reference to `async`/`await` syntax
 > so that it is possible to implement basic functionality quickly.
 > For deeper understanding, check out the additional resources linked at the [bottom of this page](#additional-resources).
