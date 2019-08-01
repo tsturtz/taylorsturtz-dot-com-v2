@@ -1,6 +1,7 @@
 import React, { Fragment, Component } from 'react'
 import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
+import { DiscussionEmbed } from 'disqus-react';
 
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
@@ -14,6 +15,13 @@ class BlogPostTemplate extends Component {
     const siteTitle = this.props.data.site.siteMetadata.title
     const siteDescription = post.excerpt
     const { previous, next } = this.props.pageContext
+
+    const disqusShortname = "taylorsturtz";
+    const disqusConfig = {
+      identifier: post.id,
+      title: post.frontmatter.title,
+    };
+
     console.log('ENV VAR TEST - ', process.env.GATSBY_TEST_ENV_VAR);
     let tags = []
     if (post.frontmatter.tags && post.frontmatter.tags.length > 0) {
@@ -124,6 +132,7 @@ class BlogPostTemplate extends Component {
             )}
           </li>
         </ul>
+        <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
       </Layout>
     )
   }
