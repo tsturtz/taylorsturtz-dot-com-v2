@@ -31,7 +31,7 @@ class BlogIndex extends Component {
                 <span
                   key={idx}
                   style={{
-                    fontFamily: 'Montserrat, sans-serif',
+                    fontFamily: 'Bitter, serif',
                     fontSize: rhythm(1 / 3),
                     borderRadius: rhythm(10),
                     padding: '.2rem .5rem',

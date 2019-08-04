@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'gatsby'
 
 // Import typefaces
-import 'typeface-montserrat'
+import 'typeface-bitter'
 import 'typeface-merriweather'
 
 import profilePic from '../assets/profile-pics/taylorsturtz-mischief.png'

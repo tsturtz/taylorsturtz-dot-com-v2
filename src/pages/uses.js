@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import { Link } from 'gatsby'
-import 'typeface-montserrat'
+import 'typeface-bitter'
 import 'typeface-merriweather'
 
 import { rhythm } from '../utils/typography'
@@ -11,7 +11,7 @@ class UsesPage extends PureComponent {
   render() {
     return (
       <Layout location={this.props.location} style={{ background: 'black' }}>
-        <h1 style={{ color: '#4D3E82', textAlign: 'center', fontFamily: 'Montserrat, sans-serif' }}>
+        <h1 style={{ color: '#4D3E82', textAlign: 'center', fontFamily: 'Bitter, serif' }}>
           I'm not influential enough to have a /uses page 🙃
         </h1>
         <hr style={{ marginTop: '2rem' }} />

@@ -17,10 +17,9 @@ class NotFoundPage extends PureComponent {
             }}
             to={'/'}
           >
-            Musings about web dev
+            Taylor Sturtz dev blog and portfolio
           </Link>
         </h1>
-        <h3 style={{ marginTop: 0 }}>(Taylor Sturtz's blog)</h3>
         {/* <Bio /> */}
         <hr style={{ marginTop: '2rem' }} />
         <h2>😱 404 Not Found</h2>

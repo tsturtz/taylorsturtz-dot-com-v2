@@ -30,7 +30,7 @@ class BlogPostTemplate extends Component {
           <span
             key={idx}
             style={{
-              fontFamily: 'Montserrat, sans-serif',
+              fontFamily: 'Bitter, serif',
               fontSize: rhythm(1 / 3),
               borderRadius: rhythm(10),
               padding: '.2rem .5rem',
@@ -54,7 +54,7 @@ class BlogPostTemplate extends Component {
           meta={[{ name: 'description', content: siteDescription }]}
           title={`${post.frontmatter.title} | ${siteTitle}`}
         />
-        <h1 style={{ marginBottom: rhythm(1) }}>{post.frontmatter.title}</h1>
+        <h1 style={{ marginBottom: rhythm(1), fontFamily: 'Bitter, serif' }}>{post.frontmatter.title}</h1>
         <p
           style={{
             ...scale(-1 / 5),

@@ -17,6 +17,7 @@ class Layout extends Component {
             marginBottom: rhythm(1),
             marginTop: 0,
             lineHeight: '3rem',
+            fontFamily: 'Bitter, serif',
           }}
         >
           <Link
@@ -36,7 +37,7 @@ class Layout extends Component {
         <h3
           style={{
             ...scale(.5),
-            fontFamily: 'Montserrat, sans-serif',
+            fontFamily: 'Bitter, serif',
             marginTop: 0,
             marginBottom: rhythm(-1.25),
           }}
