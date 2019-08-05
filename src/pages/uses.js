@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react'
 import { Link } from 'gatsby'
 import 'typeface-bitter'
-import 'typeface-merriweather'
 
 import { rhythm } from '../utils/typography'
 import Layout from '../components/Layout'

@@ -3,7 +3,6 @@ import { Link } from 'gatsby'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import Masonry from 'react-masonry-component'
 import 'typeface-bitter'
-import 'typeface-merriweather'
 
 import { rhythm } from '../utils/typography'
 import Layout from '../components/Layout'

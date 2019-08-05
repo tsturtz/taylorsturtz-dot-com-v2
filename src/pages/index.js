@@ -6,6 +6,13 @@ import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import { rhythm } from '../utils/typography'
 
+const portfolioGrid = {
+  display: 'grid',
+  gridTemplateAreas: `'left center right'`,
+  gridGap: '10px',
+  padding: '10px',
+}
+
 class BlogIndex extends Component {
   render() {
     const { data } = this.props;
@@ -21,6 +28,33 @@ class BlogIndex extends Component {
           title={siteTitle}
         />
         <Bio />
+        <p style={{ marginTop: '30px' }}>
+          I'm a software developer amongst other things... soccer fan, family man, nerd. I write empathetic code to build apps that users want to connect with. Regardless of the platform (web/mobile/CLI etc.), solving challenging problems and considering UX/DX is my jam.
+          <br /><br />
+          I currently work as a <em>Software Developer</em> pioneering front-end projects at <a href="https://www.ytel.com" className="greenTheme" target="blank_">Ytel</a>, a telecommunications API platform in Foothill Ranch, CA.
+        </p>
+        {/* PROJECTS */}
+        <blockquote>
+          <h3 id="projects">Projects</h3>
+        </blockquote>
+        <div style={portfolioGrid}>
+          <div style={{ gridArea: 'left' }}>
+            Web<br />
+            <a href="https://tsturtz.github.io/angularJs-material-todoList/" className="greenTheme" target="blank_">Angular To-Do App</a><br />
+            <a href="http://www.meetup-map.com" className="greenTheme" target="blank_">Meetup Map</a><br />
+            <a href="http://realvalue.io" className="greenTheme" target="blank_">Real Value</a>
+          </div>
+          <div style={{ gridArea: 'right' }}>
+            Mobile<br />
+            <a href="https://github.com/tsturtz/i-want-my-bbtv" className="greenTheme" target="blank_">I Want My BB-TV</a><br />
+            Bot<br />
+            <a href="https://github.com/tsturtz/soccer6-slackbot-golang" className="greenTheme" target="blank_">Soccer6 Slack Bot</a>
+          </div>
+        </div>
+        {/* BLOG */}
+        <blockquote>
+          <h3 id="blog">Blog</h3>
+        </blockquote>
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
 

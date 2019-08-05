@@ -10,33 +10,33 @@ class Layout extends Component {
     let header
 
     if (location.pathname === rootPath) {
-      header = (
-        <h1
-          style={{
-            ...scale(1),
-            marginBottom: rhythm(1),
-            marginTop: 0,
-            lineHeight: '3rem',
-            fontFamily: 'Bitter, serif',
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: '#4D3E82',
-            }}
-            to={'/'}
-          >
-            {title}
-          </Link>
-        </h1>
-      )
+      // header = (
+      //   <h1
+      //     style={{
+      //       ...scale(1),
+      //       marginBottom: rhythm(1),
+      //       marginTop: 0,
+      //       lineHeight: '3rem',
+      //       fontFamily: 'Bitter, serif',
+      //     }}
+      //   >
+      //     <Link
+      //       style={{
+      //         boxShadow: 'none',
+      //         textDecoration: 'none',
+      //         color: '#4D3E82',
+      //       }}
+      //       to={'/'}
+      //     >
+      //       {title}
+      //     </Link>
+      //   </h1>
+      // )
     } else {
       header = (
         <h3
           style={{
-            ...scale(.5),
+            fontSize: rhythm(.5),
             fontFamily: 'Bitter, serif',
             marginTop: 0,
             marginBottom: rhythm(-1.25),

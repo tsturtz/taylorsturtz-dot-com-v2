@@ -3,7 +3,6 @@ import { Link } from 'gatsby'
 
 // Import typefaces
 import 'typeface-bitter'
-import 'typeface-merriweather'
 
 import profilePic from '../assets/profile-pics/taylorsturtz-mischief.png'
 import { rhythm } from '../utils/typography'
@@ -25,13 +24,12 @@ class Bio extends Component {
             }}
           />
         </Link>
-        <p style={{ marginBottom: 0, marginLeft: '10px', lineHeight: '1.5' }}>
-          <span style={{ paddingBottom: '5px' }}>👋Hi, I'm Taylor. I write about my web dev experiences here.</span><br />
+        <p style={{ marginBottom: 0, marginLeft: '10px', lineHeight: '1.5', fontFamily: 'Bitter, serif' }}>
+          <span style={{ paddingBottom: '5px', fontSize: rhythm(.75) }}>Hi 👋 I'm Taylor (Sturtz)</span><br />
           <span>
             Check me out on
             <a href="https://github.com/tsturtz" className="greenTheme" target="_blank"> GitHub </a>
-            &bull;
-            Follow me on
+            and
             <a href="https://twitter.com/taylorsturtz" className="greenTheme" target="_blank"> Twitter</a>
           </span>
         </p>
