@@ -5,10 +5,14 @@ import Helmet from 'react-helmet'
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import { rhythm } from '../utils/typography'
+import todoGif from '../assets/todo-square-optimized.gif'
+import meetupmapGif from '../assets/meetupmap-square-optimized-small.gif'
+import realValueGif from '../assets/realvalue-square-optimized-small.gif'
+import soccer6 from '../assets/soccer6bot-square.png'
 
 const portfolioGrid = {
   display: 'grid',
-  gridTemplateAreas: `'left center right'`,
+  gridTemplateAreas: `'left right'`,
   gridGap: '10px',
   padding: '10px',
 }
@@ -29,31 +33,166 @@ class BlogIndex extends Component {
         />
         <Bio />
         <p style={{ marginTop: '30px' }}>
-          I'm a software developer amongst other things... soccer fan, family man, nerd. I write empathetic code to build apps that users want to connect with. Regardless of the platform (web/mobile/CLI etc.), solving challenging problems and considering UX/DX is my jam.
+          I'm a software developer amongst other things... eg: family man, soccer fan, music nerd. I write clean, empathetic code and build apps that users connect with directly. Regardless of the platform (web, mobile, CLI etc.), <strong>solving difficult problems and building UX/DX is my jam</strong>.
           <br /><br />
-          I currently work as a <em>Software Developer</em> pioneering front-end projects at <a href="https://www.ytel.com" className="greenTheme" target="blank_">Ytel</a>, a telecommunications API platform in Foothill Ranch, CA.
+          I currently work as a Software Developer pioneering front-end web projects at <a href="https://www.ytel.com" className="greenTheme" target="_blank">Ytel</a>, a telecommunications API platform in Foothill Ranch, CA.
+          <br /><br />
+          Take a look at my personal <a href="#projects" className="greenTheme">projects</a> and <a href="#blog" className="greenTheme">blog</a> below and <a href="#contact" className="greenTheme">reach out</a> if you'd like to chat.
         </p>
         {/* PROJECTS */}
         <blockquote>
-          <h3 id="projects">Projects</h3>
+          <h3 id="projects"><strong className="accent">Projects</strong></h3>
         </blockquote>
         <div style={portfolioGrid}>
           <div style={{ gridArea: 'left' }}>
-            Web<br />
-            <a href="https://tsturtz.github.io/angularJs-material-todoList/" className="greenTheme" target="blank_">Angular To-Do App</a><br />
-            <a href="http://www.meetup-map.com" className="greenTheme" target="blank_">Meetup Map</a><br />
-            <a href="http://realvalue.io" className="greenTheme" target="blank_">Real Value</a>
+            <span
+              style={{
+                fontFamily: 'Bitter, serif',
+                fontSize: rhythm(.5),
+                borderRadius: rhythm(10),
+                padding: '.2rem .5rem',
+                marginRight: '.4rem',
+                backgroundColor: '#36B5A2',
+                color: '#fff',
+                verticalAlign: 'middle',
+                boxShadow: '1px 1px 0px 0px #00ffda',
+                whiteSpace: 'nowrap',
+              }}
+            >Web
+            </span>
+            <br /><br />
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <img
+                src={todoGif}
+                alt={`Todo App`}
+                style={{
+                  marginRight: rhythm(1 / 2),
+                  marginBottom: 0,
+                  width: rhythm(2),
+                  // clipPath: 'circle(50% at 50% 50%)',
+                }}
+              />
+              <div style={{ paddingRight: rhythm(1), lineHeight: '1.5' }}>
+                <p style={{ marginBottom: 0 }}><a href="https://tsturtz.github.io/angularJs-material-todoList/" className="greenTheme" target="_blank">To-do For You</a><br /></p>
+                <p style={{ marginBottom: 0, fontSize: rhythm(.4), color: '#ababab', fontStyle: 'italic' }}>
+                  AngularJS / Material / Firebase Auth
+                </p>
+              </div>
+            </div>
+            <br />
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <img
+                src={meetupmapGif}
+                alt={`Meetup Map`}
+                style={{
+                  marginRight: rhythm(1 / 2),
+                  marginBottom: 0,
+                  width: rhythm(2),
+                  // clipPath: 'circle(50% at 50% 50%)',
+                }}
+              />
+              <div style={{ paddingRight: rhythm(1), lineHeight: '1.5' }}>
+                <p style={{ marginBottom: 0 }}><a href="http://www.meetup-map.com" className="greenTheme" target="_blank">Meetup Map</a><br /></p>
+                <p style={{ marginBottom: 0, fontSize: rhythm(.4), color: '#ababab', fontStyle: 'italic' }}>
+                  jQuery / Materialize
+                </p>
+              </div>
+            </div>
+            <br />
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <img
+                src={realValueGif}
+                alt={`Real Value`}
+                style={{
+                  marginRight: rhythm(1 / 2),
+                  marginBottom: 0,
+                  width: rhythm(2),
+                  // clipPath: 'circle(50% at 50% 50%)',
+                }}
+              />
+              <div style={{ paddingRight: rhythm(1), lineHeight: '1.5' }}>
+                <p style={{ marginBottom: 0 }}><a href="http://realvalue.io" className="greenTheme" target="_blank">Real Value</a><br /></p>
+                <p style={{ marginBottom: 0, fontSize: rhythm(.4), color: '#ababab', fontStyle: 'italic' }}>
+                  Angular / Material / Leaflet / Firebase DB
+                </p>
+              </div>
+            </div>
           </div>
           <div style={{ gridArea: 'right' }}>
-            Mobile<br />
-            <a href="https://github.com/tsturtz/i-want-my-bbtv" className="greenTheme" target="blank_">I Want My BB-TV</a><br />
-            Bot<br />
-            <a href="https://github.com/tsturtz/soccer6-slackbot-golang" className="greenTheme" target="blank_">Soccer6 Slack Bot</a>
+            <span
+              style={{
+                fontFamily: 'Bitter, serif',
+                fontSize: rhythm(.5),
+                borderRadius: rhythm(10),
+                padding: '.2rem .5rem',
+                marginRight: '.4rem',
+                backgroundColor: '#36B5A2',
+                color: '#fff',
+                verticalAlign: 'middle',
+                boxShadow: '1px 1px 0px 0px #00ffda',
+                whiteSpace: 'nowrap',
+              }}
+            >Mobile
+            </span>
+            <br /><br />
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <img
+                src={soccer6}
+                alt={`Soccer6 Bot`}
+                style={{
+                  marginRight: rhythm(1 / 2),
+                  marginBottom: 0,
+                  width: rhythm(2),
+                  // clipPath: 'circle(50% at 50% 50%)',
+                }}
+              />
+              <div style={{ paddingRight: rhythm(1), lineHeight: '1.5' }}>
+                <p style={{ marginBottom: 0 }}><a href="https://github.com/tsturtz/i-want-my-bbtv" className="greenTheme" target="_blank">I Want My BB-TV</a><br /></p>
+                <p style={{ marginBottom: 0, fontSize: rhythm(.4), color: '#ababab', fontStyle: 'italic' }}>
+                  React Native / Node (Express) / Mongo DB
+                </p>
+              </div>
+            </div>
+            <br />
+            <span
+              style={{
+                fontFamily: 'Bitter, serif',
+                fontSize: rhythm(.5),
+                borderRadius: rhythm(10),
+                padding: '.2rem .5rem',
+                marginRight: '.4rem',
+                backgroundColor: '#36B5A2',
+                color: '#fff',
+                verticalAlign: 'middle',
+                boxShadow: '1px 1px 0px 0px #00ffda',
+                whiteSpace: 'nowrap',
+              }}
+            >Bots
+            </span>
+            <br /><br />
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <img
+                src={soccer6}
+                alt={`Soccer6 Bot`}
+                style={{
+                  marginRight: rhythm(1 / 2),
+                  marginBottom: 0,
+                  width: rhythm(2),
+                  // clipPath: 'circle(50% at 50% 50%)',
+                }}
+              />
+              <div style={{ paddingRight: rhythm(1), lineHeight: '1.5' }}>
+                <p style={{ marginBottom: 0 }}><a href="https://github.com/tsturtz/soccer6-slackbot-golang" className="greenTheme" target="_blank">Soccer6 Slack Bot</a><br /></p>
+                <p style={{ marginBottom: 0, fontSize: rhythm(.4), color: '#ababab', fontStyle: 'italic' }}>
+                  Golang
+                </p>
+              </div>
+            </div>
           </div>
         </div>
         {/* BLOG */}
         <blockquote>
-          <h3 id="blog">Blog</h3>
+          <h3 id="blog"><strong className="accent">Blog</strong></h3>
         </blockquote>
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
@@ -85,7 +224,7 @@ class BlogIndex extends Component {
           return (
             <div key={node.fields.slug}>
               <h3 style={{ marginBottom: 0 }}>
-                <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
+                <Link className="greyLink" style={{ boxShadow: 'none' }} to={node.fields.slug}>
                   {title}
                 </Link>
               </h3>
@@ -101,6 +240,13 @@ class BlogIndex extends Component {
             </div>
           )
         })}
+        {/* <blockquote>
+          <h3 id="blog"><strong className="accent">Resume</strong></h3>
+        </blockquote> */}
+        <blockquote>
+          <h3 id="blog"><strong className="accent">Contact</strong></h3>
+        </blockquote>
+        ✉️ taylorsturtz@gmail.com
       </Layout>
     )
   }

@@ -5,6 +5,7 @@ import Masonry from 'react-masonry-component'
 import 'typeface-bitter'
 
 import { rhythm } from '../utils/typography'
+import FooterBio from '../components/FooterBio'
 import Layout from '../components/Layout'
 import profilePic from '../assets/profile-pics/taylorsturtz-mischief.png'
 
@@ -62,53 +63,25 @@ class GifsPage extends Component {
     const { copiedUrl, copiedAlt, dimmer } = this.state;
     return (
       <Layout location={this.props.location} style={{ background: 'black' }}>
-        <h1 style={{ color: '#4D3E82', textAlign: 'center', fontFamily: 'Bitter, serif' }}>
-          A Choice (👌) Collection of GIFs
+        <h1 style={{ textAlign: 'center', fontFamily: 'Bitter, serif' }}>
+          A Choice 👌 Collection of GIFs
         </h1>
         <hr style={{ marginTop: '2rem' }} />
-          {copiedUrl && (
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', border: '1px solid #36B5A2', margin: '0 10px 20px', padding: '5px 0' }}>
-              <div>'<strong>{copiedAlt}</strong>' was copied to your clipboard</div>
-              <div style={{ fontSize: '10px' }}>{<em>{copiedUrl}</em>}</div>
-            </div>
-          )}
-          <Masonry
-            elementType={'ul'}
-            options={masonryOptions}
-            disableImagesLoaded={false}
-            updateOnEachImageLoad={true}
-            imagesLoadedOptions={imagesLoadedOptions}
-          >
-            {this.gifs}
-          </Masonry>
-        <hr style={{ marginTop: '2rem' }} />
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 10px' }}>
-          <div style={{ display: 'flex', alignItems: 'center' }}>
-            <img
-              src={profilePic}
-              alt="Taylor Sturtz"
-              style={{
-                marginRight: rhythm(1 / 2),
-                marginBottom: 0,
-                width: rhythm(2),
-                height: rhythm(2),
-              }}
-            />
-            <div style={{ paddingRight: rhythm(1), lineHeight: '1.5' }}>
-              <p style={{ marginBottom: 0 }}>Taylor Sturtz</p>
-              <p style={{ marginBottom: 0, fontSize: rhythm(.4), color: '#ababab', fontStyle: 'italic' }}>
-                Software Developer
-              </p>
-            </div>
+        {copiedUrl && (
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', border: '1px solid #36B5A2', margin: '0 10px 20px', padding: '5px 0' }}>
+            <div>'<strong className="accent">{copiedAlt}</strong>' was copied to your clipboard</div>
+            <div style={{ fontSize: '10px' }}>{<em>{copiedUrl}</em>}</div>
           </div>
-          <p style={{ marginBottom: 0, fontSize: rhythm(.4), fontStyle: 'italic' }}>
-            <a href="/" target="_blank">Blog</a>
-            &nbsp;&bull;&nbsp;
-            <a href="https://github.com/tsturtz" target="_blank">GitHub</a>
-            &nbsp;&bull;&nbsp;
-            <a href="https://twitter.com/taylorsturtz" target="_blank">Twitter</a>
-          </p>
-        </div>
+        )}
+        <Masonry
+          elementType={'ul'}
+          options={masonryOptions}
+          disableImagesLoaded={false}
+          updateOnEachImageLoad={true}
+          imagesLoadedOptions={imagesLoadedOptions}
+        >
+          {this.gifs}
+        </Masonry>
       </Layout>
     )
   }

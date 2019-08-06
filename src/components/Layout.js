@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import { Link } from 'gatsby'
-
 import { rhythm, scale } from '../utils/typography'
+import FooterBio from '../components/FooterBio'
 
 class Layout extends Component {
   render() {
@@ -24,7 +24,7 @@ class Layout extends Component {
       //       style={{
       //         boxShadow: 'none',
       //         textDecoration: 'none',
-      //         color: '#4D3E82',
+      //         color: '#36B5A2',
       //       }}
       //       to={'/'}
       //     >
@@ -46,11 +46,10 @@ class Layout extends Component {
             style={{
               boxShadow: 'none',
               textDecoration: 'none',
-              color: '#4D3E82',
             }}
             to={'/'}
           >
-            {title}
+            👈 Back
           </Link>
         </h3>
       )
@@ -67,6 +66,8 @@ class Layout extends Component {
         >
           {header}
           {children}
+          <hr style={{ marginTop: '2rem' }} />
+          <FooterBio />
           <hr style={{ marginTop: '1.5rem' }} />
           👨‍💻 <code>npx taylorsturtz</code>
         </div>
