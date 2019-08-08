@@ -237,3 +237,59 @@ pre[data-line] {
 .language-bash .token.operator {
   color: inherit;
 }
+
+.portfolioGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(5, 20%);
+  grid-template-areas:
+    'l1 r1'
+    'l2 r2'
+    'l3 r3'
+    'l4 r4'
+    'l5 r5'
+  ;
+  grid-gap: 10px;
+  height: 250px;
+  padding-bottom: 50px;
+  align-items: center;
+}
+.grid1 { grid-area: l1; }
+.grid2 { grid-area: l2; }
+.grid3 { grid-area: l3; }
+.grid4 { grid-area: l4; }
+.grid5 { grid-area: l5; }
+
+.grid6 { grid-area: r1; }
+.grid7 { grid-area: r2; }
+.grid8 { grid-area: r3; }
+.grid9 { grid-area: r4; }
+.grid10 { grid-area: r5; }
+
+/* Mobile: only update changed properties */
+@media screen and (max-width : 650px) {
+  .portfolioGrid {
+    grid-template-columns: repeat(1, 100%);
+    grid-template-rows: repeat(10, 10%);
+    grid-template-areas:
+      'l1'
+      'l2'
+      'l3'
+      'l4'
+      'l5'
+      'l6'
+      'l7'
+      'l8'
+      'l9'
+      'l10'
+    ;
+    height: 500px;
+    padding-bottom: 100px;
+  }
+
+  .grid6 { grid-area: l6; }
+  .grid7 { grid-area: l7; }
+  .grid8 { grid-area: l8; }
+  .grid9 { grid-area: l9; }
+  .grid10 { grid-area: l10; }
+}

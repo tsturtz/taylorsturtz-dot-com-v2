@@ -16,23 +16,6 @@ import semanticUiReactCountriesGif from '../assets/semanticUiReactCountriesOPT.g
 
 import '@mdi/font/css/materialdesignicons.min.css';
 
-const portfolioGrid = {
-  display: 'grid',
-  gridTemplateColumns: 'repeat(2, 48%)',
-  gridTemplateRows: 'repeat(4, 25%)',
-  gridTemplateAreas: `
-    'l1 r1'
-    'l2 r2'
-    'l3 r3'
-    'l4 r4'
-    'l5 r5'
-  `,
-  gridGap: '10px',
-  height: '250px',
-  paddingBottom: '80px',
-  alignItems: 'center',
-}
-
 const lightboxStyles = {
   maxHeight: '80vh',
   maxWidth: '90vw',
@@ -296,9 +279,9 @@ class BlogIndex extends Component {
             <h3 id="projects" style={{ zIndex: 0 }}><strong className="accent">Projects</strong></h3>
           </blockquote>
 
-          <div style={portfolioGrid}>
+          <div className="portfolioGrid">
 
-            <div style={{ gridArea: 'l1' }}>
+            <div className="grid1">
               <span
                 style={{
                   fontFamily: 'Bitter, serif',
@@ -316,7 +299,7 @@ class BlogIndex extends Component {
               </span>
             </div>
 
-            <div style={{ gridArea: 'l2' }}>
+            <div className="grid2">
               <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
                 <span className="mdi mdi-arrow-right" style={{ marginRight: '5px', color: '#ababab' }} />
                 <div style={{ paddingRight: rhythm(1), lineHeight: '1.5' }}>
@@ -351,7 +334,7 @@ class BlogIndex extends Component {
               </div>
             </div>
 
-            <div style={{ gridArea: 'l3' }}>
+            <div className="grid3">
               <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
                 <span className="mdi mdi-arrow-right" style={{ marginRight: '5px', color: '#ababab' }} />
                 <div style={{ paddingRight: rhythm(1), lineHeight: '1.5' }}>
@@ -373,7 +356,7 @@ class BlogIndex extends Component {
               </div>
             </div>
 
-            <div style={{ gridArea: 'l4' }}>
+            <div className="grid4">
               <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
                 <span className="mdi mdi-arrow-right" style={{ marginRight: '5px', color: '#ababab' }} />
                 <div style={{ paddingRight: rhythm(1), lineHeight: '1.5' }}>
@@ -395,7 +378,7 @@ class BlogIndex extends Component {
               </div>
             </div>
 
-            <div style={{ gridArea: 'l5' }}>
+            <div className="grid5">
               <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
                 <span className="mdi mdi-arrow-right" style={{ marginRight: '5px', color: '#ababab' }} />
                 <div style={{ paddingRight: rhythm(1), lineHeight: '1.5' }}>
@@ -417,7 +400,7 @@ class BlogIndex extends Component {
               </div>
             </div>
 
-            <div style={{ gridArea: 'r1' }}>
+            <div className="grid6">
               <span
                 style={{
                   fontFamily: 'Bitter, serif',
@@ -435,7 +418,7 @@ class BlogIndex extends Component {
               </span>
             </div>
 
-            <div style={{ gridArea: 'r2' }}>
+            <div className="grid7">
               <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
                 <span className="mdi mdi-arrow-right" style={{ marginRight: '5px', color: '#ababab' }} />
                 <div style={{ paddingRight: rhythm(1), lineHeight: '1.5' }}>
@@ -457,7 +440,7 @@ class BlogIndex extends Component {
               </div>
             </div>
 
-            <div style={{ gridArea: 'r3' }}>
+            <div className="grid8">
               <span
                 style={{
                   fontFamily: 'Bitter, serif',
@@ -475,7 +458,7 @@ class BlogIndex extends Component {
               </span>
             </div>
 
-            <div style={{ gridArea: 'r4' }}>
+            <div className="grid9">
               <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
                 <span className="mdi mdi-arrow-right" style={{ marginRight: '5px', color: '#ababab' }} />
                 <div style={{ paddingRight: rhythm(1), lineHeight: '1.5' }}>
@@ -497,7 +480,7 @@ class BlogIndex extends Component {
               </div>
             </div>
 
-            <div style={{ gridArea: 'r5' }}>
+            <div className="grid10">
               <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
                 <span className="mdi mdi-arrow-right" style={{ marginRight: '5px', color: '#ababab' }} />
                 <div style={{ paddingRight: rhythm(1), lineHeight: '1.5' }}>
