@@ -13,17 +13,15 @@ class Bio extends Component {
       <div
         style={{ display: 'flex', alignItems: 'center' }}
       >
-        <Link to={'/'}>
-          <img
-            src={profilePic}
-            alt={`Taylor Sturtz`}
-            style={{
-              marginRight: rhythm(1 / 2),
-              marginBottom: 0,
-              width: rhythm(3),
-            }}
-          />
-        </Link>
+        <img
+          src={profilePic}
+          alt={`Taylor Sturtz`}
+          style={{
+            marginRight: rhythm(1 / 2),
+            marginBottom: 0,
+            width: rhythm(3),
+          }}
+        />
         <p style={{ marginBottom: 0, marginLeft: '10px', lineHeight: '1.5', fontFamily: 'Bitter, serif' }}>
           <span style={{ paddingBottom: '5px', fontSize: rhythm(.75) }}>Hi 👋 I'm Taylor (Sturtz)</span><br />
           <span>

@@ -4,7 +4,7 @@ img, span.gatsby-resp-image-background-image {
 .small-img {
   width: 100px;
 }
-a:hover {
+a:hover, .linkLikeStyle:hover, .whiteLink:hover {
   color: #f3bc34;
 }
 h4 {
@@ -17,12 +17,16 @@ h3 {
 .greyLink {
   color: #4b4b4b;
 }
+.whiteLink {
+  color: #FFF;
+}
 .greenTheme {
   color: #36B5A2;
 }
 
 .accent {
   position: relative;
+  z-index: -1;
 }
 .accent::after {
   content: '';
