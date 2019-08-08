@@ -315,7 +315,7 @@ class BlogIndex extends Component {
                 <span className="mdi mdi-arrow-right" style={{ marginRight: '5px', color: '#ababab' }} />
                 <div style={{ paddingRight: rhythm(1), lineHeight: '1.5' }}>
                   {(() => {
-                    if (window.location !== window.parent.location) {
+                    if (location !== parent.location) {
                       return (
                         <Fragment>
                           <p style={{ marginBottom: 0 }} className="greenTheme">
