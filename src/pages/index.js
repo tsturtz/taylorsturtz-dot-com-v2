@@ -41,7 +41,14 @@ const lightboxStyles = {
 
 class BlogIndex extends Component {
   state = {
+    inIFrame: false,
     lightboxIndex: null,
+  }
+
+  componentDidMount = () => {
+    if (typeof window !== 'undefined' && window.location !== window.parent.location) {
+      this.setState({ inIFrame: true });
+    }
   }
 
   setLightboxIndex = (e) => {
@@ -56,7 +63,7 @@ class BlogIndex extends Component {
     const siteDescription = data.site.siteMetadata.description
     const posts = data.allMarkdownRemark.edges
 
-    const { lightboxIndex } = this.state;
+    const { inIFrame, lightboxIndex } = this.state;
 
     return (
       <Fragment>
@@ -315,19 +322,16 @@ class BlogIndex extends Component {
                 <span className="mdi mdi-arrow-right" style={{ marginRight: '5px', color: '#ababab' }} />
                 <div style={{ paddingRight: rhythm(1), lineHeight: '1.5' }}>
                   {(() => {
-                    if (typeof window !== 'undefined' && window.location !== window.parent.location) {
-                      return (
-                        <Fragment>
-                          <p style={{ marginBottom: 0 }} className="greenTheme">
-                            This site
-                          </p>
-                          <p style={{ marginBottom: 0, fontSize: rhythm(.4), color: '#ababab', fontStyle: 'italic' }}>
-                            &lt;iframe/&gt; rEcUrSiOn!
-                          </p>
-                        </Fragment>
-                      )
-                    }
-                    return (
+                    {inIFrame ? (
+                      <Fragment>
+                        <p style={{ marginBottom: 0 }} className="greenTheme">
+                          This site
+                        </p>
+                        <p style={{ marginBottom: 0, fontSize: rhythm(.4), color: '#ababab', fontStyle: 'italic' }}>
+                          &lt;iframe/&gt; rEcUrSiOn!
+                        </p>
+                      </Fragment>
+                    ) : (
                       <Fragment>
                         <p
                           style={{ marginBottom: 0, cursor: 'pointer' }}
@@ -344,8 +348,7 @@ class BlogIndex extends Component {
                           React / Gatsby / Netlify
                         </p>
                       </Fragment>
-                    )
-                  })()}
+                    )}
                 </div>
               </div>
             </div>
