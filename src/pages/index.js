@@ -104,8 +104,7 @@ class BlogIndex extends Component {
               {lightboxIndex === 0 && (
                 <Fragment>
                   <iframe
-                    // src="https://taylorsturtz.com"
-                    src="http://localhost:8000"
+                    src="https://taylorsturtz.com"
                     style={{
                       ...lightboxStyles,
                       width: '1000px',
