@@ -34,7 +34,8 @@ const portfolioGrid = {
 }
 
 const lightboxStyles = {
-  maxHeight: '75vh',
+  maxHeight: '80vh',
+  maxWidth: '90vw',
   marginBottom: 0,
   boxShadow: '0px 20px 35px rgba(0,0,0,0.5)',
 }
@@ -108,8 +109,7 @@ class BlogIndex extends Component {
                     style={{
                       ...lightboxStyles,
                       width: '1000px',
-                      maxWidth: '45.5rem',
-                      height: '450px',
+                      height: '625px',
                       backgroundColor: 'white',
                       borderRadius: '10px',
                       border: '1px solid white',
