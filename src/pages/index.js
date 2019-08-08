@@ -316,7 +316,7 @@ class BlogIndex extends Component {
                 <div style={{ paddingRight: rhythm(1), lineHeight: '1.5' }}>
                   {(() => {
                     if (typeof window !== 'undefined') {
-                      if (window && window.location !== window.parent.location) {
+                      if (window.location !== window.parent.location) {
                         return (
                           <Fragment>
                             <p style={{ marginBottom: 0 }} className="greenTheme">
@@ -328,8 +328,6 @@ class BlogIndex extends Component {
                           </Fragment>
                         )
                       }
-                      return null;
-                    } else {
                       return (
                         <Fragment>
                           <p
@@ -349,6 +347,7 @@ class BlogIndex extends Component {
                         </Fragment>
                       )
                     }
+                    return null;
                   })()}
                 </div>
               </div>
