@@ -315,17 +315,20 @@ class BlogIndex extends Component {
                 <span className="mdi mdi-arrow-right" style={{ marginRight: '5px', color: '#ababab' }} />
                 <div style={{ paddingRight: rhythm(1), lineHeight: '1.5' }}>
                   {(() => {
-                    if (window && window.location !== window.parent.location) {
-                      return (
-                        <Fragment>
-                          <p style={{ marginBottom: 0 }} className="greenTheme">
-                            This site
-                          </p>
-                          <p style={{ marginBottom: 0, fontSize: rhythm(.4), color: '#ababab', fontStyle: 'italic' }}>
-                            &lt;iframe/&gt; rEcUrSiOn!
-                          </p>
-                        </Fragment>
-                      )
+                    if (window) {
+                      if (window && window.location !== window.parent.location) {
+                        return (
+                          <Fragment>
+                            <p style={{ marginBottom: 0 }} className="greenTheme">
+                              This site
+                            </p>
+                            <p style={{ marginBottom: 0, fontSize: rhythm(.4), color: '#ababab', fontStyle: 'italic' }}>
+                              &lt;iframe/&gt; rEcUrSiOn!
+                            </p>
+                          </Fragment>
+                        )
+                      }
+                      return null;
                     } else {
                       return (
                         <Fragment>
