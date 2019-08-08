@@ -315,39 +315,36 @@ class BlogIndex extends Component {
                 <span className="mdi mdi-arrow-right" style={{ marginRight: '5px', color: '#ababab' }} />
                 <div style={{ paddingRight: rhythm(1), lineHeight: '1.5' }}>
                   {(() => {
-                    if (typeof window !== 'undefined') {
-                      if (window.location !== window.parent.location) {
-                        return (
-                          <Fragment>
-                            <p style={{ marginBottom: 0 }} className="greenTheme">
-                              This site
-                            </p>
-                            <p style={{ marginBottom: 0, fontSize: rhythm(.4), color: '#ababab', fontStyle: 'italic' }}>
-                              &lt;iframe/&gt; rEcUrSiOn!
-                            </p>
-                          </Fragment>
-                        )
-                      }
+                    if (typeof window !== 'undefined' && window.location !== window.parent.location) {
                       return (
                         <Fragment>
-                          <p
-                            style={{ marginBottom: 0, cursor: 'pointer' }}
-                            className="greenTheme linkLikeStyle"
-                            lightboxindex="0"
-                            onClick={this.setLightboxIndex}
-                            onKeyUp={(e) => { if (e.which === 13 || e.which === 32) this.setLightboxIndex(e); }}
-                            role="button"
-                            tabIndex="0"
-                          >
+                          <p style={{ marginBottom: 0 }} className="greenTheme">
                             This site
                           </p>
                           <p style={{ marginBottom: 0, fontSize: rhythm(.4), color: '#ababab', fontStyle: 'italic' }}>
-                            React / Gatsby / Netlify
+                            &lt;iframe/&gt; rEcUrSiOn!
                           </p>
                         </Fragment>
                       )
                     }
-                    return null;
+                    return (
+                      <Fragment>
+                        <p
+                          style={{ marginBottom: 0, cursor: 'pointer' }}
+                          className="greenTheme linkLikeStyle"
+                          lightboxindex="0"
+                          onClick={this.setLightboxIndex}
+                          onKeyUp={(e) => { if (e.which === 13 || e.which === 32) this.setLightboxIndex(e); }}
+                          role="button"
+                          tabIndex="0"
+                        >
+                          This site
+                        </p>
+                        <p style={{ marginBottom: 0, fontSize: rhythm(.4), color: '#ababab', fontStyle: 'italic' }}>
+                          React / Gatsby / Netlify
+                        </p>
+                      </Fragment>
+                    )
                   })()}
                 </div>
               </div>
