@@ -66,7 +66,7 @@ class GifsPage extends Component {
     return (
       <Layout location={this.props.location} style={{ background: 'black' }}>
         <h1 style={{ textAlign: 'center', fontFamily: 'Bitter, serif' }}>
-          A Choice 👌 Collection of GIFs
+          A 👌 Collection of GIFs
         </h1>
         <hr style={{ marginTop: '2rem' }} />
         {copiedUrl && (

@@ -51,6 +51,8 @@ class BlogIndex extends Component {
 
     return (
       <Fragment>
+
+        {/* LIGHTBOX */}
         {lightboxIndex !== null && (
           <div
             style={{ position: 'fixed', backgroundColor: 'rgba(0,0,0,0.75)', height: '100vh', width: '100vw' }}
@@ -259,6 +261,8 @@ class BlogIndex extends Component {
             </Fragment>
           )}
         </div>
+
+        {/* LAYOUT */}
         <Layout location={this.props.location} title={siteTitle}>
           <Helmet
             htmlAttributes={{ lang: 'en' }}
@@ -267,7 +271,7 @@ class BlogIndex extends Component {
           />
           <Bio />
           <p style={{ marginTop: '30px' }}>
-            I'm a software developer amongst other things... eg: family man, soccer fan, music nerd. I write clean, empathetic code and build apps that users connect with directly. Regardless of the platform (web, mobile, CLI etc.), <strong>solving difficult problems and building UX/DX is my jam</strong>.
+            I'm a software dev amongst other things (runner / family man / soccer fan / music nerd). I write clean, empathetic code and build apps that users connect with directly. Regardless of the platform, <strong>solving difficult problems and building smooth user experiences is my jam</strong>.
             <br /><br />
             I currently work as a Software Developer pioneering front-end web projects at <a href="https://www.ytel.com" className="greenTheme" target="_blank">Ytel</a>, a telecommunications API platform in Foothill Ranch, CA.
             <br /><br />
@@ -308,8 +312,8 @@ class BlogIndex extends Component {
                       <p style={{ marginBottom: 0 }} className="greenTheme">
                         This site
                       </p>
-                      <p style={{ marginBottom: 0, fontSize: rhythm(.4), color: '#ababab', fontStyle: 'italic' }}>
-                        &lt;iframe/&gt; rEcUrSiOn!
+                      <p style={{ marginBottom: 0, fontSize: rhythm(.4), color: '#ababab' }}>
+                        🙅‍♂️ <em>&lt;iframe/&gt; rEcUrSiOn!</em>
                       </p>
                     </Fragment>
                   ) : (
@@ -391,7 +395,7 @@ class BlogIndex extends Component {
                     role="button"
                     tabIndex="0"
                   >
-                    Real Value
+                    Real Value (POC)
                   </p>
                   <p style={{ marginBottom: 0, fontSize: rhythm(.4), color: '#ababab', fontStyle: 'italic' }}>
                     AngularJS / Leaflet / D3 / Firebase
@@ -434,7 +438,7 @@ class BlogIndex extends Component {
                     I Want My BB-TV
                   </p>
                   <p style={{ marginBottom: 0, fontSize: rhythm(.4), color: '#ababab', fontStyle: 'italic' }}>
-                    React Native / Node (Express) / Mongo DB
+                    React Native / Node (Express) / MongoDB
                   </p>
                 </div>
               </div>
@@ -474,7 +478,7 @@ class BlogIndex extends Component {
                     Soccer6 Slack Bot
                   </p>
                   <p style={{ marginBottom: 0, fontSize: rhythm(.4), color: '#ababab', fontStyle: 'italic' }}>
-                    Golang (GoQuery web scraper)
+                    Golang / GoQuery (web scraper)
                   </p>
                 </div>
               </div>
@@ -496,7 +500,7 @@ class BlogIndex extends Component {
                     Semantic UI React Countries
                   </p>
                   <p style={{ marginBottom: 0, fontSize: rhythm(.4), color: '#ababab', fontStyle: 'italic' }}>
-                    Node (CLI tool) / npm
+                    Node / npm (CLI tool)
                   </p>
                 </div>
               </div>
