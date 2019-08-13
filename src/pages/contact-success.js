@@ -7,16 +7,17 @@ import FooterBio from '../components/FooterBio'
 import Layout from '../components/Layout'
 import profilePic from '../assets/profile-pics/taylorsturtz-mischief.png'
 
-class UsesPage extends PureComponent {
+class ContactSuccess extends PureComponent {
   render() {
     return (
       <Layout location={this.props.location}>
+        <img style={{ display: 'flex', margin: '60px auto 0' }} src="https://i.imgflip.com/2k8mjk.jpg" alt="Tanks"/>
         <h2 style={{ textAlign: 'center', fontFamily: 'Bitter, serif' }}>
-          I'm not influential enough to have a /uses page 🙃
+        ✔️ Your message has been sent.
         </h2>
       </Layout>
     )
   }
 }
 
-export default UsesPage
+export default ContactSuccess

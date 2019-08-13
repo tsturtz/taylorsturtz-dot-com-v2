@@ -16,20 +16,16 @@ class Bio extends Component {
         <img
           src={profilePic}
           alt={`Taylor Sturtz`}
-          style={{
-            marginRight: rhythm(1 / 2),
-            marginBottom: 0,
-            width: rhythm(3),
-          }}
+          className="bioPic"
         />
         <p style={{ marginBottom: 0, marginLeft: '10px', lineHeight: '1.5', fontFamily: 'Bitter, serif' }}>
-          <span style={{ paddingBottom: '5px', fontSize: rhythm(.75) }}>Hi 👋 I'm Taylor (Sturtz)</span><br />
-          <span style={{ color: '#4b4b4b' }}>
+          <span className="bioGreeting">Hi 👋 I'm Taylor (Sturtz)</span><br />
+          <em style={{ color: '#4b4b4b' }}>
             Check me out on
             <a href="https://github.com/tsturtz" className="greenTheme" target="_blank"> GitHub </a>
             and
             <a href="https://twitter.com/taylorsturtz" className="greenTheme" target="_blank"> Twitter</a>
-          </span>
+          </em>
         </p>
       </div>
     )

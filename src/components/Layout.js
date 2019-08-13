@@ -49,7 +49,7 @@ class Layout extends Component {
             }}
             to={'/'}
           >
-            👈 Back
+            👈 Home
           </Link>
         </h3>
       )
@@ -69,7 +69,15 @@ class Layout extends Component {
           <hr style={{ marginTop: '2rem' }} />
           <FooterBio />
           <hr style={{ marginTop: '1.5rem' }} />
-          👨‍💻 <code>npx taylorsturtz</code>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <span>👨‍💻 <code>npx taylorsturtz</code></span>
+            <div className="socialIcons">
+              <a href="https://www.linkedin.com/in/taylorsturtz/" target="_blank" className="mdi mdi-linkedin-box" />
+              <a href="https://twitter.com/taylorsturtz" target="_blank" className="mdi mdi-twitter" />
+              <a href="https://github.com/tsturtz" target="_blank" className="mdi mdi-github-circle" />
+              <a href="https://dev.to/tsturtz" target="_blank" className="mdi mdi-dev-to" />
+            </div>
+          </div>
         </div>
       </Fragment>
     )

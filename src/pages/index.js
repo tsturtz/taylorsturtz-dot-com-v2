@@ -22,6 +22,25 @@ const lightboxStyles = {
   marginBottom: 0,
   boxShadow: '0px 20px 35px rgba(0,0,0,0.5)',
 }
+const portfolioTypePillStyles = {
+  fontFamily: 'Bitter, serif',
+  fontSize: rhythm(.5),
+  borderRadius: rhythm(10),
+  padding: '.2rem .5rem',
+  marginRight: '.4rem',
+  backgroundColor: '#36B5A2',
+  color: '#fff',
+  verticalAlign: 'middle',
+  boxShadow: '1px 1px 0px 0px #00ffda',
+  whiteSpace: 'nowrap',
+}
+const contactFormInputStyles = {
+  width: '100%',
+  marginBottom: '10px',
+}
+const contactFormLabelStyles = {
+  fontSize: 'small',
+}
 
 class BlogIndex extends Component {
   state = {
@@ -271,11 +290,11 @@ class BlogIndex extends Component {
           />
           <Bio />
           <p style={{ marginTop: '30px' }}>
-            I'm a software dev amongst other things (runner / family man / soccer fan / music nerd). I write clean, empathetic code and build apps that users connect with directly. Regardless of the platform, <strong>solving difficult problems and building smooth user experiences is my jam</strong>.
+            I'm a software dev amongst other things (runner / music nerd / family man / soccer fan). I write <a href="https://www.benjaminjohnson.me/blog/empathetic-code/" target="_blank">empathetic code</a> and build applications that people connect with directly. Regardless of the platform, solving difficult problems and building smooth user experiences is my jam.
             <br /><br />
             I currently work as a Software Developer pioneering front-end web projects at <a href="https://www.ytel.com" className="greenTheme" target="_blank">Ytel</a>, a telecommunications API platform in Foothill Ranch, CA.
             <br /><br />
-            Take a look at my personal <a href="#projects" className="greenTheme">projects</a> and <a href="#blog" className="greenTheme">blog</a> below and <a href="#contact" className="greenTheme">reach out</a> if you'd like to chat.
+            <em>Don't hesitate to <a href="#contact" className="greenTheme">give me a shout</a> if you'd like to chat!</em>
           </p>
 
           {/* PROJECTS */}
@@ -285,23 +304,7 @@ class BlogIndex extends Component {
 
           <div className="portfolioGrid">
 
-            <div className="grid1">
-              <span
-                style={{
-                  fontFamily: 'Bitter, serif',
-                  fontSize: rhythm(.4),
-                  borderRadius: rhythm(10),
-                  padding: '.2rem .5rem',
-                  marginRight: '.4rem',
-                  backgroundColor: '#36B5A2',
-                  color: '#fff',
-                  verticalAlign: 'middle',
-                  boxShadow: '1px 1px 0px 0px #00ffda',
-                  whiteSpace: 'nowrap',
-                }}
-              >Web
-              </span>
-            </div>
+            <div className="grid1"><span style={portfolioTypePillStyles}>Web</span></div>
 
             <div className="grid2">
               <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
@@ -313,7 +316,7 @@ class BlogIndex extends Component {
                         This site
                       </p>
                       <p style={{ marginBottom: 0, fontSize: rhythm(.4), color: '#ababab' }}>
-                        🙅‍♂️ <em>&lt;iframe/&gt; rEcUrSiOn!</em>
+                        No <em>&lt;iFrAmE&gt; rEcUrSiOn!</em>
                       </p>
                     </Fragment>
                   ) : (
@@ -330,7 +333,7 @@ class BlogIndex extends Component {
                         This site
                       </p>
                       <p style={{ marginBottom: 0, fontSize: rhythm(.4), color: '#ababab', fontStyle: 'italic' }}>
-                        React / Gatsby / Netlify
+                        React / Gatsby / Netlify / GCP / Python
                       </p>
                     </Fragment>
                   )}
@@ -354,7 +357,7 @@ class BlogIndex extends Component {
                     Meetup Map
                   </p>
                   <p style={{ marginBottom: 0, fontSize: rhythm(.4), color: '#ababab', fontStyle: 'italic' }}>
-                    jQuery
+                    jQuery / Materialize CSS
                   </p>
                 </div>
               </div>
@@ -404,23 +407,7 @@ class BlogIndex extends Component {
               </div>
             </div>
 
-            <div className="grid6">
-              <span
-                style={{
-                  fontFamily: 'Bitter, serif',
-                  fontSize: rhythm(.4),
-                  borderRadius: rhythm(10),
-                  padding: '.2rem .5rem',
-                  marginRight: '.4rem',
-                  backgroundColor: '#36B5A2',
-                  color: '#fff',
-                  verticalAlign: 'middle',
-                  boxShadow: '1px 1px 0px 0px #00ffda',
-                  whiteSpace: 'nowrap',
-                }}
-              >Mobile
-              </span>
-            </div>
+            <div className="grid6"><span style={portfolioTypePillStyles}>Mobile</span></div>
 
             <div className="grid7">
               <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
@@ -444,23 +431,7 @@ class BlogIndex extends Component {
               </div>
             </div>
 
-            <div className="grid8">
-              <span
-                style={{
-                  fontFamily: 'Bitter, serif',
-                  fontSize: rhythm(.4),
-                  borderRadius: rhythm(10),
-                  padding: '.2rem .5rem',
-                  marginRight: '.4rem',
-                  backgroundColor: '#36B5A2',
-                  color: '#fff',
-                  verticalAlign: 'middle',
-                  boxShadow: '1px 1px 0px 0px #00ffda',
-                  whiteSpace: 'nowrap',
-                }}
-              >Other
-              </span>
-            </div>
+            <div className="grid8"><span style={portfolioTypePillStyles}>Other</span></div>
 
             <div className="grid9">
               <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
@@ -507,6 +478,7 @@ class BlogIndex extends Component {
             </div>
 
           </div>
+
           {/* BLOG */}
           <blockquote>
             <h3 id="blog"><strong className="accent">Blog</strong></h3>
@@ -557,13 +529,25 @@ class BlogIndex extends Component {
               </div>
             )
           })}
-          {/* <blockquote>
-            <h3 id="blog"><strong className="accent">Resume</strong></h3>
-          </blockquote> */}
+
+          {/* RESUME */}
+          <blockquote>
+            <h3 id="resume"><strong className="accent">Resume</strong></h3>
+          </blockquote>
+
+          {/* CONTACT */}
           <blockquote>
             <h3 id="contact"><strong className="accent">Contact</strong></h3>
           </blockquote>
-          ✉️ taylorsturtz@gmail.com
+          <form action="https://us-central1-contact-form-249703.cloudfunctions.net/contact-form2" method="POST">
+            <label htmlFor="name" style={contactFormLabelStyles}>Name</label>
+            <input type="text" id="name" name="name" style={contactFormInputStyles} />
+            <label htmlFor="email" style={contactFormLabelStyles}>Email</label>
+            <input type="email" id="email" name="email" style={contactFormInputStyles} />
+            <label htmlFor="message" style={contactFormLabelStyles}>Message</label>
+            <textarea rows="5" id="body" name="body" style={contactFormInputStyles} />
+            <input type="submit" name="Submit" className="greenTheme linkLikeStyle" style={{ border: 'none', cursor: 'pointer' }} />
+          </form>
         </Layout>
       </Fragment>
     )

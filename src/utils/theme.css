@@ -1,3 +1,8 @@
+/* body {
+  background-image: url(../assets/pattern.png);
+  background-color: rgba(155, 0, 255, 1);
+  background-blend-mode: lighten;
+} */
 img, span.gatsby-resp-image-background-image {
   border-radius: 10px !important;
 }
@@ -13,7 +18,26 @@ h4 {
 h3 {
   font-size: 1.2rem;
 }
-
+.bioPic {
+  margin-right: 12px;
+  margin-bottom: 0;
+  width: 85px;
+}
+.bioGreeting {
+  padding-bottom: 5px;
+  font-size: 22px;
+}
+.socialIcons {
+  display: flex;
+  font-size: 25px;
+}
+.socialIcons > a {
+  margin-left: 5px;
+  color: #ababab;
+}
+.socialIcons > a:hover {
+  color: #4b4b4b;
+}
 .greyLink {
   color: #4b4b4b;
 }
@@ -268,6 +292,13 @@ pre[data-line] {
 
 /* Mobile: only update changed properties */
 @media screen and (max-width : 650px) {
+  .bioPic {
+    margin-right: 5px;
+    width: 70px;
+  }
+  .bioGreeting {
+    font-size: 20px;
+  }
   .portfolioGrid {
     grid-template-columns: repeat(1, 100%);
     grid-template-rows: repeat(10, 10%);

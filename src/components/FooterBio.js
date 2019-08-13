@@ -26,11 +26,15 @@ class FooterBio extends PureComponent {
           </div>
         </div>
         <p style={{ marginBottom: 0, fontSize: rhythm(.4), fontStyle: 'italic' }}>
-          <a href="/">Blog</a>
+          <a href="/#projects">Projects</a>
           &nbsp;&bull;&nbsp;
-          <a href="https://github.com/tsturtz" target="_blank">GitHub</a>
+          <a href="/#blog">Blog</a>
           &nbsp;&bull;&nbsp;
-          <a href="https://twitter.com/taylorsturtz" target="_blank">Twitter</a>
+          <a href="/#resume">Resume</a>
+          &nbsp;&bull;&nbsp;
+          <a href="/#contact">Contact</a>
+          &nbsp;&bull;&nbsp;
+          <a href="/gifs">GIFs</a>
         </p>
       </div>
     )
