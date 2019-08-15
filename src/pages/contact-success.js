@@ -13,7 +13,7 @@ class ContactSuccess extends PureComponent {
       <Layout location={this.props.location}>
         <img style={{ display: 'flex', margin: '60px auto 0' }} src="https://i.imgflip.com/2k8mjk.jpg" alt="Tanks"/>
         <h2 style={{ textAlign: 'center', fontFamily: 'Bitter, serif' }}>
-        ✔️ Your message has been sent.
+          ✔️ Your message has been sent.
         </h2>
       </Layout>
     )

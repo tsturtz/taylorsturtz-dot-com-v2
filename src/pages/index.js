@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import { rhythm } from '../utils/typography'
+import { portfolioTypePillStyles } from '../utils/consts'
 
 import meetupmapGif from '../assets/meetupmapOPT.gif'
 import todoGif from '../assets/todoOPT.gif'
@@ -21,18 +22,6 @@ const lightboxStyles = {
   maxWidth: '90vw',
   marginBottom: 0,
   boxShadow: '0px 20px 35px rgba(0,0,0,0.5)',
-}
-const portfolioTypePillStyles = {
-  fontFamily: 'Bitter, serif',
-  fontSize: rhythm(.5),
-  borderRadius: rhythm(10),
-  padding: '.2rem .5rem',
-  marginRight: '.4rem',
-  backgroundColor: '#36B5A2',
-  color: '#fff',
-  verticalAlign: 'middle',
-  boxShadow: '1px 1px 0px 0px #00ffda',
-  whiteSpace: 'nowrap',
 }
 const contactFormInputStyles = {
   width: '100%',
@@ -290,11 +279,11 @@ class BlogIndex extends Component {
           />
           <Bio />
           <p style={{ marginTop: '30px' }}>
-            I'm a software dev amongst other things (runner / music nerd / family man / soccer fan). I write <a href="https://www.benjaminjohnson.me/blog/empathetic-code/" target="_blank">empathetic code</a> and build applications that people connect with directly. Regardless of the platform, solving difficult problems and building smooth user experiences is my jam.
+            I'm a software dev amongst other things (runner / family man / soccer fan / music nerd). I write <a href="https://www.benjaminjohnson.me/blog/empathetic-code/" target="_blank">empathetic code</a> and build applications that people connect with directly. Regardless of the platform, solving difficult problems and building smooth user experiences is my jam.
             <br /><br />
             I currently work as a Software Developer pioneering front-end web projects at <a href="https://www.ytel.com" className="greenTheme" target="_blank">Ytel</a>, a telecommunications API platform in Foothill Ranch, CA.
             <br /><br />
-            <em>Don't hesitate to <a href="#contact" className="greenTheme">give me a shout</a> if you'd like to chat!</em>
+            <em>Go ahead and <a href="#contact" className="greenTheme">give me a shout</a> if you'd like to chat.</em>
           </p>
 
           {/* PROJECTS */}
@@ -492,18 +481,7 @@ class BlogIndex extends Component {
                 return (
                   <span
                     key={idx}
-                    style={{
-                      fontFamily: 'Bitter, serif',
-                      fontSize: rhythm(1 / 3),
-                      borderRadius: rhythm(10),
-                      padding: '.2rem .5rem',
-                      marginRight: '.4rem',
-                      backgroundColor: '#36B5A2',
-                      color: '#fff',
-                      verticalAlign: 'middle',
-                      boxShadow: '1px 1px 0px 0px #00ffda',
-                      whiteSpace: 'nowrap',
-                    }}
+                    style={portfolioTypePillStyles}
                   >{tag}
                   </span>
                 )
@@ -529,11 +507,6 @@ class BlogIndex extends Component {
               </div>
             )
           })}
-
-          {/* RESUME */}
-          <blockquote>
-            <h3 id="resume"><strong className="accent">Resume</strong></h3>
-          </blockquote>
 
           {/* CONTACT */}
           <blockquote>

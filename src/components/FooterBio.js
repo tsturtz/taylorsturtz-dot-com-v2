@@ -30,11 +30,11 @@ class FooterBio extends PureComponent {
           &nbsp;&bull;&nbsp;
           <a href="/#blog">Blog</a>
           &nbsp;&bull;&nbsp;
-          <a href="/#resume">Resume</a>
-          &nbsp;&bull;&nbsp;
-          <a href="/#contact">Contact</a>
+          <a href="/resume" target="_blank">Resume</a>
           &nbsp;&bull;&nbsp;
           <a href="/gifs">GIFs</a>
+          &nbsp;&bull;&nbsp;
+          <a href="/#contact">Contact</a>
         </p>
       </div>
     )

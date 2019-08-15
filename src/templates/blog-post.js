@@ -6,6 +6,7 @@ import { DiscussionEmbed } from 'disqus-react';
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import { rhythm, scale } from '../utils/typography'
+import { portfolioTypePillStyles } from '../utils/consts'
 
 import profilePic from '../assets/profile-pics/taylorsturtz-mischief.png'
 
@@ -29,18 +30,7 @@ class BlogPostTemplate extends Component {
         return (
           <span
             key={idx}
-            style={{
-              fontFamily: 'Bitter, serif',
-              fontSize: rhythm(1 / 3),
-              borderRadius: rhythm(10),
-              padding: '.2rem .5rem',
-              marginRight: '.4rem',
-              backgroundColor: '#36B5A2',
-              color: '#fff',
-              verticalAlign: 'middle',
-              boxShadow: '1px 1px 0px 0px #00ffda',
-              whiteSpace: 'nowrap',
-            }}
+            style={portfolioTypePillStyles}
           >{tag}
           </span>
         )
