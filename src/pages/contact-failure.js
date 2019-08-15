@@ -19,7 +19,7 @@ class ContactFailure extends PureComponent {
           I have no idea where your message went.
         </h2>
         <h3 style={{ textAlign: 'center', marginTop: 0 }}>
-          Please email me directly instead:&nbsp; ✉️ taylorsturtz@gmail.com
+          Please email me directly instead: <a href="mailto:taylorsturtz@gmail.com">taylorsturtz@gmail.com</a>
         </h3>
       </Layout>
     )

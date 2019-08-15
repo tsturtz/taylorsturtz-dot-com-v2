@@ -33,13 +33,14 @@ const contactFormLabelStyles = {
 
 class BlogIndex extends Component {
   state = {
-    inIFrame: false,
+    isInIFrame: false,
     lightboxIndex: null,
+    isSubmittingContact: false,
   }
 
   componentDidMount = () => {
     if (typeof window !== 'undefined' && window.location !== window.parent.location) {
-      this.setState({ inIFrame: true });
+      this.setState({ isInIFrame: true });
     }
   }
 
@@ -55,10 +56,27 @@ class BlogIndex extends Component {
     const siteDescription = data.site.siteMetadata.description
     const posts = data.allMarkdownRemark.edges
 
-    const { inIFrame, lightboxIndex } = this.state;
+    const { isInIFrame, lightboxIndex, isSubmittingContact } = this.state;
 
     return (
       <Fragment>
+
+        {/* SUBMITTING CONTACT LOADER */}
+        {isSubmittingContact && (
+          <Fragment>
+            <div style={{ position: 'fixed', backgroundColor: 'rgba(0,0,0,0.75)', height: '100vh', width: '100vw' }} />
+            <div
+              style={{
+                position: 'fixed',
+                left: '50%',
+                top: '50%',
+                transform: 'translate(-50%, -50%)',
+              }}
+            >
+              <span className="mdi mdi-loading rotating" style={{ color: '#FFF', fontSize: '3rem' }} />
+            </div>
+          </Fragment>
+        )}
 
         {/* LIGHTBOX */}
         {lightboxIndex !== null && (
@@ -299,7 +317,7 @@ class BlogIndex extends Component {
               <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
                 <span className="mdi mdi-arrow-right" style={{ marginRight: '5px', color: '#ababab' }} />
                 <div style={{ paddingRight: rhythm(1), lineHeight: '1.5' }}>
-                  {inIFrame ? (
+                  {isInIFrame ? (
                     <Fragment>
                       <p style={{ marginBottom: 0 }} className="greenTheme">
                         This site
@@ -512,7 +530,13 @@ class BlogIndex extends Component {
           <blockquote>
             <h3 id="contact"><strong className="accent">Contact</strong></h3>
           </blockquote>
-          <form action="https://us-central1-contact-form-249703.cloudfunctions.net/contact-form2" method="POST">
+          <form
+            action="https://us-central1-contact-form-249703.cloudfunctions.net/contact-form2"
+            method="POST"
+            onSubmit={() => {
+              this.setState({ isSubmittingContact: true })
+            }}
+          >
             <label htmlFor="name" style={contactFormLabelStyles}>Name</label>
             <input type="text" id="name" name="name" style={contactFormInputStyles} />
             <label htmlFor="email" style={contactFormLabelStyles}>Email</label>
