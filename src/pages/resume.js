@@ -8,6 +8,8 @@ import FooterBio from '../components/FooterBio'
 import Layout from '../components/Layout'
 import profilePic from '../assets/profile-pics/taylorsturtz-mischief.png'
 
+import '@mdi/font/css/materialdesignicons.min.css';
+
 const hrMarginBottom = {
   marginBottom: '8px'
 }
@@ -49,7 +51,7 @@ class Resume extends PureComponent {
           marginLeft: 'auto',
           marginRight: 'auto',
           maxWidth: rhythm(26),
-          padding: '10px 0',
+          padding: '20px 0',
         }}
       >
         <div style={{ display: 'flex', justifyContent: 'space-between' }}>

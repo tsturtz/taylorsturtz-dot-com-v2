@@ -8,6 +8,8 @@ import FooterBio from '../components/FooterBio'
 import Layout from '../components/Layout'
 import profilePic from '../assets/profile-pics/taylorsturtz-mischief.png'
 
+import '@mdi/font/css/materialdesignicons.min.css';
+
 const hrMarginBottom = {
   marginBottom: '8px'
 }
