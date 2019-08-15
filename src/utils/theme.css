@@ -267,7 +267,7 @@ pre[data-line] {
   font-size: 0.85rem;
 }
 #resume .resume-contact-items {
-  font-size: 1rem;
+  font-size: 1rem !important;
 }
 #resume small {
   line-height: 1.3;
