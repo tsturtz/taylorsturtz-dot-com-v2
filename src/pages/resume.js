@@ -62,15 +62,15 @@ class Resume extends PureComponent {
             </blockquote>
           </div>
           <div id="contactInfo" style={{ margin: '11px 0 0 0', textAlign: 'right', width: '32%' }}>
-            <h3 style={{ fontSize: '1rem', margin: '0 0 5px 0', display: 'flex', justifyContent: 'space-between' }}>
+            <h3 className="resume-contact-items" style={{ margin: '0 0 5px 0', display: 'flex', justifyContent: 'space-between' }}>
               <span className="mdi mdi-phone" style={{ color: '#ababab' }} />
               <a style={{ fontWeight: '400' }} href="tel:949-500-3960">949-500-3960</a>
             </h3>
-            <h3 style={{ fontSize: '1rem', margin: '0 0 5px 0', display: 'flex', justifyContent: 'space-between' }}>
+            <h3 className="resume-contact-items" style={{ margin: '0 0 5px 0', display: 'flex', justifyContent: 'space-between' }}>
               <span className="mdi mdi-link-variant" style={{ color: '#ababab' }} />
               <a style={{ fontWeight: '400' }} href="https://taylorsturtz.com" target="_blank">taylorsturtz.com</a>
             </h3>
-            <h3 style={{ fontSize: '1rem', margin: '0 0 5px 0', display: 'flex', justifyContent: 'space-between' }}>
+            <h3 className="resume-contact-items" style={{ margin: '0 0 5px 0', display: 'flex', justifyContent: 'space-between' }}>
               <span className="mdi mdi-at" style={{ color: '#ababab' }} />
               <a style={{ fontWeight: '400' }} href="mailto:taylorsturtz@gmail.com">taylorsturtz@gmail.com</a>
             </h3>
