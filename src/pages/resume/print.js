@@ -1,9 +1,14 @@
-import React, { PureComponent } from 'react'
+import React, { PureComponent, Fragment } from 'react'
 import { rhythm } from '../../utils/typography'
 import { portfolioTypePillStylesPrint } from '../../utils/consts'
 import { ResumeComponent } from '../../components/ResumeComponent';
 
 class PrintResume extends PureComponent {
+  // componentDidMount() {
+  //   setTimeout(() => {
+  //     window.print();
+  //   }, 1000);
+  // }
   render() {
     return (
       <div
