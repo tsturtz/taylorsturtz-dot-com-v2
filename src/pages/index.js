@@ -23,12 +23,27 @@ const lightboxStyles = {
   marginBottom: 0,
   boxShadow: '0px 20px 35px rgba(0,0,0,0.5)',
 }
-const contactFormInputStyles = {
-  width: '100%',
-  marginBottom: '10px',
+const contactFormStyles = {
+  padding: '20px',
 }
 const contactFormLabelStyles = {
   fontSize: 'small',
+}
+const contactFormInputStyles = {
+  padding: '.25rem .75rem',
+  width: '100%',
+  marginBottom: '10px',
+  borderRadius: '10px',
+  border: '1px solid rgb(231, 231, 231)',
+  boxShadow: 'rgb(204, 204, 204) 1px 1px 0px 0px inset',
+  background: 'rgb(249, 249, 249)',
+}
+const contactFormSubmitButtonStyles = {
+  cursor: 'pointer',
+  padding: '.2rem 1.2rem',
+  borderRadius: '20px',
+  border: '1px solid #36B5A2',
+  boxShadow: '1px 1px 0px 0px #00ffda',
 }
 
 class BlogIndex extends Component {
@@ -297,7 +312,7 @@ class BlogIndex extends Component {
           />
           <Bio />
           <p style={{ marginTop: '30px' }}>
-            I'm a software dev amongst other things (runner / family man / soccer fan / music nerd). I write <a href="https://www.benjaminjohnson.me/blog/empathetic-code/" target="_blank">empathetic code</a> and build applications that people connect with directly. Regardless of the platform, solving difficult problems and building smooth user experiences is my jam.
+            I'm a predominantly self-taught software dev amongst other things (runner / family man / soccer fan / music nerd). I write <a href="https://www.benjaminjohnson.me/blog/empathetic-code/" target="_blank">empathetic code</a> and build applications that people connect with directly. Regardless of the platform, solving difficult problems and building smooth user experiences is my jam.
             <br /><br />
             I currently work as a Software Developer pioneering front-end web projects at <a href="https://www.ytel.com" className="greenTheme" target="_blank">Ytel</a>, a telecommunications API platform in Foothill Ranch, CA.
             <br /><br />
@@ -536,14 +551,22 @@ class BlogIndex extends Component {
             onSubmit={() => {
               this.setState({ isSubmittingContact: true })
             }}
+            style={{ ...contactFormStyles }}
           >
-            <label htmlFor="name" style={contactFormLabelStyles}>Name</label>
-            <input type="text" id="name" name="name" style={contactFormInputStyles} />
-            <label htmlFor="email" style={contactFormLabelStyles}>Email</label>
-            <input type="email" id="email" name="email" style={contactFormInputStyles} />
-            <label htmlFor="message" style={contactFormLabelStyles}>Message</label>
-            <textarea rows="5" id="body" name="body" style={contactFormInputStyles} />
-            <input type="submit" name="Submit" className="greenTheme linkLikeStyle" style={{ border: 'none', cursor: 'pointer' }} />
+            <div style={{ display: 'flex' }}>
+              <div style={{ width: '50%' }}>
+                <label htmlFor="name" style={{ ...contactFormLabelStyles }}>Name</label>
+                <input type="text" id="name" name="name" style={{ ...contactFormInputStyles }} />
+              </div>
+              <div style={{ width: '3%' }}></div>
+              <div style={{ width: '50%' }}>
+                <label htmlFor="email" style={{ ...contactFormLabelStyles }}>Email</label>
+                <input type="email" id="email" name="email" style={{ ...contactFormInputStyles }} />
+              </div>
+            </div>
+            <label htmlFor="message" style={{ ...contactFormLabelStyles }}>Message</label>
+            <textarea rows="4" id="body" name="body" style={{ ...contactFormInputStyles }} />
+            <input type="submit" name="Submit" className="greenTheme linkLikeStyle" style={{ ...contactFormSubmitButtonStyles }} />
           </form>
         </Layout>
       </Fragment>
