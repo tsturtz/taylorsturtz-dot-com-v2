@@ -358,6 +358,13 @@ pre[data-line] {
   .bioGreeting {
     font-size: 20px;
   }
+  .footerBullets {
+    display: none;
+  }
+  .footerSiteLinks {
+    flex-direction: column;
+    text-align: right;
+  }
   .portfolioGrid {
     grid-template-columns: repeat(1, 100%);
     grid-template-rows: repeat(10, 10%);

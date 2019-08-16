@@ -26,15 +26,13 @@ class FooterBio extends PureComponent {
               </p>
             </div>
           </div>
-          <p style={{ marginBottom: 0, fontSize: rhythm(.4), fontStyle: 'italic' }}>
+          <p className="footerSiteLinks" style={{ display: 'flex', marginBottom: 0, fontSize: rhythm(.45), fontStyle: 'italic' }}>
             <a href="/#projects">Projects</a>
-            &nbsp;&bull;&nbsp;
+            <span className="footerBullets">&nbsp;&bull;&nbsp;</span>
             <a href="/#blog">Blog</a>
-            &nbsp;&bull;&nbsp;
+            <span className="footerBullets">&nbsp;&bull;&nbsp;</span>
             <a href="/resume" target="_blank">Resume</a>
-            &nbsp;&bull;&nbsp;
-            <a href="/gifs">GIFs</a>
-            &nbsp;&bull;&nbsp;
+            <span className="footerBullets">&nbsp;&bull;&nbsp;</span>
             <a href="/#contact">Contact</a>
           </p>
         </div>

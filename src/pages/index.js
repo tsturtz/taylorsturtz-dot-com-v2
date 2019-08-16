@@ -24,7 +24,7 @@ const lightboxStyles = {
   boxShadow: '0px 20px 35px rgba(0,0,0,0.5)',
 }
 const contactFormStyles = {
-  padding: '20px',
+  padding: '10px',
 }
 const contactFormLabelStyles = {
   fontSize: 'small',
@@ -44,6 +44,7 @@ const contactFormSubmitButtonStyles = {
   borderRadius: '20px',
   border: '1px solid #36B5A2',
   boxShadow: '1px 1px 0px 0px #00ffda',
+  background: '#FFF',
 }
 
 class BlogIndex extends Component {
