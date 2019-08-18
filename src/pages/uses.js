@@ -11,7 +11,7 @@ class UsesPage extends PureComponent {
   render() {
     return (
       <Layout location={this.props.location}>
-        <h2 style={{ textAlign: 'center', fontFamily: 'Bitter, serif' }}>
+        <h2 style={{ textAlign: 'center', fontFamily: 'Bitter, serif', marginTop: '90px' }}>
           I'm not influential enough to have a /uses page 🙃
         </h2>
       </Layout>

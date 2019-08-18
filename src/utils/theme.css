@@ -62,47 +62,44 @@ h2 {
   color: #f3bc34;
 }
 
-.sitemapLink {
+.sitemapLinkContainer {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 25%;
   text-align: center;
-  color: #ababab !important;
-  font-size: .8rem;
+  position: relative;
 }
-/* .sitemapLinks a:after {
-  visibility: hidden;
-  content: attr(content);
-  color: #fff;
-  text-decoration: #f3bc33 wavy underline;
-  position: absolute;
-  font-size: 120%;
-  z-index: -100;
-}
-.sitemapLinks a:hover:after {
-  visibility: visible;
-} */
-.sitemapLinkUnderline:hover:after {
-  content: '---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------';
+.sitemapLinkContainer:hover .sitemapLinkUnderlineOverlay {
+  display: none;
 }
 .sitemapLinkUnderline {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  width: 25%;
-}
-.sitemapLinkUnderline:after {
-  content: '';
   color: #fff;
   font-size: 1.5rem;
   text-decoration: #f3bc33 wavy underline;
-  overflow: hidden;
-  white-space: nowrap;
+  user-select: none;
+  position: relative;
+  top: -20px;
+}
+.sitemapLinkUnderlineOverlay {
+  display: block;
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  bottom: 10px;
+  background-color: #FFF;
+}
+.sitemapLink {
+  text-align: center;
+  color: #ababab !important;
+  font-size: 0.9rem;
 }
 
-.footerDivider {
-  margin: 0 0 20px 0;
+.wavyGreyDivider {
+  margin: 0;
   display: flex;
   flex-direction: column;
 }
-.footerDivider:after {
+.wavyGreyDivider:after {
   content: '---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------';
   color: #fff;
   font-size: 1.5rem;

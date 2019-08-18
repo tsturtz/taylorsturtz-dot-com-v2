@@ -66,8 +66,9 @@ class Layout extends Component {
         >
           <div
             style={{
-              borderTop: '3px solid #f3bc34',
-              borderBottom: '3px solid #f3bc34',
+              borderTop: '2px solid #36B5A2',
+              paddingTop: '10px',
+              borderBottom: '2px solid #f3bc34',
             }}
           >
             {header}

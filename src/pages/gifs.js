@@ -65,10 +65,10 @@ class GifsPage extends Component {
     const { copiedUrl, copiedAlt, dimmer } = this.state;
     return (
       <Layout location={this.props.location}>
-        <h1 style={{ textAlign: 'center', fontFamily: 'Bitter, serif' }}>
+        <h1 style={{ textAlign: 'center', fontFamily: 'Bitter, serif', marginTop: '90px' }}>
           A 👌 Collection of GIFs
         </h1>
-        <hr style={{ marginTop: '2rem' }} />
+        <div className="wavyGreyDivider" />
         {copiedUrl && (
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', border: '1px solid #36B5A2', margin: '0 10px 20px', padding: '5px 0' }}>
             <div>'<strong className="accent">{copiedAlt}</strong>' was copied to your clipboard</div>

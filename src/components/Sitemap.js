@@ -9,7 +9,7 @@ class Sitemap extends PureComponent {
       <div
         style={{
           display: 'block',
-          margin: top ? '30px 0 50px' : '10px 0 30px',
+          margin: '20px 0 0',
         }}
       >
         <div
@@ -19,18 +19,26 @@ class Sitemap extends PureComponent {
             maxWidth: rhythm(26),
           }}
         >
-          <div className="sitemapLinkUnderline">
-            <a href="/#projects" className="sitemapLink">Projects</a>
-          </div>
-          <div className="sitemapLinkUnderline">
-            <a href="/#blog" className="sitemapLink">Blog</a>
-          </div>
-          <div className="sitemapLinkUnderline">
-            <a href="/resume" target="_blank" className="sitemapLink">Resume</a>
-          </div>
-          <div className="sitemapLinkUnderline">
-            <a href="/#contact" className="sitemapLink">Contact</a>
-          </div>
+          <a href="/#projects" className="sitemapLinkContainer">
+            <span className="sitemapLink">Projects</span>
+            <div className="sitemapLinkUnderline">-----------</div>
+            <div className="sitemapLinkUnderlineOverlay" />
+          </a>
+          <a href="/#blog" className="sitemapLinkContainer">
+            <span className="sitemapLink">Blog</span>
+            <div className="sitemapLinkUnderline">-----------</div>
+            <div className="sitemapLinkUnderlineOverlay" />
+          </a>
+          <a href="/#contact" className="sitemapLinkContainer">
+            <span className="sitemapLink">Contact</span>
+            <div className="sitemapLinkUnderline">-----------</div>
+            <div className="sitemapLinkUnderlineOverlay" />
+          </a>
+          <a href="/resume" target="_blank" className="sitemapLinkContainer">
+            <span className="sitemapLink">Resume</span>
+            <div className="sitemapLinkUnderline">-----------</div>
+            <div className="sitemapLinkUnderlineOverlay" />
+          </a>
         </div>
       </div>
     )
