@@ -3,9 +3,9 @@ if (process.env.NODE_ENV === 'development') {
 }
 module.exports = {
   siteMetadata: {
-    title: 'Taylor (Sturtz)',
+    title: 'Taylor Sturtz',
     author: 'Taylor Sturtz',
-    description: 'Taylor (Sturtz)',
+    description: 'Taylor Sturtz',
     siteUrl: 'https://taylorsturtz.com',
   },
   plugins: [

@@ -3,6 +3,7 @@ import { Link, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 
 import Bio from '../components/Bio'
+import Sitemap from '../components/Sitemap'
 import Layout from '../components/Layout'
 import { rhythm } from '../utils/typography'
 import { portfolioTypePillStyles } from '../utils/consts'
@@ -10,7 +11,6 @@ import { portfolioTypePillStyles } from '../utils/consts'
 import meetupmapGif from '../assets/meetupmapOPT.gif'
 import todoGif from '../assets/todoOPT.gif'
 import realValueGif from '../assets/realValueOPT.gif'
-// import thisSitePng from '../assets/thisSite.png'
 import bbtvGif from '../assets/bbtvOPT.gif'
 import soccer6Png from '../assets/soccer6BotScreenshot.png'
 import semanticUiReactCountriesGif from '../assets/semanticUiReactCountriesOPT.gif'
@@ -22,9 +22,6 @@ const lightboxStyles = {
   maxWidth: '90vw',
   marginBottom: 0,
   boxShadow: '0px 20px 35px rgba(0,0,0,0.5)',
-}
-const contactFormStyles = {
-  padding: '10px',
 }
 const contactFormLabelStyles = {
   fontSize: 'small',
@@ -45,6 +42,8 @@ const contactFormSubmitButtonStyles = {
   border: '1px solid #36B5A2',
   boxShadow: '1px 1px 0px 0px #00ffda',
   background: '#FFF',
+  margin: '0 0 0 auto',
+  display: 'block',
 }
 
 class BlogIndex extends Component {
@@ -61,8 +60,7 @@ class BlogIndex extends Component {
   }
 
   setLightboxIndex = (e) => {
-    e.preventDefault();
-    const lightboxIndex = JSON.parse(e.target.getAttribute('lightboxindex'));
+    const lightboxIndex = JSON.parse(e.currentTarget.getAttribute('lightboxindex'));
     this.setState({ lightboxIndex });
   }
 
@@ -311,121 +309,96 @@ class BlogIndex extends Component {
             meta={[{ name: 'description', content: siteDescription }]}
             title={siteTitle}
           />
+          <Sitemap orientation="top" />
           <Bio />
           <p style={{ marginTop: '30px' }}>
-            I'm a predominantly self-taught software dev amongst other things (runner / family man / soccer fan / music nerd). I write <a href="https://www.benjaminjohnson.me/blog/empathetic-code/" target="_blank">empathetic code</a> and build applications that people connect with directly. Regardless of the platform, solving difficult problems and building smooth user experiences is my jam.
+            I'm a self-taught software developer from Irvine, CA with a background in design. I write <a href="https://www.benjaminjohnson.me/blog/empathetic-code/" target="_blank">empathetic code</a> and build full-stack applications that people connect with directly. Regardless of the platform, solving difficult problems and building smooth user experiences is my jam.
             <br /><br />
-            I currently work as a Software Developer pioneering front-end web projects at <a href="https://www.ytel.com" className="greenTheme" target="_blank">Ytel</a>, a telecommunications API platform in Foothill Ranch, CA.
+            I currently work as a <em>Software Developer</em> pioneering front-end web projects at <a href="https://www.ytel.com" target="_blank">Ytel</a>, a telecommunications API platform in Foothill Ranch, CA.
             <br /><br />
-            <em>Go ahead and <a href="#contact" className="greenTheme">give me a shout</a> if you'd like to chat.</em>
+            <em>Go ahead and <a href="#contact">give me a shout</a> if you'd like to chat.</em>
           </p>
 
           {/* PROJECTS */}
-          <blockquote>
-            <h3 id="projects" style={{ zIndex: 0 }}><strong className="accent">Projects</strong></h3>
-          </blockquote>
+          <h2 id="projects" className="sectionTitle">Projects</h2>
 
           <div className="portfolioGrid">
 
             <div className="grid1"><span style={portfolioTypePillStyles}>Web</span></div>
 
             <div className="grid2">
-              <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
-                <span className="mdi mdi-arrow-right" style={{ marginRight: '5px', color: '#ababab' }} />
+              <div
+                className="projectItem"
+                lightboxindex="0"
+                onClick={this.setLightboxIndex}
+                onKeyUp={(e) => { if (e.which === 13 || e.which === 32) this.setLightboxIndex(e); }}
+                role="button"
+                tabIndex="0"
+              >
+                <span className="mdi mdi-arrow-right" />
                 <div style={{ paddingRight: rhythm(1), lineHeight: '1.5' }}>
                   {isInIFrame ? (
-                    <Fragment>
-                      <p style={{ marginBottom: 0 }} className="greenTheme">
-                        This site
-                      </p>
-                      <p style={{ marginBottom: 0, fontSize: rhythm(.4), color: '#ababab' }}>
-                        No <em>&lt;iFrAmE&gt; rEcUrSiOn!</em>
-                      </p>
-                    </Fragment>
+                    <div>
+                      <p className="projectTitle">This site</p>
+                      <p className="projectSubtitle">No <em>&lt;iFrAmE&gt; rEcUrSiOn!</em></p>
+                    </div>
                   ) : (
-                    <Fragment>
-                      <p
-                        style={{ marginBottom: 0, cursor: 'pointer' }}
-                        className="greenTheme linkLikeStyle"
-                        lightboxindex="0"
-                        onClick={this.setLightboxIndex}
-                        onKeyUp={(e) => { if (e.which === 13 || e.which === 32) this.setLightboxIndex(e); }}
-                        role="button"
-                        tabIndex="0"
-                      >
-                        This site
-                      </p>
-                      <p style={{ marginBottom: 0, fontSize: rhythm(.4), color: '#ababab', fontStyle: 'italic' }}>
-                        React / Gatsby / Netlify / GCP / Python
-                      </p>
-                    </Fragment>
+                    <div>
+                      <p className="projectTitle">This site</p>
+                      <p className="projectSubtitle">React / Gatsby / Netlify / GCP / Python</p>
+                    </div>
                   )}
                 </div>
               </div>
             </div>
 
             <div className="grid3">
-              <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
-                <span className="mdi mdi-arrow-right" style={{ marginRight: '5px', color: '#ababab' }} />
+              <div
+                className="projectItem"
+                lightboxindex="1"
+                onClick={this.setLightboxIndex}
+                onKeyUp={(e) => { if (e.which === 13 || e.which === 32) this.setLightboxIndex(e); }}
+                role="button"
+                tabIndex="0"
+              >
+                <span className="mdi mdi-arrow-right" />
                 <div style={{ paddingRight: rhythm(1), lineHeight: '1.5' }}>
-                  <p
-                    style={{ marginBottom: 0, cursor: 'pointer' }}
-                    className="greenTheme linkLikeStyle"
-                    lightboxindex="1"
-                    onClick={this.setLightboxIndex}
-                    onKeyUp={(e) => { if (e.which === 13 || e.which === 32) this.setLightboxIndex(e); }}
-                    role="button"
-                    tabIndex="0"
-                  >
-                    Meetup Map
-                  </p>
-                  <p style={{ marginBottom: 0, fontSize: rhythm(.4), color: '#ababab', fontStyle: 'italic' }}>
-                    jQuery / Materialize CSS
-                  </p>
+                  <p className="projectTitle">Meetup Map</p>
+                  <p className="projectSubtitle">jQuery / Materialize CSS</p>
                 </div>
               </div>
             </div>
 
             <div className="grid4">
-              <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
-                <span className="mdi mdi-arrow-right" style={{ marginRight: '5px', color: '#ababab' }} />
+              <div
+                className="projectItem"
+                lightboxindex="2"
+                onClick={this.setLightboxIndex}
+                onKeyUp={(e) => { if (e.which === 13 || e.which === 32) this.setLightboxIndex(e); }}
+                role="button"
+                tabIndex="0"
+              >
+                <span className="mdi mdi-arrow-right" />
                 <div style={{ paddingRight: rhythm(1), lineHeight: '1.5' }}>
-                  <p
-                    style={{ marginBottom: 0, cursor: 'pointer' }}
-                    className="greenTheme linkLikeStyle"
-                    lightboxindex="2"
-                    onClick={this.setLightboxIndex}
-                    onKeyUp={(e) => { if (e.which === 13 || e.which === 32) this.setLightboxIndex(e); }}
-                    role="button"
-                    tabIndex="0"
-                  >
-                    To-do For You
-                  </p>
-                  <p style={{ marginBottom: 0, fontSize: rhythm(.4), color: '#ababab', fontStyle: 'italic' }}>
-                    AngularJS / Firebase
-                  </p>
+                  <p className="projectTitle">To-do For You</p>
+                  <p className="projectSubtitle">AngularJS / Firebase</p>
                 </div>
               </div>
             </div>
 
             <div className="grid5">
-              <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
-                <span className="mdi mdi-arrow-right" style={{ marginRight: '5px', color: '#ababab' }} />
+              <div
+                className="projectItem"
+                lightboxindex="3"
+                onClick={this.setLightboxIndex}
+                onKeyUp={(e) => { if (e.which === 13 || e.which === 32) this.setLightboxIndex(e); }}
+                role="button"
+                tabIndex="0"
+              >
+                <span className="mdi mdi-arrow-right" />
                 <div style={{ paddingRight: rhythm(1), lineHeight: '1.5' }}>
-                  <p
-                    style={{ marginBottom: 0, cursor: 'pointer' }}
-                    className="greenTheme linkLikeStyle"
-                    lightboxindex="3"
-                    onClick={this.setLightboxIndex}
-                    onKeyUp={(e) => { if (e.which === 13 || e.which === 32) this.setLightboxIndex(e); }}
-                    role="button"
-                    tabIndex="0"
-                  >
-                    Real Value (POC)
-                  </p>
-                  <p style={{ marginBottom: 0, fontSize: rhythm(.4), color: '#ababab', fontStyle: 'italic' }}>
-                    AngularJS / Leaflet / D3 / Firebase
-                  </p>
+                  <p className="projectTitle">Real Value (POC)</p>
+                  <p className="projectSubtitle">AngularJS / Leaflet / D3 / Firebase</p>
                 </div>
               </div>
             </div>
@@ -433,23 +406,18 @@ class BlogIndex extends Component {
             <div className="grid6"><span style={portfolioTypePillStyles}>Mobile</span></div>
 
             <div className="grid7">
-              <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
-                <span className="mdi mdi-arrow-right" style={{ marginRight: '5px', color: '#ababab' }} />
+              <div
+                className="projectItem"
+                lightboxindex="4"
+                onClick={this.setLightboxIndex}
+                onKeyUp={(e) => { if (e.which === 13 || e.which === 32) this.setLightboxIndex(e); }}
+                role="button"
+                tabIndex="0"
+              >
+                <span className="mdi mdi-arrow-right" />
                 <div style={{ paddingRight: rhythm(1), lineHeight: '1.5' }}>
-                  <p
-                    style={{ marginBottom: 0, cursor: 'pointer' }}
-                    className="greenTheme linkLikeStyle"
-                    lightboxindex="4"
-                    onClick={this.setLightboxIndex}
-                    onKeyUp={(e) => { if (e.which === 13 || e.which === 32) this.setLightboxIndex(e); }}
-                    role="button"
-                    tabIndex="0"
-                  >
-                    I Want My BB-TV
-                  </p>
-                  <p style={{ marginBottom: 0, fontSize: rhythm(.4), color: '#ababab', fontStyle: 'italic' }}>
-                    React Native / Node (Express) / MongoDB
-                  </p>
+                  <p className="projectTitle">I Want My BB-TV</p>
+                  <p className="projectSubtitle">React Native / Node (Express) / MongoDB</p>
                 </div>
               </div>
             </div>
@@ -457,45 +425,35 @@ class BlogIndex extends Component {
             <div className="grid8"><span style={portfolioTypePillStyles}>Other</span></div>
 
             <div className="grid9">
-              <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
-                <span className="mdi mdi-arrow-right" style={{ marginRight: '5px', color: '#ababab' }} />
+              <div
+                className="projectItem"
+                lightboxindex="5"
+                onClick={this.setLightboxIndex}
+                onKeyUp={(e) => { if (e.which === 13 || e.which === 32) this.setLightboxIndex(e); }}
+                role="button"
+                tabIndex="0"
+              >
+                <span className="mdi mdi-arrow-right" />
                 <div style={{ paddingRight: rhythm(1), lineHeight: '1.5' }}>
-                  <p
-                    style={{ marginBottom: 0, cursor: 'pointer' }}
-                    className="greenTheme linkLikeStyle"
-                    lightboxindex="5"
-                    onClick={this.setLightboxIndex}
-                    onKeyUp={(e) => { if (e.which === 13 || e.which === 32) this.setLightboxIndex(e); }}
-                    role="button"
-                    tabIndex="0"
-                  >
-                    Soccer6 Slack Bot
-                  </p>
-                  <p style={{ marginBottom: 0, fontSize: rhythm(.4), color: '#ababab', fontStyle: 'italic' }}>
-                    Golang / GoQuery (web scraper)
-                  </p>
+                  <p className="projectTitle">Soccer6 Slack Bot</p>
+                  <p className="projectSubtitle">Golang / GoQuery (web scraper)</p>
                 </div>
               </div>
             </div>
 
             <div className="grid10">
-              <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
-                <span className="mdi mdi-arrow-right" style={{ marginRight: '5px', color: '#ababab' }} />
+              <div
+                className="projectItem"
+                lightboxindex="6"
+                onClick={this.setLightboxIndex}
+                onKeyUp={(e) => { if (e.which === 13 || e.which === 32) this.setLightboxIndex(e); }}
+                role="button"
+                tabIndex="0"
+              >
+                <span className="mdi mdi-arrow-right" />
                 <div style={{ paddingRight: rhythm(1), lineHeight: '1.5' }}>
-                  <p
-                    style={{ marginBottom: 0, cursor: 'pointer' }}
-                    className="greenTheme linkLikeStyle"
-                    lightboxindex="6"
-                    onClick={this.setLightboxIndex}
-                    onKeyUp={(e) => { if (e.which === 13 || e.which === 32) this.setLightboxIndex(e); }}
-                    role="button"
-                    tabIndex="0"
-                  >
-                    Semantic UI React Countries
-                  </p>
-                  <p style={{ marginBottom: 0, fontSize: rhythm(.4), color: '#ababab', fontStyle: 'italic' }}>
-                    Node / npm (CLI tool)
-                  </p>
+                  <p className="projectTitle">Semantic UI React Countries</p>
+                  <p className="projectSubtitle">Node / npm (CLI tool)</p>
                 </div>
               </div>
             </div>
@@ -503,9 +461,7 @@ class BlogIndex extends Component {
           </div>
 
           {/* BLOG */}
-          <blockquote>
-            <h3 id="blog"><strong className="accent">Blog</strong></h3>
-          </blockquote>
+          <h2 id="blog" className="sectionTitle">Blog</h2>
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
 
@@ -524,7 +480,7 @@ class BlogIndex extends Component {
 
             return (
               <div key={node.fields.slug}>
-                <h3 style={{ marginBottom: 0 }}>
+                <h3 style={{ margin: 0 }}>
                   <Link className="greyLink" style={{ boxShadow: 'none' }} to={node.fields.slug}>
                     {title}
                   </Link>
@@ -543,16 +499,13 @@ class BlogIndex extends Component {
           })}
 
           {/* CONTACT */}
-          <blockquote>
-            <h3 id="contact"><strong className="accent">Contact</strong></h3>
-          </blockquote>
+          <h2 id="contact" className="sectionTitle">Contact</h2>
           <form
             action="https://us-central1-contact-form-249703.cloudfunctions.net/contact-form2"
             method="POST"
             onSubmit={() => {
               this.setState({ isSubmittingContact: true })
             }}
-            style={{ ...contactFormStyles }}
           >
             <div style={{ display: 'flex' }}>
               <div style={{ width: '50%' }}>

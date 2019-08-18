@@ -18,25 +18,95 @@ h4 {
 h3 {
   font-size: 1.2rem !important;
 }
+h2 {
+  font-size: 1.5rem !important;
+}
+.sitemapLinks a {
+  color: #fff !important;
+}
 .bioPic {
   margin-right: 12px;
   margin-bottom: 0;
-  width: 85px;
+  width: 100px;
 }
 .bioGreeting {
   padding-bottom: 5px;
-  font-size: 22px;
+  font-size: 1.5rem;
 }
+
+.projectItem {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: 0;
+  transition: .175s;
+}
+.projectItem:hover {
+  margin-left: 5px;
+}
+.projectItem .mdi-arrow-right {
+  color: #f3bc34;
+  margin-right: 5px;
+}
+.projectItem .projectTitle {
+  color: #4b4b4b;
+  margin-bottom: 0;
+  transition: .1s;
+}
+.projectItem .projectSubtitle {
+  color: #ababab;
+  margin-bottom: 0;
+  font-size: .7rem;
+  font-style: italic;
+  transition: .1s;
+}
+.projectItem:hover .projectTitle, .projectItem:hover .projectSubtitle {
+  color: #f3bc34;
+}
+
+.footerDivider {
+  margin: 0 0 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+.footerDivider:after {
+  content: '---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------';
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: #ababab wavy underline;
+  overflow: hidden;
+  white-space: nowrap;
+  height: 50px;
+}
+.sectionTitle {
+  margin: 50px 0 20px;
+  color: #4b4b4b;
+  font-style: italic;
+  display: flex;
+  flex-direction: column;
+}
+.sectionTitle:after {
+  content: '---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------';
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: #f3bc33 wavy underline;
+  overflow: hidden;
+  white-space: nowrap;
+  height: 50px;
+}
+
 .socialIcons {
   display: flex;
   font-size: 25px;
+  margin: 5px 0 0 auto;
 }
 .socialIcons > a {
   margin-left: 5px;
   color: #ababab;
 }
 .socialIcons > a:hover {
-  color: #4b4b4b;
+  color: #f3bc34;
 }
 .greyLink {
   color: #4b4b4b;
@@ -357,13 +427,6 @@ pre[data-line] {
   }
   .bioGreeting {
     font-size: 20px;
-  }
-  .footerBullets {
-    display: none;
-  }
-  .footerSiteLinks {
-    flex-direction: column;
-    text-align: right;
   }
   .portfolioGrid {
     grid-template-columns: repeat(1, 100%);

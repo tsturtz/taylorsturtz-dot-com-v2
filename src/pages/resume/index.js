@@ -1,34 +1,30 @@
 import React, { PureComponent, Fragment } from 'react'
+import detectPrint from 'react-detect-print'
 import { rhythm } from '../../utils/typography'
 import { portfolioTypePillStyles } from '../../utils/consts'
 import { ResumeComponent } from '../../components/ResumeComponent';
 
 class Resume extends PureComponent {
   render() {
+    const { printing } = this.props;
+    // if (printing) {
+    //   return (  )
+    // }
     return (
       <Fragment>
-        <a
-          href="/resume/print"
+        <div
           style={{
             display: 'block',
-            position: 'fixed',
             textAlign: 'center',
-            lineHeight: 1,
-            transform: 'rotate(45deg)',
-            background: '#f3bc33',
-            padding: '100px 100px 10px',
-            right: '-125px',
-            top: '-80px',
+            background: '#f3bc34',
           }}
+          onClick={() => window.print()}
+          role="button"
         >
-          <small style={{ color: 'white' }}>
-            <span className="mdi mdi-open-in-new" />
-            <br />
-            Print
-            <br />
-            version
-          </small>
-        </a>
+          <span style={{ color: 'white', fontSize: '.8rem' }}>
+            <span className="mdi mdi-printer" /> Print
+          </span>
+        </div>
         <div
           id="resume"
           style={{
@@ -45,4 +41,4 @@ class Resume extends PureComponent {
   }
 }
 
-export default Resume
+export default detectPrint(Resume)

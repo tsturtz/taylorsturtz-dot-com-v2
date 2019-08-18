@@ -49,7 +49,7 @@ class Layout extends Component {
             }}
             to={'/'}
           >
-            👈 Home
+            {/* 👈 Home */}
           </Link>
         </h3>
       )
@@ -61,12 +61,11 @@ class Layout extends Component {
             marginLeft: 'auto',
             marginRight: 'auto',
             maxWidth: rhythm(26),
-            padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+            padding: `0 ${rhythm(3 / 4)}`,
           }}
         >
           {header}
           {children}
-          <hr style={{ marginTop: '2rem' }} />
           <FooterBio />
         </div>
       </Fragment>

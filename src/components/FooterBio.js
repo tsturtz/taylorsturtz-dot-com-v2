@@ -2,12 +2,14 @@ import React, { PureComponent, Fragment } from 'react'
 import 'typeface-bitter'
 import profilePic from '../assets/profile-pics/taylorsturtz-mischief.png'
 import { rhythm } from '../utils/typography'
+import Sitemap from '../components/Sitemap'
 
 class FooterBio extends PureComponent {
   render() {
     return (
       <Fragment>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 10px' }}>
+        <div className="footerDivider" />
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <div style={{ display: 'flex', alignItems: 'center' }}>
             <img
               src={profilePic}
@@ -21,31 +23,23 @@ class FooterBio extends PureComponent {
             />
             <div style={{ paddingRight: rhythm(1), lineHeight: '1.5' }}>
               <p style={{ marginBottom: 0 }}>Taylor Sturtz</p>
-              <p style={{ marginBottom: 0, fontSize: rhythm(.4), color: '#ababab', fontStyle: 'italic' }}>
-                Software Developer
-              </p>
+              <span style={{ display: 'flex', alignItems: 'center', color: '#ababab', maxHeight: '15px' }}>
+                <span className="mdi mdi-console-line" />
+                &nbsp;
+                <code>npx taylorsturtz</code>
+              </span>
             </div>
           </div>
-          <p className="footerSiteLinks" style={{ display: 'flex', marginBottom: 0, fontSize: rhythm(.45), fontStyle: 'italic' }}>
-            <a href="/#projects">Projects</a>
-            <span className="footerBullets">&nbsp;&bull;&nbsp;</span>
-            <a href="/#blog">Blog</a>
-            <span className="footerBullets">&nbsp;&bull;&nbsp;</span>
-            <a href="/resume" target="_blank">Resume</a>
-            <span className="footerBullets">&nbsp;&bull;&nbsp;</span>
-            <a href="/#contact">Contact</a>
-          </p>
-        </div>
-        <hr style={{ marginTop: '1.5rem' }} />
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <span>👨‍💻 <code>npx taylorsturtz</code></span>
-          <div className="socialIcons">
-            <a href="https://www.linkedin.com/in/taylorsturtz/" target="_blank" className="mdi mdi-linkedin-box" />
-            <a href="https://twitter.com/taylorsturtz" target="_blank" className="mdi mdi-twitter" />
-            <a href="https://github.com/tsturtz" target="_blank" className="mdi mdi-github-circle" />
-            <a href="https://dev.to/tsturtz" target="_blank" className="mdi mdi-dev-to" />
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+            <div className="socialIcons">
+              <a href="https://www.linkedin.com/in/taylorsturtz/" target="_blank" className="mdi mdi-linkedin-box" />
+              <a href="https://twitter.com/taylorsturtz" target="_blank" className="mdi mdi-twitter" />
+              <a href="https://github.com/tsturtz" target="_blank" className="mdi mdi-github-circle" />
+              <a href="https://dev.to/tsturtz" target="_blank" className="mdi mdi-dev-to" />
+            </div>
           </div>
         </div>
+        <Sitemap orientation="bottom" />
       </Fragment>
     )
   }

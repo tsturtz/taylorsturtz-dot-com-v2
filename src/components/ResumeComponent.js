@@ -25,17 +25,20 @@ const skills = [
   'CSS3 / LESS / SASS',
   'Node',
   'Firebase',
-  'Unit testing',
   'REST / GraphQL',
-  'Agile',
+  'Unit Testing',
+  'Agile / Scrum',
   'Git',
-  'Angular / AngularJS',
   'jQuery',
+  'Angular / AngularJS',
+  'Webpack / Gulp',
+  'Gatsby',
+  'Linux',
   'MongoDB',
-  'PHP / Laravel',
+  'PHP',
+  'Laravel',
   'Golang',
   'CI/CD',
-  'Linux',
   'Google Cloud Functions',
   'SQL',
   'Python',
@@ -50,7 +53,7 @@ export class ResumeComponent extends PureComponent {
           <div id="nameAndTitle">
             <h1 style={{ margin: '0 0 10px 0' }}>Taylor Sturtz</h1>
             <blockquote style={{ marginBottom: '10px' }}>
-              <h3 id="title" style={{ margin: 0 }}><strong className={print ? '' : 'accent'}>Software Developer from Irvine, CA</strong></h3>
+              <h3 id="title" style={{ margin: 0 }}><strong>Software Developer from Irvine, CA</strong></h3>
             </blockquote>
           </div>
           <div id="contactInfo" style={{ margin: '11px 0 0 0', textAlign: 'right', width: '32%' }}>
@@ -87,7 +90,7 @@ export class ResumeComponent extends PureComponent {
 
         {/* SKILLS */}
         <blockquote style={{ ...sectionMargins }}>
-          <h3 id="title" style={{ margin: '0 0 10px 0' }}><strong className={print ? '' : 'accent'}>Skills</strong></h3>
+          <h3 id="title" style={{ margin: '0 0 10px 0' }}><strong>Skills</strong></h3>
         </blockquote>
         <hr style={{ ...hrMarginBottom }} />
         <div style={{ width: '100%' }}>
@@ -101,7 +104,7 @@ export class ResumeComponent extends PureComponent {
           <div style={{ width: '65%' }}>
             {/* EXPERIENCE */}
             <blockquote style={{ ...sectionMargins }}>
-              <h3 id="title" style={{ margin: '0 0 10px 0' }}><strong className={print ? '' : 'accent'}>Experience</strong></h3>
+              <h3 id="title" style={{ margin: '0 0 10px 0' }}><strong>Experience</strong></h3>
             </blockquote>
             <hr style={{ ...hrMarginBottom }} />
             {/* Ytel - software */}
@@ -179,7 +182,7 @@ export class ResumeComponent extends PureComponent {
 
             {/* EDUCATION */}
             <blockquote style={{ ...sectionMargins }}>
-              <h3 id="title" style={{ margin: '0 0 10px 0' }}><strong className={print ? '' : 'accent'}>Education</strong></h3>
+              <h3 id="title" style={{ margin: '0 0 10px 0' }}><strong>Education</strong></h3>
             </blockquote>
             <hr style={{ ...hrMarginBottom }} />
             {/* LearningFuze */}
@@ -211,7 +214,7 @@ export class ResumeComponent extends PureComponent {
 
             {/* AWARDS */}
             <blockquote style={{ ...sectionMargins }}>
-              <h3 id="title" style={{ margin: '0 0 10px 0' }}><strong className={print ? '' : 'accent'}>Awards</strong></h3>
+              <h3 id="title" style={{ margin: '0 0 10px 0' }}><strong>Awards</strong></h3>
             </blockquote>
             <hr style={{ ...hrMarginBottom }} />
             {/* BAMF */}
@@ -243,7 +246,7 @@ export class ResumeComponent extends PureComponent {
 
             {/* LANGUAGES */}
             <blockquote style={{ ...sectionMargins }}>
-              <h3 id="title" style={{ margin: '0 0 10px 0' }}><strong className={print ? '' : 'accent'}>Languages</strong></h3>
+              <h3 id="title" style={{ margin: '0 0 10px 0' }}><strong>Languages</strong></h3>
             </blockquote>
             <hr style={{ ...hrMarginBottom }} />
             {/* English */}
@@ -288,7 +291,7 @@ export class ResumeComponent extends PureComponent {
 
             {/* ON THE INTERWEB */}
             <blockquote style={{ ...sectionMargins }}>
-              <h3 id="title" style={{ margin: '0 0 10px 0' }}><strong className={print ? '' : 'accent'}>On the Interweb</strong></h3>
+              <h3 id="title" style={{ margin: '0 0 10px 0' }}><strong>On the Interweb</strong></h3>
             </blockquote>
             <hr style={{ ...hrMarginBottom }} />
             {/* GitHub */}
@@ -345,7 +348,7 @@ export class ResumeComponent extends PureComponent {
 
             {/* INTERESTS */}
             <blockquote style={{ ...sectionMargins }}>
-              <h3 id="title" style={{ margin: '0 0 10px 0' }}><strong className={print ? '' : 'accent'}>Interests</strong></h3>
+              <h3 id="title" style={{ margin: '0 0 10px 0' }}><strong>Interests</strong></h3>
             </blockquote>
             <hr style={{ ...hrMarginBottom }} />
             {/* Soccer */}
