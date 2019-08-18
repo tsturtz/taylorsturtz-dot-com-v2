@@ -9,7 +9,8 @@ class FooterBio extends PureComponent {
     return (
       <Fragment>
         <div className="footerDivider" />
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        <Sitemap />
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingBottom: '30px' }}>
           <div style={{ display: 'flex', alignItems: 'center' }}>
             <img
               src={profilePic}
@@ -39,7 +40,6 @@ class FooterBio extends PureComponent {
             </div>
           </div>
         </div>
-        <Sitemap orientation="bottom" />
       </Fragment>
     )
   }

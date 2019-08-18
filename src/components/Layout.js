@@ -64,9 +64,16 @@ class Layout extends Component {
             padding: `0 ${rhythm(3 / 4)}`,
           }}
         >
-          {header}
-          {children}
-          <FooterBio />
+          <div
+            style={{
+              borderTop: '3px solid #f3bc34',
+              borderBottom: '3px solid #f3bc34',
+            }}
+          >
+            {header}
+            {children}
+            <FooterBio />
+          </div>
         </div>
       </Fragment>
     )

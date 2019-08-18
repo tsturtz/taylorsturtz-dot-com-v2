@@ -21,9 +21,6 @@ h3 {
 h2 {
   font-size: 1.5rem !important;
 }
-.sitemapLinks a {
-  color: #fff !important;
-}
 .bioPic {
   margin-right: 12px;
   margin-bottom: 0;
@@ -63,6 +60,41 @@ h2 {
 }
 .projectItem:hover .projectTitle, .projectItem:hover .projectSubtitle {
   color: #f3bc34;
+}
+
+.sitemapLink {
+  text-align: center;
+  color: #ababab !important;
+  font-size: .8rem;
+}
+/* .sitemapLinks a:after {
+  visibility: hidden;
+  content: attr(content);
+  color: #fff;
+  text-decoration: #f3bc33 wavy underline;
+  position: absolute;
+  font-size: 120%;
+  z-index: -100;
+}
+.sitemapLinks a:hover:after {
+  visibility: visible;
+} */
+.sitemapLinkUnderline:hover:after {
+  content: '---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------';
+}
+.sitemapLinkUnderline {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 25%;
+}
+.sitemapLinkUnderline:after {
+  content: '';
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: #f3bc33 wavy underline;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .footerDivider {

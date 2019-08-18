@@ -309,7 +309,7 @@ class BlogIndex extends Component {
             meta={[{ name: 'description', content: siteDescription }]}
             title={siteTitle}
           />
-          <Sitemap orientation="top" />
+          <Sitemap top />
           <Bio />
           <p style={{ marginTop: '30px' }}>
             I'm a self-taught software developer from Irvine, CA with a background in design. I write <a href="https://www.benjaminjohnson.me/blog/empathetic-code/" target="_blank">empathetic code</a> and build full-stack applications that people connect with directly. Regardless of the platform, solving difficult problems and building smooth user experiences is my jam.

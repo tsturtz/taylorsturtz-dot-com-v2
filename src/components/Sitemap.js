@@ -4,32 +4,33 @@ import { rhythm } from '../utils/typography'
 
 class Sitemap extends PureComponent {
   render() {
-    const { orientation } = this.props;
+    const { top } = this.props;
     return (
       <div
         style={{
           display: 'block',
-          textAlign: 'center',
-          background: '#f3bc34',
-          marginBottom: orientation === 'top' ? '30px' : 0,
-          marginTop: orientation === 'bottom' ? '30px' : 0,
+          margin: top ? '30px 0 50px' : '10px 0 30px',
         }}
       >
         <div
-          className="sitemapLinks"
           style={{
             display: 'flex',
-            justifyContent: 'space-around',
-            fontSize: '.8rem',
-            marginLeft: 'auto',
-            marginRight: 'auto',
+            margin: '0 auto',
             maxWidth: rhythm(26),
           }}
         >
-          <a href="/#projects">Projects</a>
-          <a href="/#blog">Blog</a>
-          <a href="/resume" target="_blank">Resume</a>
-          <a href="/#contact">Contact</a>
+          <div className="sitemapLinkUnderline">
+            <a href="/#projects" className="sitemapLink">Projects</a>
+          </div>
+          <div className="sitemapLinkUnderline">
+            <a href="/#blog" className="sitemapLink">Blog</a>
+          </div>
+          <div className="sitemapLinkUnderline">
+            <a href="/resume" target="_blank" className="sitemapLink">Resume</a>
+          </div>
+          <div className="sitemapLinkUnderline">
+            <a href="/#contact" className="sitemapLink">Contact</a>
+          </div>
         </div>
       </div>
     )
