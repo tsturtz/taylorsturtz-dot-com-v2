@@ -24,7 +24,7 @@ class FooterBio extends PureComponent {
             />
             <div style={{ paddingRight: rhythm(1), lineHeight: '1.5' }}>
               <p style={{ marginBottom: 0 }}>Taylor Sturtz</p>
-              <span style={{ display: 'flex', alignItems: 'center', color: '#ababab', maxHeight: '15px' }}>
+              <span style={{ display: 'flex', alignItems: 'center', color: '#ababab', maxHeight: '15px', whiteSpace: 'nowrap' }}>
                 <span className="mdi mdi-console-line" />
                 &nbsp;
                 <code>npx taylorsturtz</code>

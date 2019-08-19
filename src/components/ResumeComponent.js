@@ -32,7 +32,7 @@ const skills = [
   'jQuery',
   'Angular / AngularJS',
   'Webpack / Gulp',
-  'Gatsby',
+  'Gatsby / Jekyll',
   'Linux',
   'MongoDB',
   'PHP',

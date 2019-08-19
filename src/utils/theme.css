@@ -22,13 +22,20 @@ h2 {
   font-size: 1.5rem !important;
 }
 .bioPic {
-  margin-right: 12px;
+  margin: 0 20px;
   margin-bottom: 0;
   width: 100px;
 }
 .bioGreeting {
   padding-bottom: 5px;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
+}
+span#goIsCoolToo {
+  display: none;
+  font-weight: 700;
+}
+span#jsJunky:hover ~ #goIsCoolToo {
+  display: inline-block;
 }
 
 .projectItem {
@@ -100,6 +107,29 @@ h2 {
   z-index: -1;
 }
 
+/* .wavy {
+	text-decoration: none;
+	position: relative;
+	padding-bottom: 1em;
+	overflow: hidden;
+}
+.wavy:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  white-space: nowrap;
+  content: attr(data-text)attr(data-text);
+  color: transparent;
+  line-height: 1.8;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: #f3bc33;
+  animation: wavy-slide 3s linear infinite;
+}
+@keyframes wavy-slide { to { margin-left: -51%; } } */
+
 .aboutSection {
   margin: 40px 0 60px;
   padding: 30px;
@@ -120,6 +150,7 @@ h2 {
 .contactForm form, .contactForm p {
   background: #FFF;
   padding: 30px;
+  margin: 0 0 30px;
 }
 .contactForm form {
   margin: 0;
@@ -149,7 +180,7 @@ h2 {
 }
 
 .sectionTitle {
-  margin: 50px 0 0;
+  margin: 60px 0 0;
   color: #4b4b4b;
   font-style: italic;
   display: flex;
@@ -427,7 +458,7 @@ pre[data-line] {
   ;
   grid-gap: 10px;
   height: 300px;
-  padding-bottom: 50px;
+  padding-bottom: 40px;
   align-items: center;
 }
 .grid1 { grid-area: l1; }
@@ -445,7 +476,7 @@ pre[data-line] {
 /* Mobile: only update changed properties */
 @media screen and (max-width : 650px) {
   .bioPic {
-    margin-right: 5px;
+    margin: 0 15px;
     width: 70px;
   }
   .bioGreeting {

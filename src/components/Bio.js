@@ -16,10 +16,11 @@ class Bio extends Component {
           alt={`Taylor Sturtz`}
           className="bioPic"
         />
-        <p style={{ marginBottom: 0, marginRight: '10px', lineHeight: '1.5', fontFamily: 'Bitter, serif' }}>
-          <span className="bioGreeting" style={{ fontWeight: 700 }}>Hi 👋 I'm Taylor Sturtz</span><br />
+        <p style={{ marginBottom: 0, lineHeight: '1.5', fontFamily: 'Bitter, serif' }}>
+          <span className="bioGreeting" style={{ fontWeight: 700 }}>Hi, I'm Taylor Sturtz</span>
+          <br />
           <em style={{ color: '#4b4b4b', fontSize: '1rem' }}>
-            developer / runner / family man / soccer fan / retro gamer / music nerd
+            <span id="jsJunky">javascript junky </span><span id="goIsCoolToo">~ go is cool too!</span> / soccer hooligan / daddy shark
           </em>
         </p>
       </div>

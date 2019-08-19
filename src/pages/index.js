@@ -302,6 +302,8 @@ class BlogIndex extends Component {
           )}
         </div>
 
+        {/* START CONTENT */}
+
         {/* LAYOUT */}
         <Layout location={this.props.location} title={siteTitle}>
           <Helmet
@@ -314,17 +316,20 @@ class BlogIndex extends Component {
           {/* <div className="greyUnderline wavyDivider" /> */}
           <div className="aboutSection">
             <p>
-              I'm a self-taught software developer from Irvine, CA with a background in design. I write <a href="https://www.benjaminjohnson.me/blog/empathetic-code/" target="_blank">empathetic code</a> and build full-stack applications that people connect with directly. Regardless of the platform, solving difficult problems and building smooth user experiences is my jam.
+              I'm a self-taught software engineer from Irvine, CA with a background in design. I write <a href="https://www.benjaminjohnson.me/blog/empathetic-code/" target="_blank">empathetic code</a> and build full-stack applications that people connect with directly. Regardless of the platform, solving difficult problems and building <span className="wavy" data-text="smooth">smooth</span> user experiences is my jam.
               <br /><br />
-              I currently work as a <strong>Software Developer</strong> pioneering front-end web projects at <a href="https://www.ytel.com" target="_blank">Ytel</a>, a telecommunications API platform in Foothill Ranch, CA.
-              <br /><br />
-              <em>Go ahead and <a href="#contact">give me a shout</a> if you'd like to chat.</em>
+              I currently work full-time as a <strong>Software Developer</strong> pioneering front-end web projects at <a href="https://www.ytel.com" target="_blank">Ytel</a>, a telecommunications API platform in Foothill Ranch, California.
+              <div className="greyUnderline wavyDivider" style={{ marginBottom: '20px' }} />
+              <em>Have a question or an intriguing idea? Lose my number? Am I ignoring your LinkedIn message? </em>
+              &nbsp;✉️ <em><a href="#contact">Shoot me an email.</a></em>
             </p>
           </div>
 
           {/* PROJECTS */}
           <h2 id="projects" className="sectionTitle">Projects</h2>
           <div className="yellowUnderline wavyDivider" style={{ marginBottom: '10px', position: 'relative', top: '-10px', zIndex: '-1' }} />
+
+          <span style={{ paddingLeft: '20px', display: 'inline-block', marginBottom: '10px' }}><em style={{ color: '#ababab' }}>A handful of my personal and opensource projects.</em></span>
 
           <div className="portfolioGrid">
 
@@ -349,7 +354,7 @@ class BlogIndex extends Component {
                   ) : (
                     <div>
                       <p className="projectTitle">This site</p>
-                      <p className="projectSubtitle">React / Gatsby / Netlify / GCP / Python</p>
+                      <p className="projectSubtitle">React / Gatsby / Google Cloud Functions / Python</p>
                     </div>
                   )}
                 </div>
@@ -498,7 +503,7 @@ class BlogIndex extends Component {
                 <div>
                   {tags}
                 </div>
-                <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                <p style={{ marginTop: '10px' }} dangerouslySetInnerHTML={{ __html: node.excerpt }} />
               </div>
             )
           })}
@@ -508,7 +513,14 @@ class BlogIndex extends Component {
           <div className="yellowUnderline wavyDivider" style={{ marginBottom: '10px', position: 'relative', top: '-10px', zIndex: '-1' }} />
           <div className="contactForm">
             <p>
-              I'm currently <strong>unavailable</strong> for immediate hire but I am always open to chat about interesting opportunities.
+              I'm currently <strong>unavailable</strong> for immediate hire <em>but I am always open to chat about interesting opportunities</em>.
+            </p>
+            <p>
+              You could try me on social media:
+              <br />
+              <span className="mdi mdi-twitter" style={{ fontSize: '1.2rem', color: '#ababab', position: 'relative', top: '3px' }} /> I'm fairly active on Twitter: <a href="https://twitter.com/taylorsturtz" target="_blank">@taylorsturtz</a>
+              <br />
+              <span className="mdi mdi-linkedin-box" style={{ fontSize: '1.2rem', color: '#ababab', position: 'relative', top: '3px' }} /> Not so much on LinkedIn: <a href="https://linkedin.com/in/taylorsturtz" target="_blank">/in/taylorsturtz</a>
             </p>
             <form
               action="https://us-central1-contact-form-249703.cloudfunctions.net/contact-form2"
@@ -517,6 +529,9 @@ class BlogIndex extends Component {
                 this.setState({ isSubmittingContact: true })
               }}
             >
+              <span>Send me a message.</span>
+              <br />
+              <strong>Recruiters:</strong> in-house recruiters only, please ❤️
               <div style={{ display: 'flex' }}>
                 <div style={{ width: '50%' }}>
                   <label htmlFor="name" style={{ ...contactFormLabelStyles }}>Name</label>
@@ -530,7 +545,10 @@ class BlogIndex extends Component {
               </div>
               <label htmlFor="message" style={{ ...contactFormLabelStyles }}>Message</label>
               <textarea rows="4" id="body" name="body" style={{ ...contactFormInputStyles }} />
-              <input type="submit" name="Submit" className="greenTheme linkLikeStyle" style={{ ...contactFormSubmitButtonStyles }} />
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                <em>✔️ Goes directly to my email inbox</em>
+                <input type="submit" name="Submit" className="greenTheme linkLikeStyle" style={{ ...contactFormSubmitButtonStyles }} />
+              </div>
             </form>
           </div>
         </Layout>
