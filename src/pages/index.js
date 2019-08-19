@@ -311,14 +311,16 @@ class BlogIndex extends Component {
           />
           <Sitemap top />
           <Bio />
-          <div className="greyUnderline wavyDivider" />
-          <p style={{ marginTop: '30px' }}>
-            I'm a self-taught software developer from Irvine, CA with a background in design. I write <a href="https://www.benjaminjohnson.me/blog/empathetic-code/" target="_blank">empathetic code</a> and build full-stack applications that people connect with directly. Regardless of the platform, solving difficult problems and building smooth user experiences is my jam.
-            <br /><br />
-            I currently work as a <em>Software Developer</em> pioneering front-end web projects at <a href="https://www.ytel.com" target="_blank">Ytel</a>, a telecommunications API platform in Foothill Ranch, CA.
-            <br /><br />
-            <em>Go ahead and <a href="#contact">give me a shout</a> if you'd like to chat.</em>
-          </p>
+          {/* <div className="greyUnderline wavyDivider" /> */}
+          <div className="aboutSection">
+            <p>
+              I'm a self-taught software developer from Irvine, CA with a background in design. I write <a href="https://www.benjaminjohnson.me/blog/empathetic-code/" target="_blank">empathetic code</a> and build full-stack applications that people connect with directly. Regardless of the platform, solving difficult problems and building smooth user experiences is my jam.
+              <br /><br />
+              I currently work as a <strong>Software Developer</strong> pioneering front-end web projects at <a href="https://www.ytel.com" target="_blank">Ytel</a>, a telecommunications API platform in Foothill Ranch, CA.
+              <br /><br />
+              <em>Go ahead and <a href="#contact">give me a shout</a> if you'd like to chat.</em>
+            </p>
+          </div>
 
           {/* PROJECTS */}
           <h2 id="projects" className="sectionTitle">Projects</h2>
@@ -504,28 +506,33 @@ class BlogIndex extends Component {
           {/* CONTACT */}
           <h2 id="contact" className="sectionTitle">Contact</h2>
           <div className="yellowUnderline wavyDivider" style={{ marginBottom: '10px', position: 'relative', top: '-10px', zIndex: '-1' }} />
-          <form
-            action="https://us-central1-contact-form-249703.cloudfunctions.net/contact-form2"
-            method="POST"
-            onSubmit={() => {
-              this.setState({ isSubmittingContact: true })
-            }}
-          >
-            <div style={{ display: 'flex' }}>
-              <div style={{ width: '50%' }}>
-                <label htmlFor="name" style={{ ...contactFormLabelStyles }}>Name</label>
-                <input type="text" id="name" name="name" style={{ ...contactFormInputStyles }} />
+          <div className="contactForm">
+            <p>
+              I'm currently <strong>unavailable</strong> for immediate hire but I am <em>always</em> open to chat about interesting opportunities.
+            </p>
+            <form
+              action="https://us-central1-contact-form-249703.cloudfunctions.net/contact-form2"
+              method="POST"
+              onSubmit={() => {
+                this.setState({ isSubmittingContact: true })
+              }}
+            >
+              <div style={{ display: 'flex' }}>
+                <div style={{ width: '50%' }}>
+                  <label htmlFor="name" style={{ ...contactFormLabelStyles }}>Name</label>
+                  <input type="text" id="name" name="name" style={{ ...contactFormInputStyles }} />
+                </div>
+                <div style={{ width: '3%' }}></div>
+                <div style={{ width: '50%' }}>
+                  <label htmlFor="email" style={{ ...contactFormLabelStyles }}>Email</label>
+                  <input type="email" id="email" name="email" style={{ ...contactFormInputStyles }} />
+                </div>
               </div>
-              <div style={{ width: '3%' }}></div>
-              <div style={{ width: '50%' }}>
-                <label htmlFor="email" style={{ ...contactFormLabelStyles }}>Email</label>
-                <input type="email" id="email" name="email" style={{ ...contactFormInputStyles }} />
-              </div>
-            </div>
-            <label htmlFor="message" style={{ ...contactFormLabelStyles }}>Message</label>
-            <textarea rows="4" id="body" name="body" style={{ ...contactFormInputStyles }} />
-            <input type="submit" name="Submit" className="greenTheme linkLikeStyle" style={{ ...contactFormSubmitButtonStyles }} />
-          </form>
+              <label htmlFor="message" style={{ ...contactFormLabelStyles }}>Message</label>
+              <textarea rows="4" id="body" name="body" style={{ ...contactFormInputStyles }} />
+              <input type="submit" name="Submit" className="greenTheme linkLikeStyle" style={{ ...contactFormSubmitButtonStyles }} />
+            </form>
+          </div>
         </Layout>
       </Fragment>
     )

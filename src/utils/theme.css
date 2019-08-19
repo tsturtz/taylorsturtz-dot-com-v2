@@ -70,7 +70,7 @@ h2 {
   position: relative;
 }
 .sitemapLinkContainer:hover .sitemapLinkUnderlineOverlay {
-  display: none;
+  left: 150px;
 }
 .sitemapLinkUnderline {
   color: #fff;
@@ -80,16 +80,17 @@ h2 {
   position: relative;
   z-index: -1;
   top: -20px;
-  left: 2.5px;
+  left: 3px;
 }
 .sitemapLinkUnderlineOverlay {
-  display: block;
   position: absolute;
   z-index: -1;
   height: 50%;
   width: 100%;
   bottom: 10px;
   background-color: #FFF;
+  left: 0;
+  transition: .5s;
 }
 .sitemapLink {
   text-align: center;
@@ -97,6 +98,31 @@ h2 {
   font-size: 0.9rem;
   position: relative;
   z-index: -1;
+}
+
+.aboutSection {
+  margin-top: 30px;
+  padding: 30px;
+  background-image: radial-gradient(rgba(54, 181, 162, 1) 15%, transparent 16%), radial-gradient(rgba(54, 181, 162, 1) 15%, transparent 16%);
+  background-size: 10px 10px;
+}
+.aboutSection p {
+  background: #FFF;
+  padding: 30px;
+  margin: 0;
+}
+.contactForm {
+  margin: 20px 0 40px;
+  padding: 30px;
+  background-image: radial-gradient(rgba(54, 181, 162, 1) 15%, transparent 16%), radial-gradient(rgba(54, 181, 162, 1) 15%, transparent 16%);
+  background-size: 10px 10px;
+}
+.contactForm form, .contactForm p {
+  background: #FFF;
+  padding: 30px;
+}
+.contactForm form {
+  margin: 0;
 }
 
 .greyUnderline:after {
