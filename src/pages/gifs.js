@@ -68,7 +68,7 @@ class GifsPage extends Component {
         <h1 style={{ textAlign: 'center', fontFamily: 'Bitter, serif', marginTop: '90px' }}>
           A 👌 Collection of GIFs
         </h1>
-        <div className="wavyGreyDivider" />
+        <div className="greyUnderline wavyDivider" />
         {copiedUrl && (
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', border: '1px solid #36B5A2', margin: '0 10px 20px', padding: '5px 0' }}>
             <div>'<strong className="accent">{copiedAlt}</strong>' was copied to your clipboard</div>

@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import { Link } from 'gatsby'
 import { rhythm, scale } from '../utils/typography'
+import Bio from '../components/Bio'
 import FooterBio from '../components/FooterBio'
 
 class Layout extends Component {

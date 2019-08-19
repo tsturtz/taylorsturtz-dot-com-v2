@@ -311,6 +311,7 @@ class BlogIndex extends Component {
           />
           <Sitemap top />
           <Bio />
+          <div className="greyUnderline wavyDivider" />
           <p style={{ marginTop: '30px' }}>
             I'm a self-taught software developer from Irvine, CA with a background in design. I write <a href="https://www.benjaminjohnson.me/blog/empathetic-code/" target="_blank">empathetic code</a> and build full-stack applications that people connect with directly. Regardless of the platform, solving difficult problems and building smooth user experiences is my jam.
             <br /><br />
@@ -321,6 +322,7 @@ class BlogIndex extends Component {
 
           {/* PROJECTS */}
           <h2 id="projects" className="sectionTitle">Projects</h2>
+          <div className="yellowUnderline wavyDivider" style={{ marginBottom: '10px', position: 'relative', top: '-10px', zIndex: '-1' }} />
 
           <div className="portfolioGrid">
 
@@ -462,6 +464,7 @@ class BlogIndex extends Component {
 
           {/* BLOG */}
           <h2 id="blog" className="sectionTitle">Blog</h2>
+          <div className="yellowUnderline wavyDivider" style={{ marginBottom: '10px', position: 'relative', top: '-10px', zIndex: '-1' }} />
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
 
@@ -500,6 +503,7 @@ class BlogIndex extends Component {
 
           {/* CONTACT */}
           <h2 id="contact" className="sectionTitle">Contact</h2>
+          <div className="yellowUnderline wavyDivider" style={{ marginBottom: '10px', position: 'relative', top: '-10px', zIndex: '-1' }} />
           <form
             action="https://us-central1-contact-form-249703.cloudfunctions.net/contact-form2"
             method="POST"

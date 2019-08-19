@@ -8,7 +8,7 @@ class FooterBio extends PureComponent {
   render() {
     return (
       <Fragment>
-        <div className="wavyGreyDivider" />
+        <div className="greyUnderline wavyDivider" />
         <Sitemap />
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingBottom: '30px' }}>
           <div style={{ display: 'flex', alignItems: 'center' }}>
