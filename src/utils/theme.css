@@ -101,7 +101,7 @@ h2 {
 }
 
 .aboutSection {
-  margin-top: 30px;
+  margin: 40px 0 60px;
   padding: 30px;
   background-image: radial-gradient(rgba(54, 181, 162, 1) 15%, transparent 16%), radial-gradient(rgba(54, 181, 162, 1) 15%, transparent 16%);
   background-size: 10px 10px;
@@ -426,7 +426,7 @@ pre[data-line] {
     'l5 r5'
   ;
   grid-gap: 10px;
-  height: 250px;
+  height: 300px;
   padding-bottom: 50px;
   align-items: center;
 }

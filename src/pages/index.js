@@ -40,7 +40,7 @@ const contactFormSubmitButtonStyles = {
   padding: '.2rem 1.2rem',
   borderRadius: '20px',
   border: '1px solid #36B5A2',
-  boxShadow: '1px 1px 0px 0px #00ffda',
+  boxShadow: '2px 2px 0px 0px #00ffda',
   background: '#FFF',
   margin: '0 0 0 auto',
   display: 'block',
@@ -328,7 +328,7 @@ class BlogIndex extends Component {
 
           <div className="portfolioGrid">
 
-            <div className="grid1"><span style={portfolioTypePillStyles}>Web</span></div>
+            <div className="grid1"><span style={{ ...portfolioTypePillStyles, fontSize: '.85rem' }}>Web</span></div>
 
             <div className="grid2">
               <div
@@ -407,7 +407,7 @@ class BlogIndex extends Component {
               </div>
             </div>
 
-            <div className="grid6"><span style={portfolioTypePillStyles}>Mobile</span></div>
+            <div className="grid6"><span style={{ ...portfolioTypePillStyles, fontSize: '.85rem' }}>Mobile</span></div>
 
             <div className="grid7">
               <div
@@ -426,7 +426,7 @@ class BlogIndex extends Component {
               </div>
             </div>
 
-            <div className="grid8"><span style={portfolioTypePillStyles}>Other</span></div>
+            <div className="grid8"><span style={{ ...portfolioTypePillStyles, fontSize: '.85rem' }}>Other</span></div>
 
             <div className="grid9">
               <div
@@ -466,7 +466,7 @@ class BlogIndex extends Component {
 
           {/* BLOG */}
           <h2 id="blog" className="sectionTitle">Blog</h2>
-          <div className="yellowUnderline wavyDivider" style={{ marginBottom: '10px', position: 'relative', top: '-10px', zIndex: '-1' }} />
+          <div className="yellowUnderline wavyDivider" style={{ marginBottom: '20px', position: 'relative', top: '-10px', zIndex: '-1' }} />
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
 
@@ -508,7 +508,7 @@ class BlogIndex extends Component {
           <div className="yellowUnderline wavyDivider" style={{ marginBottom: '10px', position: 'relative', top: '-10px', zIndex: '-1' }} />
           <div className="contactForm">
             <p>
-              I'm currently <strong>unavailable</strong> for immediate hire but I am <em>always</em> open to chat about interesting opportunities.
+              I'm currently <strong>unavailable</strong> for immediate hire but I am always open to chat about interesting opportunities.
             </p>
             <form
               action="https://us-central1-contact-form-249703.cloudfunctions.net/contact-form2"

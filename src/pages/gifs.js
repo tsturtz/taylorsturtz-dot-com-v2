@@ -31,7 +31,8 @@ const gifUrls = [
   { alt: 'Extremely Shocked Dude', url: 'https://media.giphy.com/media/4WRfY6epo5vZ6/giphy.gif' },
   { alt: 'Prison Mike - "Tanks"', url: 'https://i.imgflip.com/2k8mjk.jpg' },
   { alt: 'Ali G - Respect', url: 'https://giphygifs.s3.amazonaws.com/media/8JiEPO8NRh15u/giphy.gif' },
-  { alt: 'Bye!', url: 'https://media0.giphy.com/media/m9eG1qVjvN56H0MXt8/giphy-downsized.gif?cid=6104955ed3fa63ded7ff8bd1f1a25e090ce94b2953bf6c34&rid=giphy-downsized.gif' },
+  { alt: 'Bye!', url: 'https://media0.giphy.com/media/m9eG1qVjvN56H0MXt8/giphy-downsized.gif' },
+  { alt: 'Gotcha', url: 'https://media1.giphy.com/media/3oz8xs8WYZr0dJV3kQ/source.gif' },
 ]
 
 class GifsPage extends Component {
