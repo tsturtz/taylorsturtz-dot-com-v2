@@ -20,7 +20,7 @@ class Bio extends Component {
           <span className="bioGreeting" style={{ fontWeight: 700 }}>Hi, I'm Taylor Sturtz</span>
           <br />
           <em style={{ color: '#4b4b4b', fontSize: '1rem' }}>
-            <span id="jsJunky">javascript junky </span><span id="goIsCoolToo">~ go is cool too!</span> / soccer hooligan / daddy shark
+            <span id="jsJunky">javascript junky</span> / soccer hooligan / daddy shark
           </em>
         </p>
       </div>

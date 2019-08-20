@@ -11,7 +11,7 @@ class FooterBio extends PureComponent {
         <div className="greyUnderline wavyDivider" />
         <Sitemap />
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingBottom: '30px' }}>
-          <div style={{ display: 'flex', alignItems: 'center' }}>
+          <a href="/" className="footerBioLink">
             <img
               src={profilePic}
               alt="Taylor Sturtz"
@@ -30,7 +30,7 @@ class FooterBio extends PureComponent {
                 <code>npx taylorsturtz</code>
               </span>
             </div>
-          </div>
+          </a>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
             <div className="socialIcons">
               <a href="https://www.linkedin.com/in/taylorsturtz/" target="_blank" className="mdi mdi-linkedin-box" />

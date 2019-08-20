@@ -6,7 +6,7 @@ import { DiscussionEmbed } from 'disqus-react';
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import { rhythm, scale } from '../utils/typography'
-import { portfolioTypePillStyles } from '../utils/consts'
+import { pillStyles } from '../utils/consts'
 
 import profilePic from '../assets/profile-pics/taylorsturtz-mischief.png'
 
@@ -30,7 +30,7 @@ class BlogPostTemplate extends Component {
         return (
           <span
             key={idx}
-            style={portfolioTypePillStyles}
+            style={pillStyles}
           >{tag}
           </span>
         )

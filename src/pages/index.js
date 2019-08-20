@@ -6,7 +6,7 @@ import Bio from '../components/Bio'
 import Sitemap from '../components/Sitemap'
 import Layout from '../components/Layout'
 import { rhythm } from '../utils/typography'
-import { portfolioTypePillStyles } from '../utils/consts'
+import { pillStyles } from '../utils/consts'
 
 import meetupmapGif from '../assets/meetupmapOPT.gif'
 import todoGif from '../assets/todoOPT.gif'
@@ -34,16 +34,6 @@ const contactFormInputStyles = {
   border: '1px solid rgb(231, 231, 231)',
   boxShadow: 'rgb(204, 204, 204) 1px 1px 0px 0px inset',
   background: 'rgb(249, 249, 249)',
-}
-const contactFormSubmitButtonStyles = {
-  cursor: 'pointer',
-  padding: '.2rem 1.2rem',
-  borderRadius: '20px',
-  border: '1px solid #36B5A2',
-  boxShadow: '2px 2px 0px 0px #00ffda',
-  background: '#FFF',
-  margin: '0 0 0 auto',
-  display: 'block',
 }
 
 class BlogIndex extends Component {
@@ -313,27 +303,36 @@ class BlogIndex extends Component {
           />
           <Sitemap top />
           <Bio />
-          {/* <div className="greyUnderline wavyDivider" /> */}
           <div className="aboutSection">
             <p>
-              I'm a self-taught software engineer from Irvine, CA with a background in design. I write <a href="https://www.benjaminjohnson.me/blog/empathetic-code/" target="_blank">empathetic code</a> and build full-stack applications that people connect with directly. Regardless of the platform, solving difficult problems and building <span className="wavy" data-text="smooth">smooth</span> user experiences is my jam.
+              I'm a self-motivated software engineer from Irvine, CA with a background in design. I write <a href="https://www.benjaminjohnson.me/blog/empathetic-code/" target="_blank">empathetic code</a> and build full-stack applications that people connect with directly. Regardless of the platform, solving difficult problems and building <span className="wavy" data-text="smooth">smooth</span> user experiences is my jam.
               <br /><br />
               I currently work full-time as a <strong>Software Developer</strong> pioneering front-end web projects at <a href="https://www.ytel.com" target="_blank">Ytel</a>, a telecommunications API platform in Foothill Ranch, California.
               <div className="greyUnderline wavyDivider" style={{ marginBottom: '20px' }} />
               <em>Have a question or an intriguing idea? Lose my number? Am I ignoring your LinkedIn message? </em>
-              &nbsp;✉️ <em><a href="#contact">Shoot me an email.</a></em>
+              &nbsp;✉️ <em><a href="#contact">Shoot me a message.</a></em>
             </p>
           </div>
 
           {/* PROJECTS */}
           <h2 id="projects" className="sectionTitle">Projects</h2>
-          <div className="yellowUnderline wavyDivider" style={{ marginBottom: '10px', position: 'relative', top: '-10px', zIndex: '-1' }} />
+          <div className="yellowUnderline wavyDivider" style={{ position: 'relative', top: '-10px', zIndex: '-1' }} />
 
-          <span style={{ paddingLeft: '20px', display: 'inline-block', marginBottom: '10px' }}><em style={{ color: '#ababab' }}>A handful of my personal and opensource projects.</em></span>
+          <p style={{ marginBottom: '10px' }}>
+            <em style={{ color: '#ababab' }}>
+              A handful of my personal and open source projects; check my
+              <a href="https://twitter.com/taylorsturtz" target="_blank">
+                &nbsp;
+                <span className="mdi mdi-github-circle" style={{ marginRight: '2px', fontSize: '1rem', position: 'relative', top: '3px', zIndex: '-1' }} />
+                GitHub
+              </a>
+              &nbsp;for more.
+            </em>
+          </p>
 
           <div className="portfolioGrid">
 
-            <div className="grid1"><span style={{ ...portfolioTypePillStyles, fontSize: '.85rem' }}>Web</span></div>
+            <div className="grid1"><span style={{ ...pillStyles, fontSize: '.85rem' }}>Web</span></div>
 
             <div className="grid2">
               <div
@@ -412,7 +411,7 @@ class BlogIndex extends Component {
               </div>
             </div>
 
-            <div className="grid6"><span style={{ ...portfolioTypePillStyles, fontSize: '.85rem' }}>Mobile</span></div>
+            <div className="grid6"><span style={{ ...pillStyles, fontSize: '.85rem' }}>Mobile</span></div>
 
             <div className="grid7">
               <div
@@ -431,7 +430,7 @@ class BlogIndex extends Component {
               </div>
             </div>
 
-            <div className="grid8"><span style={{ ...portfolioTypePillStyles, fontSize: '.85rem' }}>Other</span></div>
+            <div className="grid8"><span style={{ ...pillStyles, fontSize: '.85rem' }}>Other</span></div>
 
             <div className="grid9">
               <div
@@ -481,7 +480,7 @@ class BlogIndex extends Component {
                 return (
                   <span
                     key={idx}
-                    style={portfolioTypePillStyles}
+                    style={pillStyles}
                   >{tag}
                   </span>
                 )
@@ -513,14 +512,33 @@ class BlogIndex extends Component {
           <div className="yellowUnderline wavyDivider" style={{ marginBottom: '10px', position: 'relative', top: '-10px', zIndex: '-1' }} />
           <div className="contactForm">
             <p>
-              I'm currently <strong>unavailable</strong> for immediate hire <em>but I am always open to chat about interesting opportunities</em>.
+              I'm currently <strong>unavailable</strong> for immediate hire <em>but I am always open to chat about new opportunities</em>.
             </p>
             <p>
-              You could try me on social media:
+              To reach me you could try me on social media...
               <br />
-              <span className="mdi mdi-twitter" style={{ fontSize: '1.2rem', color: '#ababab', position: 'relative', top: '3px' }} /> I'm fairly active on Twitter: <a href="https://twitter.com/taylorsturtz" target="_blank">@taylorsturtz</a>
-              <br />
-              <span className="mdi mdi-linkedin-box" style={{ fontSize: '1.2rem', color: '#ababab', position: 'relative', top: '3px' }} /> Not so much on LinkedIn: <a href="https://linkedin.com/in/taylorsturtz" target="_blank">/in/taylorsturtz</a>
+              <ul>
+                <li style={{ margin: 0 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', lineHeight: '1.3' }}>
+                    <span>I'm fairly active on Twitter:</span>
+                    &nbsp;
+                    <a href="https://twitter.com/taylorsturtz" target="_blank" style={{ display: 'flex', alignItems: 'center' }}>
+                      <span className="mdi mdi-twitter socialIconsContact" />
+                      <span>@taylorsturtz</span>
+                    </a>
+                  </div>
+                </li>
+                <li style={{ margin: 0 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', lineHeight: '1.3' }}>
+                    <span>Not so much on LinkedIn:</span>
+                    &nbsp;
+                    <a href="https://linkedin.com/in/taylorsturtz" target="_blank" style={{ display: 'flex', alignItems: 'center' }}>
+                      <span className="mdi mdi-linkedin-box socialIconsContact" />
+                      <span>/in/taylorsturtz</span>
+                    </a>
+                  </div>
+                </li>
+              </ul>
             </p>
             <form
               action="https://us-central1-contact-form-249703.cloudfunctions.net/contact-form2"
@@ -529,10 +547,8 @@ class BlogIndex extends Component {
                 this.setState({ isSubmittingContact: true })
               }}
             >
-              <span>Send me a message.</span>
-              <br />
-              <strong>Recruiters:</strong> in-house recruiters only, please ❤️
-              <div style={{ display: 'flex' }}>
+              <span>...or better yet send me an email directly:</span>
+              <div style={{ display: 'flex', marginTop: '10px' }}>
                 <div style={{ width: '50%' }}>
                   <label htmlFor="name" style={{ ...contactFormLabelStyles }}>Name</label>
                   <input type="text" id="name" name="name" style={{ ...contactFormInputStyles }} />
@@ -546,8 +562,8 @@ class BlogIndex extends Component {
               <label htmlFor="message" style={{ ...contactFormLabelStyles }}>Message</label>
               <textarea rows="4" id="body" name="body" style={{ ...contactFormInputStyles }} />
               <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <em>✔️ Goes directly to my email inbox</em>
-                <input type="submit" name="Submit" className="greenTheme linkLikeStyle" style={{ ...contactFormSubmitButtonStyles }} />
+                <strong>Recruiters: <em>in-house recruiters only please!</em> ❤️</strong>
+                <input type="submit" name="Submit" className="greenTheme submitButton" />
               </div>
             </form>
           </div>

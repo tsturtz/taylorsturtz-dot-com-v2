@@ -9,8 +9,11 @@ img, span.gatsby-resp-image-background-image {
 .small-img {
   width: 100px;
 }
+ul {
+  list-style-type: circle;
+}
 a:hover, .linkLikeStyle:hover, .whiteLink:hover {
-  color: #f3bc34;
+  color: #f3bc33;
 }
 h4 {
   color: #36B5A2 !important;
@@ -30,12 +33,16 @@ h2 {
   padding-bottom: 5px;
   font-size: 1.7rem;
 }
-span#goIsCoolToo {
-  display: none;
-  font-weight: 700;
+span#jsJunky {
+  transition: .5s;
 }
-span#jsJunky:hover ~ #goIsCoolToo {
-  display: inline-block;
+span#jsJunky:after {
+  content: ' / golang fan ';
+  display: none;
+  transition: .5s;
+}
+span#jsJunky:hover:after {
+  display: inline;
 }
 
 .projectItem {
@@ -50,7 +57,7 @@ span#jsJunky:hover ~ #goIsCoolToo {
   margin-left: 5px;
 }
 .projectItem .mdi-arrow-right {
-  color: #f3bc34;
+  color: #f3bc33;
   margin-right: 5px;
 }
 .projectItem .projectTitle {
@@ -66,7 +73,7 @@ span#jsJunky:hover ~ #goIsCoolToo {
   transition: .1s;
 }
 .projectItem:hover .projectTitle, .projectItem:hover .projectSubtitle {
-  color: #f3bc34;
+  color: #f3bc33;
 }
 
 .sitemapLinkContainer {
@@ -155,6 +162,45 @@ span#jsJunky:hover ~ #goIsCoolToo {
 .contactForm form {
   margin: 0;
 }
+.submitButton {
+  cursor: pointer;
+  padding: .2rem 1.2rem;
+  border-radius: 20px;
+  border: 1px solid #36B5A2;
+  box-shadow: rgb(0, 255, 218) 2px 2px 0px 0px;
+  background: #FFF;
+  margin: 0 0 0 auto;
+  display: block;
+}
+.submitButton:hover {
+  box-shadow: inset rgb(0, 255, 218) 2px 2px 0px 0px !important;
+}
+.resumePrintBtn, .resumeDownloadBtn {
+  cursor: pointer;
+  padding: .2rem 1.2rem;
+  border-radius: 20px;
+  border: 1px solid #36B5A2;
+  box-shadow: rgb(0, 255, 218) 2px 2px 0px 0px;
+  background: #FFF;
+  color: #36B5A2;
+  font-size: .8rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.resumePrintBtn:hover, .resumeDownloadBtn:hover {
+  color: #36B5A2;
+  box-shadow: inset rgb(0, 255, 218) 2px 2px 0px 0px !important;
+}
+
+.footerBioLink {
+  display: flex;
+  align-items: center;
+  color: #4b4b4b;
+}
+.footerBioLink:hover {
+  color: #f3bc33;
+}
 
 .greyUnderline:after {
   text-decoration: #ababab wavy underline;
@@ -169,6 +215,7 @@ span#jsJunky:hover ~ #goIsCoolToo {
   margin: 0;
   display: flex;
   flex-direction: column;
+  user-select: none;
 }
 .wavyDivider:after {
   content: '---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------';
@@ -197,7 +244,10 @@ span#jsJunky:hover ~ #goIsCoolToo {
   color: #ababab;
 }
 .socialIcons > a:hover {
-  color: #f3bc34;
+  color: #f3bc33;
+}
+.socialIconsContact {
+  font-size: 1.4rem;
 }
 .greyLink {
   color: #4b4b4b;

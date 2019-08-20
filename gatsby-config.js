@@ -63,8 +63,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Taylor Sturtz Blog`,
-        short_name: `TS Blog`,
+        name: `Taylor Sturtz Personal Site`,
+        short_name: `TS Site`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,

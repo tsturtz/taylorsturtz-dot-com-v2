@@ -33,6 +33,7 @@ const gifUrls = [
   { alt: 'Ali G - Respect', url: 'https://giphygifs.s3.amazonaws.com/media/8JiEPO8NRh15u/giphy.gif' },
   { alt: 'Bye!', url: 'https://media0.giphy.com/media/m9eG1qVjvN56H0MXt8/giphy-downsized.gif' },
   { alt: 'Gotcha', url: 'https://media1.giphy.com/media/3oz8xs8WYZr0dJV3kQ/source.gif' },
+  { alt: 'Oh yaaa kid', url: 'https://media1.tenor.com/images/19401f67708c3bcff5b14d9cd655567e/tenor.gif' },
 ]
 
 class GifsPage extends Component {
@@ -66,10 +67,10 @@ class GifsPage extends Component {
     const { copiedUrl, copiedAlt, dimmer } = this.state;
     return (
       <Layout location={this.props.location}>
-        <h1 style={{ textAlign: 'center', fontFamily: 'Bitter, serif', marginTop: '90px' }}>
-          A 👌 Collection of GIFs
-        </h1>
-        <div className="greyUnderline wavyDivider" />
+        <h2 style={{ textAlign: 'center', fontFamily: 'Bitter, serif', marginTop: '90px' }}>
+          A 👌 Collection of Reaction GIFs
+        </h2>
+        <div className="greyUnderline wavyDivider" style={{ marginBottom: '20px' }} />
         {copiedUrl && (
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', border: '1px solid #36B5A2', margin: '0 10px 20px', padding: '5px 0' }}>
             <div>'<strong className="accent">{copiedAlt}</strong>' was copied to your clipboard</div>

@@ -1,8 +1,9 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a1fed13a-2276-45ae-bb82-e3a4343137e7/deploy-status)](https://app.netlify.com/sites/youthful-neumann-53d5c9/deploys)
 
 ## Taylor Sturtz developer portfolio and blog
+*javascript junky / soccer hooligan / daddy shark*
 
-Hi 👋I'm a software dev amongst other things (runner / family man / soccer fan / music nerd). I write clean, empathetic code and build apps that users connect with directly. Regardless of the platform, **solving difficult problems and building smooth user experiences is my jam**.
+I'm a self-taught software engineer from Irvine, CA with a background in design. I write empathetic code and build full-stack applications that people connect with directly. Regardless of the platform, solving difficult problems and building smooth user experiences is my jam.
 
 *Check me out on [**GitHub**](https://github.com/tsturtz) and [**Twitter**](https://twitter.com/taylorsturtz)*
 
@@ -19,6 +20,4 @@ Hi 👋I'm a software dev amongst other things (runner / family man / soccer fan
 
 ---
 
-*Forked from [**Gatsby Starter Blog**](https://github.com/gatsbyjs/gatsby-starter-blog)*
-
-*Borrowed and slightly modified the code syntax theme from [@gaearon](https://github.com/gaearon) (which is based on [@sdras](https://github.com/sdras)'s Night Owl theme).*
+*Borrowed and slightly modified the code syntax theme in blog from [@gaearon](https://github.com/gaearon) (which is based on [@sdras](https://github.com/sdras)'s Night Owl theme).*
