@@ -1,6 +1,6 @@
 import React, { PureComponent, Fragment } from 'react'
 import { rhythm } from '../utils/typography'
-import resumePdf from '../assets/TAYLOR_STURTZ_resume.pdf'
+import resumePdf from '../assets/TAYLOR_STURTZ_RESUME.pdf'
 
 const sectionMargins = {
   marginRight: 0,
