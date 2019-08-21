@@ -7,16 +7,16 @@ import FooterBio from '../components/FooterBio'
 import Layout from '../components/Layout'
 import profilePic from '../assets/profile-pics/taylorsturtz-mischief.png'
 
-class Uses extends PureComponent {
+class Follows extends PureComponent {
   render() {
     return (
       <Layout location={this.props.location}>
         <h2 style={{ textAlign: 'center', fontFamily: 'Bitter, serif', marginTop: '90px' }}>
-          I'm not influential enough to have a /uses page 🙃
+          This is where I'll list devs in the community I follow and for what reasons.
         </h2>
       </Layout>
     )
   }
 }
 
-export default Uses
+export default Follows

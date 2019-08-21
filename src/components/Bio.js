@@ -10,7 +10,7 @@ import { rhythm } from '../utils/typography'
 class Bio extends Component {
   render() {
     return (
-      <div style={{ display: 'flex', alignItems: 'center' }}>
+      <div className="bio">
         <img
           src={profilePic}
           alt={`Taylor Sturtz`}
@@ -19,8 +19,15 @@ class Bio extends Component {
         <p style={{ marginBottom: 0, lineHeight: '1.5', fontFamily: 'Bitter, serif' }}>
           <span className="bioGreeting" style={{ fontWeight: 700 }}>Hi, I'm Taylor Sturtz</span>
           <br />
-          <em style={{ color: '#4b4b4b', fontSize: '1rem' }}>
-            <span id="jsJunky">javascript junky</span> / soccer hooligan / daddy shark
+          <em className="bioGreetingSubtitle">
+            javascript junky / soccer hooligan / daddy shark
+          </em>
+          <em className="bioGreetingSubtitleMobile">
+            <ul>
+              <li>javascript junky</li>
+              <li>soccer hooligan</li>
+              <li>daddy shark</li>
+            </ul>
           </em>
         </p>
       </div>

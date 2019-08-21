@@ -50,6 +50,8 @@ class BlogIndex extends Component {
   }
 
   setLightboxIndex = (e) => {
+    const { isInIFrame } = this.state;
+    if (isInIFrame) return;
     const lightboxIndex = JSON.parse(e.currentTarget.getAttribute('lightboxindex'));
     this.setState({ lightboxIndex });
   }
@@ -309,8 +311,13 @@ class BlogIndex extends Component {
               <br /><br />
               I currently work full-time as a <strong>Software Developer</strong> pioneering front-end web projects at <a href="https://www.ytel.com" target="_blank">Ytel</a>, a telecommunications API platform in Foothill Ranch, California.
               <div className="greyUnderline wavyDivider" style={{ marginBottom: '20px' }} />
-              <em>Have a question or an intriguing idea? Lose my number? Am I ignoring your LinkedIn message? </em>
-              &nbsp;✉️ <em><a href="#contact">Shoot me a message.</a></em>
+              <div className="aboutSectionLetsChat">
+                <em>Have a question or an intriguing idea? Lose my number? Am I ignoring your LinkedIn messages? </em>
+                <a href="#contact" className="messageMeBtn">
+                  {/* <span className="mdi mdi-message-text" /> */}
+                  🤙 Let's chat!
+                </a>
+              </div>
             </p>
           </div>
 
@@ -323,7 +330,7 @@ class BlogIndex extends Component {
               A handful of my personal and open source projects; check my
               <a href="https://twitter.com/taylorsturtz" target="_blank">
                 &nbsp;
-                <span className="mdi mdi-github-circle" style={{ marginRight: '2px', fontSize: '1rem', position: 'relative', top: '3px', zIndex: '-1' }} />
+                <span className="mdi mdi-github-circle" style={{ marginRight: '2px', fontSize: '1.2rem', position: 'relative', top: '3px', zIndex: '-1' }} />
                 GitHub
               </a>
               &nbsp;for more.
@@ -339,7 +346,11 @@ class BlogIndex extends Component {
                 className="projectItem"
                 lightboxindex="0"
                 onClick={this.setLightboxIndex}
-                onKeyUp={(e) => { if (e.which === 13 || e.which === 32) this.setLightboxIndex(e); }}
+                onKeyUp={(e) => {
+                  if (e.which === 13 || e.which === 32) {
+                    this.setLightboxIndex(e);
+                  }
+                }}
                 role="button"
                 tabIndex="0"
               >
@@ -353,7 +364,7 @@ class BlogIndex extends Component {
                   ) : (
                     <div>
                       <p className="projectTitle">This site</p>
-                      <p className="projectSubtitle">React / Gatsby / Google Cloud Functions / Python</p>
+                      <p className="projectSubtitle">React / Gatsby / Serverless Python</p>
                     </div>
                   )}
                 </div>
@@ -372,7 +383,7 @@ class BlogIndex extends Component {
                 <span className="mdi mdi-arrow-right" />
                 <div style={{ paddingRight: rhythm(1), lineHeight: '1.5' }}>
                   <p className="projectTitle">Meetup Map</p>
-                  <p className="projectSubtitle">jQuery / Materialize CSS</p>
+                  <p className="projectSubtitle">jQuery / PHP</p>
                 </div>
               </div>
             </div>
@@ -471,7 +482,7 @@ class BlogIndex extends Component {
           {/* BLOG */}
           <h2 id="blog" className="sectionTitle">Blog</h2>
           <div className="yellowUnderline wavyDivider" style={{ marginBottom: '20px', position: 'relative', top: '-10px', zIndex: '-1' }} />
-          {posts.map(({ node }) => {
+          {posts.map(({ node }, blogIndex, blogArr) => {
             const title = node.frontmatter.title || node.fields.slug
 
             let tags = []
@@ -503,6 +514,9 @@ class BlogIndex extends Component {
                   {tags}
                 </div>
                 <p style={{ marginTop: '10px' }} dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                {blogIndex < blogArr.length - 1 && (
+                  <div className="greyUnderline wavyDivider" style={{ position: 'relative', zIndex: '-1', top: '-25px', width: '90px' }} />
+                )}
               </div>
             )
           })}
@@ -517,28 +531,17 @@ class BlogIndex extends Component {
             <p>
               To reach me you could try me on social media...
               <br />
-              <ul>
-                <li style={{ margin: 0 }}>
-                  <div style={{ display: 'flex', alignItems: 'center', lineHeight: '1.3' }}>
-                    <span>I'm fairly active on Twitter:</span>
-                    &nbsp;
-                    <a href="https://twitter.com/taylorsturtz" target="_blank" style={{ display: 'flex', alignItems: 'center' }}>
-                      <span className="mdi mdi-twitter socialIconsContact" />
-                      <span>@taylorsturtz</span>
-                    </a>
-                  </div>
-                </li>
-                <li style={{ margin: 0 }}>
-                  <div style={{ display: 'flex', alignItems: 'center', lineHeight: '1.3' }}>
-                    <span>Not so much on LinkedIn:</span>
-                    &nbsp;
-                    <a href="https://linkedin.com/in/taylorsturtz" target="_blank" style={{ display: 'flex', alignItems: 'center' }}>
-                      <span className="mdi mdi-linkedin-box socialIconsContact" />
-                      <span>/in/taylorsturtz</span>
-                    </a>
-                  </div>
-                </li>
-              </ul>
+              <span className="mdi mdi-twitter socialIconsContact" style={{ verticalAlign: 'sub', color: '#4b4b4b', lineHeight: '1.2' }} />
+              &nbsp;I'm fairly active on Twitter
+              (<a href="https://twitter.com/taylorsturtz" target="_blank" style={{ lineHeight: 1 }}>
+                <span>@taylorsturtz</span>
+              </a>)
+              <br />
+              <span className="mdi mdi-linkedin-box socialIconsContact" style={{ verticalAlign: 'sub', color: '#4b4b4b', lineHeight: '1.2' }} />
+              &nbsp;not so much on LinkedIn
+              (<a href="https://linkedin.com/in/taylorsturtz" target="_blank" style={{ lineHeight: 1 }}>
+                <span>/in/taylorsturtz</span>
+              </a>)
             </p>
             <form
               action="https://us-central1-contact-form-249703.cloudfunctions.net/contact-form2"
@@ -551,17 +554,17 @@ class BlogIndex extends Component {
               <div style={{ display: 'flex', marginTop: '10px' }}>
                 <div style={{ width: '50%' }}>
                   <label htmlFor="name" style={{ ...contactFormLabelStyles }}>Name</label>
-                  <input type="text" id="name" name="name" style={{ ...contactFormInputStyles }} />
+                  <input type="text" id="name" name="name" style={{ ...contactFormInputStyles }} required />
                 </div>
                 <div style={{ width: '3%' }}></div>
                 <div style={{ width: '50%' }}>
                   <label htmlFor="email" style={{ ...contactFormLabelStyles }}>Email</label>
-                  <input type="email" id="email" name="email" style={{ ...contactFormInputStyles }} />
+                  <input type="email" id="email" name="email" style={{ ...contactFormInputStyles }} required />
                 </div>
               </div>
               <label htmlFor="message" style={{ ...contactFormLabelStyles }}>Message</label>
-              <textarea rows="4" id="body" name="body" style={{ ...contactFormInputStyles }} />
-              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+              <textarea rows="3" id="body" name="body" style={{ ...contactFormInputStyles, minWidth: '100%', maxWidth: '100%' }} required />
+              <div className="formSubmitRow">
                 <strong>Recruiters: <em>in-house recruiters only please!</em> ❤️</strong>
                 <input type="submit" name="Submit" className="greenTheme submitButton" />
               </div>

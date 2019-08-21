@@ -10,19 +10,14 @@ class FooterBio extends PureComponent {
       <Fragment>
         <div className="greyUnderline wavyDivider" />
         <Sitemap />
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingBottom: '30px' }}>
+        <div className="footerBioContainer" style={{ paddingBottom: '30px' }}>
           <a href="/" className="footerBioLink">
             <img
               src={profilePic}
               alt="Taylor Sturtz"
-              style={{
-                marginRight: rhythm(1 / 2),
-                marginBottom: 0,
-                width: rhythm(2),
-                height: rhythm(2),
-              }}
+              className="footerBioPic"
             />
-            <div style={{ paddingRight: rhythm(1), lineHeight: '1.5' }}>
+            <div className="footerBioTitle">
               <p style={{ marginBottom: 0 }}>Taylor Sturtz</p>
               <span style={{ display: 'flex', alignItems: 'center', color: '#ababab', maxHeight: '15px', whiteSpace: 'nowrap' }}>
                 <span className="mdi mdi-console-line" />
@@ -31,7 +26,7 @@ class FooterBio extends PureComponent {
               </span>
             </div>
           </a>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <div className="socialIcons">
               <a href="https://www.linkedin.com/in/taylorsturtz/" target="_blank" className="mdi mdi-linkedin-box" />
               <a href="https://twitter.com/taylorsturtz" target="_blank" className="mdi mdi-twitter" />
