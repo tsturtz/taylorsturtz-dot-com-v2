@@ -1,6 +1,8 @@
 import React, { PureComponent, Fragment } from 'react'
 import { rhythm } from '../utils/typography'
 import resumePdf from '../assets/TAYLOR_STURTZ_RESUME.pdf'
+import '@mdi/font/css/materialdesignicons.min.css'
+import 'typeface-bitter'
 
 const sectionMargins = {
   marginRight: 0,
