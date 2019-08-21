@@ -30,7 +30,7 @@ const contactFormInputStyles = {
   padding: '.25rem .75rem',
   width: '100%',
   marginBottom: '10px',
-  borderRadius: '10px',
+  borderRadius: '6px',
   border: '1px solid rgb(231, 231, 231)',
   boxShadow: 'rgb(204, 204, 204) 1px 1px 0px 0px inset',
   background: 'rgb(249, 249, 249)',
