@@ -11,15 +11,15 @@ const sectionMargins = {
 }
 
 const skills = [
-  'JavaScript',
+  'JavaScript / TypeScript',
   'React / React Native',
   'Redux / Redux Saga',
   'HTML5 / DOM / Canvas',
   'CSS3 / LESS / SASS',
   'Node',
   'REST / GraphQL',
-  'jQuery',
   'Angular / AngularJS',
+  'jQuery',
   'Firebase',
   'Unit Testing',
   'Agile / Scrum',
@@ -31,7 +31,7 @@ const skills = [
   'Gatsby / Jekyll',
   'Golang',
   'CI/CD',
-  'GCP / FaaS',
+  'Serverless',
   'SQL',
   'Python',
 ];
@@ -159,7 +159,7 @@ class Resume extends PureComponent {
                 </p>
                 <ul style={{ marginTop: '10px', marginBottom: '15px', position: 'relative', left: '15px', width: 'calc(100% - 15px)' }}>
                   <li style={{ margin: 0 }}>
-                    Newport Coast Real Estate Website:&nbsp;
+                    Newport Coast real estate website:&nbsp;
 
                     <em className="annackermanPrint">annackerman.com</em>
                     <a className="annackermanWeb" href="http://annackerman.com" target="_blank">
@@ -167,7 +167,7 @@ class Resume extends PureComponent {
                     </a>
                   </li>
                   <li style={{ margin: 0 }}>
-                    Love Formula Card Game Website:&nbsp;
+                    Love Formula card game website:&nbsp;
                     <em className="loverformulaPrint">loveformulagame.com</em>
                     <a className="loverformulaWeb" href="http://www.loveformulagame.com" target="_blank">
                       <em>loveformulagame.com</em>

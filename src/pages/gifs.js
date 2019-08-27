@@ -35,6 +35,7 @@ const gifUrls = [
   { alt: 'Gotcha', url: 'https://media1.giphy.com/media/3oz8xs8WYZr0dJV3kQ/source.gif' },
   { alt: 'Oh yaaa kid', url: 'https://media1.tenor.com/images/19401f67708c3bcff5b14d9cd655567e/tenor.gif' },
   { alt: 'Anger squint owl', url: 'https://media1.giphy.com/media/7NP07dTr1gZstAan9f/giphy-downsized.gif' },
+  { alt: 'Excited girl', url: 'https://i.giphy.com/media/xTiN0CNHgoRf1Ha7CM/giphy-downsized.gif' },
 ]
 
 class GifsPage extends Component {

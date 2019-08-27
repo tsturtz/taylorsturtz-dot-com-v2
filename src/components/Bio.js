@@ -23,11 +23,9 @@ class Bio extends Component {
             javascript junky / soccer hooligan / daddy shark
           </em>
           <em className="bioGreetingSubtitleMobile">
-            <ul>
-              <li>javascript junky</li>
-              <li>soccer hooligan</li>
-              <li>daddy shark</li>
-            </ul>
+            <div>javascript junky</div>
+            <div>soccer hooligan</div>
+            <div>daddy shark</div>
           </em>
         </p>
       </div>

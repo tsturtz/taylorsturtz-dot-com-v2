@@ -8,6 +8,7 @@ import Layout from '../components/Layout'
 import { rhythm } from '../utils/typography'
 import { pillStyles } from '../utils/consts'
 
+import toejamandearlGif from '../assets/toejamandearlOPT.gif'
 import meetupmapGif from '../assets/meetupmapOPT.gif'
 import todoGif from '../assets/todoOPT.gif'
 import realValueGif from '../assets/realValueOPT.gif'
@@ -157,21 +158,21 @@ class BlogIndex extends Component {
               {lightboxIndex === 1 && (
                 <Fragment>
                   <img
-                    src={meetupmapGif}
-                    alt="Meetup Map"
+                    src={toejamandearlGif}
+                    alt="Toejam & Earl Jam Out"
                     style={lightboxStyles}
                   />
                   <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                     <a
                       className="whiteLink"
-                      href="http://www.meetup-map.com"
+                      href="https://toejamandearl.club"
                       target="_blank"
                     >
-                      meetup-map.com <span className="mdi mdi-open-in-new" />
+                      toejamandearl.club <span className="mdi mdi-open-in-new" />
                     </a>
                     <a
                       className="whiteLink"
-                      href="https://github.com/Xevnik/meetup_map"
+                      href="https://github.com/tsturtz/toejam-and-earl-jam-out"
                       target="_blank"
                     >
                       GitHub <span className="mdi mdi-open-in-new" />
@@ -232,6 +233,31 @@ class BlogIndex extends Component {
               {lightboxIndex === 4 && (
                 <Fragment>
                   <img
+                    src={meetupmapGif}
+                    alt="Meetup Map"
+                    style={lightboxStyles}
+                  />
+                  <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                    <a
+                      className="whiteLink"
+                      href="http://www.meetup-map.com"
+                      target="_blank"
+                    >
+                      meetup-map.com <span className="mdi mdi-open-in-new" />
+                    </a>
+                    <a
+                      className="whiteLink"
+                      href="https://github.com/Xevnik/meetup_map"
+                      target="_blank"
+                    >
+                      GitHub <span className="mdi mdi-open-in-new" />
+                    </a>
+                  </div>
+                </Fragment>
+              )}
+              {lightboxIndex === 5 && (
+                <Fragment>
+                  <img
                     src={bbtvGif}
                     alt="I want my BB-TV"
                     style={lightboxStyles}
@@ -247,7 +273,7 @@ class BlogIndex extends Component {
                   </div>
                 </Fragment>
               )}
-              {lightboxIndex === 5 && (
+              {lightboxIndex === 6 && (
                 <Fragment>
                   <img
                     src={soccer6Png}
@@ -265,7 +291,7 @@ class BlogIndex extends Component {
                   </div>
                 </Fragment>
               )}
-              {lightboxIndex === 6 && (
+              {lightboxIndex === 7 && (
                 <Fragment>
                   <img
                     src={semanticUiReactCountriesGif}
@@ -382,8 +408,8 @@ class BlogIndex extends Component {
               >
                 <span className="mdi mdi-arrow-right" />
                 <div style={{ paddingRight: rhythm(1), lineHeight: '1.5' }}>
-                  <p className="projectTitle">Meetup Map</p>
-                  <p className="projectSubtitle">jQuery / PHP</p>
+                  <p className="projectTitle">Toejam & Earl Jam Out</p>
+                  <p className="projectSubtitle">React / Typescript</p>
                 </div>
               </div>
             </div>
@@ -422,12 +448,29 @@ class BlogIndex extends Component {
               </div>
             </div>
 
-            <div className="grid6"><span style={{ ...pillStyles, fontSize: '.85rem' }}>Mobile</span></div>
-
-            <div className="grid7">
+            <div className="grid6">
               <div
                 className="projectItem"
                 lightboxindex="4"
+                onClick={this.setLightboxIndex}
+                onKeyUp={(e) => { if (e.which === 13 || e.which === 32) this.setLightboxIndex(e); }}
+                role="button"
+                tabIndex="0"
+              >
+                <span className="mdi mdi-arrow-right" />
+                <div style={{ paddingRight: rhythm(1), lineHeight: '1.5' }}>
+                  <p className="projectTitle">Meetup Map</p>
+                  <p className="projectSubtitle">jQuery / PHP</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid7"><span style={{ ...pillStyles, fontSize: '.85rem' }}>Mobile</span></div>
+
+            <div className="grid8">
+              <div
+                className="projectItem"
+                lightboxindex="5"
                 onClick={this.setLightboxIndex}
                 onKeyUp={(e) => { if (e.which === 13 || e.which === 32) this.setLightboxIndex(e); }}
                 role="button"
@@ -441,12 +484,12 @@ class BlogIndex extends Component {
               </div>
             </div>
 
-            <div className="grid8"><span style={{ ...pillStyles, fontSize: '.85rem' }}>Other</span></div>
+            <div className="grid9"><span style={{ ...pillStyles, fontSize: '.85rem' }}>Other</span></div>
 
-            <div className="grid9">
+            <div className="grid10">
               <div
                 className="projectItem"
-                lightboxindex="5"
+                lightboxindex="6"
                 onClick={this.setLightboxIndex}
                 onKeyUp={(e) => { if (e.which === 13 || e.which === 32) this.setLightboxIndex(e); }}
                 role="button"
@@ -460,10 +503,10 @@ class BlogIndex extends Component {
               </div>
             </div>
 
-            <div className="grid10">
+            <div className="grid11">
               <div
                 className="projectItem"
-                lightboxindex="6"
+                lightboxindex="7"
                 onClick={this.setLightboxIndex}
                 onKeyUp={(e) => { if (e.which === 13 || e.which === 32) this.setLightboxIndex(e); }}
                 role="button"
