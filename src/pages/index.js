@@ -568,9 +568,9 @@ class BlogIndex extends Component {
           <h2 id="contact" className="sectionTitle">Contact</h2>
           <div className="yellowUnderline wavyDivider" style={{ marginBottom: '10px', position: 'relative', top: '-10px', zIndex: '-1' }} />
           <div className="contactForm">
-            <p>
-              I'm currently <strong>unavailable</strong> for immediate hire <em>but I am always open to chat about new opportunities</em>.
-            </p>
+            {/* <p>
+              <em>I am always open to chat about new opportunities</em>.
+            </p> */}
             <p>
               To reach me you could try me on social media...
               <br />
