@@ -4,7 +4,6 @@ date: "2019-01-12"
 authors:
   - name: Taylor Sturtz
     title: Software Developer
-    company: Ytel
     github: https://github.com/tsturtz
     twitter: https://twitter.com/taylorsturtz
 tags:

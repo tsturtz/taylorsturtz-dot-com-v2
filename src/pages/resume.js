@@ -117,13 +117,26 @@ class Resume extends PureComponent {
                   <h3 id="title" style={{ margin: '0 0 10px 0' }}><strong>Experience</strong></h3>
                 </blockquote>
                 <hr style={{ marginBottom: '8px' }} />
-                {/* Ytel - software */}
+                {/* Restaurant365 */}
+                <p style={{ margin: 0 }}>
+                  <span>
+                    <strong>Software Engineer</strong> &bull; <em>Restaurant365</em>
+                    <br />
+                    <small>
+                      <em>October 2019 - present &bull; Irvine, CA</em>
+                    </small>
+                  </span>
+                </p>
+                <ul style={{ marginTop: '10px', marginBottom: '15px', position: 'relative', left: '15px', width: 'calc(100% - 15px)' }}>
+                  <li style={{ margin: 0 }}>Just started!</li>
+                </ul>
+                {/* Ytel */}
                 <p style={{ margin: 0 }}>
                   <span>
                     <strong>Software Developer</strong> &bull; <em>Ytel</em>
                     <br />
                     <small>
-                      <em>May 2017 - present &bull; Foothill Ranch, CA</em>
+                      <em>March 2017 - Sept 2019 (2 years 7 months) &bull; Foothill Ranch, CA</em>
                     </small>
                   </span>
                 </p>
@@ -132,23 +145,11 @@ class Resume extends PureComponent {
                   <li style={{ margin: 0 }}>Engineered a full-featured GUI workflow on the browser canvas.</li>
                   <li style={{ margin: 0 }}>Introduced unit-testing to our client-side code bases and maintained coverage.</li>
                   <li style={{ margin: 0 }}>Wrote and adapted CI and node scripts to drive DevOps culture and improve productivity and performance through automation.</li>
-                </ul>
-                {/* Ytel - marketing */}
-                <p style={{ margin: 0 }}>
-                  <span>
-                    <strong>Web Developer</strong> &bull; <em>Ytel</em>
-                    <br />
-                    <small>
-                      <em>March 2017 - May 2017 &bull; Foothill Ranch, CA</em>
-                    </small>
-                  </span>
-                </p>
-                <ul style={{ marginTop: '10px', marginBottom: '15px', position: 'relative', left: '15px', width: 'calc(100% - 15px)' }}>
-                  <li style={{ margin: 0 }}>Developed projects in HTML5, CSS/SCSS, JavaScript, Jekyll, Gulp, and Firebase.</li>
                   <li style={{ margin: 0 }}>Managed DNS, migrated, configured, and maintained marketing websites on an optimized LEMP stack virtual machine.</li>
+                  <li style={{ margin: 0 }}>Made contributions to GCP cloud functions and Java codebases.</li>
                 </ul>
                 {/* Freelance */}
-                <p style={{ margin: 0 }}>
+                {/* <p style={{ margin: 0 }}>
                   <span>
                     <strong>Web Designer/Developer</strong> &bull; <em>Freelance</em>
                     <br />
@@ -173,14 +174,14 @@ class Resume extends PureComponent {
                       <em>loveformulagame.com</em>
                     </a>
                   </li>
-                </ul>
+                </ul> */}
                 {/* MMG */}
                 <p style={{ margin: 0 }}>
                   <span>
                     <strong>Lead Web/Graphic Designer</strong> &bull; <em>MMG INTL</em>
                     <br />
                     <small>
-                      <em>July 2011 - Sept 2016 &bull; Orange, CA</em>
+                      <em>July 2011 - Oct 2016 (5 years 4 months) &bull; Orange, CA</em>
                     </small>
                   </span>
                 </p>

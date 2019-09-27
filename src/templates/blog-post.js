@@ -79,8 +79,6 @@ class BlogPostTemplate extends Component {
                     <p style={{ marginBottom: 0 }}>{author.name}</p>
                     <p style={{ marginBottom: 0, fontSize: rhythm(.4), color: '#ababab', fontStyle: 'italic' }}>
                       {author.title}
-                      {author.company ? ' at ' : ''}
-                      {author.company}
                     </p>
                     <p style={{ marginBottom: 0, fontSize: rhythm(.4), fontStyle: 'italic' }}>
                       <a href={author.github} target="_blank">GitHub</a>
@@ -149,7 +147,6 @@ export const pageQuery = graphql`
         authors {
           name
           title
-          company
           github
           twitter
         }
