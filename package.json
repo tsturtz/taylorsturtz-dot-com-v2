@@ -9,7 +9,7 @@
   "dependencies": {
     "@mdi/font": "^3.9.96",
     "disqus-react": "^1.0.6",
-    "gatsby": "^2.0.19",
+    "gatsby": "^2.15.36",
     "gatsby-cli": "^2.4.6",
     "gatsby-plugin-feed": "^2.0.8",
     "gatsby-plugin-google-analytics": "^2.0.5",
