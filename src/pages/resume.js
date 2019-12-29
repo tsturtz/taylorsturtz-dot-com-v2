@@ -12,28 +12,28 @@ const sectionMargins = {
 
 const skills = [
   'JavaScript / TypeScript',
-  'React / React Native',
+  'React',
+  'React Native',
   'Redux / Redux Saga',
-  'HTML5 / DOM / Canvas',
+  'HTML5 / Canvas',
   'CSS3 / SASS',
-  'REST / GraphQL',
   'Node.js',
+  'REST / GraphQL',
   'Linux',
   'Git',
   'Agile / Scrum',
-  'Gatsby / Jekyll',
   'Webpack / Gulp / Grunt',
-  'AngularJS / Angular',
+  'AngularJS',
+  'Angular',
   'jQuery',
   'Firebase',
   'Unit Testing',
-  'MongoDB',
+  'CI/CD',
+  'AWS / GCP',
+  'Serverless',
   'PHP / Laravel',
   'Golang',
-  'CI/CD',
-  'Serverless',
-  'SQL',
-  'Python',
+  'MongoDB',
 ];
 
 class Resume extends PureComponent {
@@ -128,12 +128,14 @@ class Resume extends PureComponent {
                   </span>
                 </p>
                 <ul style={{ marginTop: '10px', marginBottom: '15px', position: 'relative', left: '15px', width: 'calc(100% - 15px)' }}>
-                  <li style={{ margin: 0 }}>Just started!</li>
+                  <li style={{ margin: 0 }}>Creating new features and refactoring code with Typescript, React, and Redux.</li>
+                  <li style={{ margin: 0 }}>Debugging and maintaining legacy app implementation in AngularJS.</li>
+                  <li style={{ margin: 0 }}>Working to improve developer experience (ie: cross-platform integrated local development) and deployment processes.</li>
                 </ul>
                 {/* Ytel */}
                 <p style={{ margin: 0 }}>
                   <span>
-                    <strong>Software Developer</strong> &bull; <em>Ytel</em>
+                    <strong>Software Engineer</strong> &bull; <em>Ytel</em>
                     <br />
                     <small>
                       <em>March 2017 - Sept 2019 (2 years 7 months) &bull; Foothill Ranch, CA</em>

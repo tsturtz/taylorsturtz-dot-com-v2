@@ -391,7 +391,7 @@ class BlogIndex extends Component {
                   ) : (
                     <div>
                       <p className="projectTitle">This site</p>
-                      <p className="projectSubtitle">React / Gatsby / Serverless Python</p>
+                      <p className="projectSubtitle">React / Gatsby / Serverless (GCP) Python</p>
                     </div>
                   )}
                 </div>
@@ -410,7 +410,7 @@ class BlogIndex extends Component {
                 <span className="mdi mdi-arrow-right" />
                 <div style={{ paddingRight: rhythm(1), lineHeight: '1.5' }}>
                   <p className="projectTitle">Toejam & Earl Jam Out</p>
-                  <p className="projectSubtitle">React / Typescript</p>
+                  <p className="projectSubtitle">React / SVG sprites & CSS @keyframes</p>
                 </div>
               </div>
             </div>
@@ -427,7 +427,7 @@ class BlogIndex extends Component {
                 <span className="mdi mdi-arrow-right" />
                 <div style={{ paddingRight: rhythm(1), lineHeight: '1.5' }}>
                   <p className="projectTitle">To-do For You</p>
-                  <p className="projectSubtitle">AngularJS / Firebase</p>
+                  <p className="projectSubtitle">AngularJS / Firebase DB & Authentication</p>
                 </div>
               </div>
             </div>
