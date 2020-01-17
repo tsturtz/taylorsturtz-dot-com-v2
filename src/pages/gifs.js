@@ -39,6 +39,7 @@ const gifUrls = [
   { alt: 'Excited girl', url: 'https://i.giphy.com/media/xTiN0CNHgoRf1Ha7CM/giphy-downsized.gif' },
   { alt: 'Emma Watson weird', url: 'https://media2.giphy.com/media/PEglcwKOSAjlu/giphy.gif' },
   { alt: 'Word!', url: 'https://i.giphy.com/media/xT1R9ERHwyzbCkIwla/giphy-downsized.gif' },
+  { alt: 'Zoonlander - you guyz!', url: 'https://media1.giphy.com/media/bXveYFUaYr67e/giphy.gif' },
 ]
 
 class GifsPage extends Component {
