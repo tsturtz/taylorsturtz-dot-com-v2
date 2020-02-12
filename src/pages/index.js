@@ -165,10 +165,10 @@ class BlogIndex extends Component {
                   <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                     <a
                       className="whiteLink"
-                      href="https://toejamandearl.club"
+                      href="https://toejamandearl.taylorsturtz.com"
                       target="_blank"
                     >
-                      toejamandearl.club <span className="mdi mdi-open-in-new" />
+                      toejamandearl.taylorsturtz.com <span className="mdi mdi-open-in-new" />
                     </a>
                     <a
                       className="whiteLink"
@@ -215,10 +215,10 @@ class BlogIndex extends Component {
                   <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                     <a
                       className="whiteLink"
-                      href="http://realvalue.io"
+                      href="https://realvalue.taylorsturtz.com"
                       target="_blank"
                     >
-                      realvalue.io <span className="mdi mdi-open-in-new" />
+                      realvalue.taylorsturtz.com <span className="mdi mdi-open-in-new" />
                     </a>
                     <a
                       className="whiteLink"
@@ -240,10 +240,10 @@ class BlogIndex extends Component {
                   <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                     <a
                       className="whiteLink"
-                      href="http://www.meetup-map.com"
+                      href="http://meetupmap.taylorsturtz.com"
                       target="_blank"
                     >
-                      meetup-map.com <span className="mdi mdi-open-in-new" />
+                      meetupmap.taylorsturtz.com <span className="mdi mdi-open-in-new" />
                     </a>
                     <a
                       className="whiteLink"
