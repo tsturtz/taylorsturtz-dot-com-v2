@@ -369,7 +369,7 @@ class Resume extends PureComponent {
                       <strong>Running / Hiking / Soccer</strong>
                       <br />
                       <small>
-                        <em>I love being moving outdoors!</em>
+                        <em>I love doing stuff outdoors!</em>
                       </small>
                     </span>
                   </p>
