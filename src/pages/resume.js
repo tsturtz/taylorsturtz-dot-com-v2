@@ -12,28 +12,29 @@ const sectionMargins = {
 
 const skills = [
   'JavaScript / TypeScript',
+  'Node.js',
   'React',
   'React Native',
-  'Redux / Redux Saga',
-  'HTML5 / Canvas',
-  'CSS3 / SASS',
-  'Node.js',
-  'REST / GraphQL',
-  'Linux',
-  'Git',
-  'Agile / Scrum',
-  'Webpack / Gulp / Grunt',
+  'Redux / Saga',
   'AngularJS',
   'Angular',
   'jQuery',
-  'Firebase',
-  'Unit Testing',
+  'Vue.js',
+  'HTML5',
+  'CSS3 / SASS',
+  'REST / GraphQL',
   'CI/CD',
-  'AWS / GCP',
   'Serverless',
-  'PHP / Laravel',
-  'Golang',
+  'AWS / Azure / GCP',
+  'Git',
+  'Linux',
+  'Firebase',
   'MongoDB',
+  'PHP / Laravel',
+  'Webpack / Gulp / Grunt',
+  'Unit Testing',
+  'Agile / Scrum',
+  'Golang',
 ];
 
 class Resume extends PureComponent {
@@ -73,7 +74,7 @@ class Resume extends PureComponent {
               <div id="nameAndTitle">
                 <h1 style={{ margin: '0 0 10px 0' }}>Taylor Sturtz</h1>
                 <blockquote style={{ marginBottom: '10px' }}>
-                  <h3 id="title" style={{ margin: 0 }}><strong>Software Developer from Irvine, CA</strong></h3>
+                  <h3 id="title" style={{ margin: 0 }}><strong>Software Engineer / Irvine, CA</strong></h3>
                 </blockquote>
               </div>
               <div id="contactInfo" style={{ margin: '11px 0 0 0', textAlign: 'right', width: '32%' }}>
@@ -128,9 +129,9 @@ class Resume extends PureComponent {
                   </span>
                 </p>
                 <ul style={{ marginTop: '10px', marginBottom: '15px', position: 'relative', left: '15px', width: 'calc(100% - 15px)' }}>
-                  <li style={{ margin: 0 }}>Creating new features and refactoring code with Typescript, React, and Redux.</li>
-                  <li style={{ margin: 0 }}>Debugging and maintaining legacy app implementation in AngularJS.</li>
-                  <li style={{ margin: 0 }}>Working to improve developer experience (ie: cross-platform integrated local development) and deployment processes.</li>
+                  <li style={{ margin: 0 }}>Developed features using Typescript, React, AngularJS, and Node.js.</li>
+                  <li style={{ margin: 0 }}>Created PDF manipulation microservices and deployed them to AWS and Azure using the Serverless Framework and GitLab CI.</li>
+                  <li style={{ margin: 0 }}>Provided thorough code reviews, improved deployment processes, and greatly improved developer experience by enabling end-to-end, cross-platform local development.</li>
                 </ul>
                 {/* Ytel */}
                 <p style={{ margin: 0 }}>
@@ -143,12 +144,12 @@ class Resume extends PureComponent {
                   </span>
                 </p>
                 <ul style={{ marginTop: '10px', marginBottom: '15px', position: 'relative', left: '15px', width: 'calc(100% - 15px)' }}>
-                  <li style={{ margin: 0 }}>Developed and often led React/Redux enterprise web apps on a collaborative team.</li>
-                  <li style={{ margin: 0 }}>Engineered a full-featured GUI workflow on the browser canvas.</li>
-                  <li style={{ margin: 0 }}>Introduced unit-testing to our client-side code bases and maintained coverage.</li>
-                  <li style={{ margin: 0 }}>Wrote and adapted CI and node scripts to drive DevOps culture and improve productivity and performance through automation.</li>
-                  <li style={{ margin: 0 }}>Managed DNS, migrated, configured, and maintained marketing websites on an optimized LEMP stack virtual machine.</li>
-                  <li style={{ margin: 0 }}>Made contributions to GCP cloud functions and Java codebases.</li>
+                  <li style={{ margin: 0 }}>Built SSO and user management systems using JWTs and GraphQL.</li>
+                  <li style={{ margin: 0 }}>Developed an interface for plotting and managing interactive nodes in a tree structure (similar to an org chart) on browser canvas.</li>
+                  <li style={{ margin: 0 }}>Led development of React/Redux messaging campaign applications and maintained legacy apps written in PHP Laravel, Vue.js, and AngularJS.</li>
+                  {/* <li style={{ margin: 0 }}>Introduced unit-testing to client-side code bases and maintained healthy coverage.</li> */}
+                  <li style={{ margin: 0 }}>Wrote GitLab CI and Node.js scripts to drive forward DevOps culture and improve productivity and performance through automation.</li>
+                  <li style={{ margin: 0 }}>Managed DNS, migrated, configured, and maintained web projects on an optimized LEMP stack virtual machine.</li>
                 </ul>
                 {/* Freelance */}
                 {/* <p style={{ margin: 0 }}>
@@ -180,7 +181,7 @@ class Resume extends PureComponent {
                 {/* MMG */}
                 <p style={{ margin: 0 }}>
                   <span>
-                    <strong>Lead Web/Graphic Designer</strong> &bull; <em>MMG INTL</em>
+                    <strong>Design Team Lead</strong> &bull; <em>MMG INTL</em>
                     <br />
                     <small>
                       <em>July 2011 - Oct 2016 (5 years 4 months) &bull; Orange, CA</em>
@@ -188,8 +189,8 @@ class Resume extends PureComponent {
                   </span>
                 </p>
                 <ul style={{ marginTop: '10px', marginBottom: '20px', position: 'relative', left: '15px', width: 'calc(100% - 15px)' }}>
-                  <li style={{ margin: 0 }}>Led design projects and wrote HTML/CSS for client websites.</li>
-                  <li style={{ margin: 0 }}>Streamlined internal procedures: variable data templating; Slack integrations; Zapier automation.</li>
+                  <li style={{ margin: 0 }}>Led design team projects, contributed HTML/CSS for client websites, and maintained an OpenCart ecommerce platform.</li>
+                  <li style={{ margin: 0 }}>Laid out 27 quarterly magazines for 7-Eleven FOAs in LA, San Diego, and Denver.</li>
                 </ul>
 
                 {/* EDUCATION */}
@@ -336,7 +337,7 @@ class Resume extends PureComponent {
                       <strong>German</strong>
                       <br />
                       <small>
-                        <em>Proficient</em>
+                        <em>Limited proficiency</em>
                       </small>
                     </span>
                   </p>
@@ -368,7 +369,7 @@ class Resume extends PureComponent {
                       <strong>Running / Hiking / Soccer</strong>
                       <br />
                       <small>
-                        <em>I love being outdoors and working up a sweat!</em>
+                        <em>I love being moving outdoors!</em>
                       </small>
                     </span>
                   </p>
@@ -381,7 +382,7 @@ class Resume extends PureComponent {
                       <strong>Travel</strong>
                       <br />
                       <small>
-                        <em>Last trip: England, France, & Germany;</em>
+                        <em>Last trip: England, France, & Germany</em>
                         <br />
                         <em>Next trip: Japan? New Zealand? Spain & Italy? A Disney cruise?</em>
                       </small>
