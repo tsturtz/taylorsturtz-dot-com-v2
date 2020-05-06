@@ -336,7 +336,7 @@ class BlogIndex extends Component {
               I'm a self-motivated software engineer from Irvine, CA with a background in design. I write <a href="https://www.benjaminjohnson.me/blog/empathetic-code/" target="_blank">empathetic code</a> and build full-stack applications that people connect with directly. Regardless of the platform, solving difficult problems and building <span className="wavy" data-text="smooth">smooth</span> user experiences is my jam.
               <br /><br />
               {/* pioneering front-end web projects */}
-              I currently work as a <strong>Software Engineer</strong> at <a href="https://www.restaurant365.com" target="_blank">Restaurant365</a>, an all-in-one restaurant management platform in Irvine, California.
+              I currently work as a <strong>Software Engineer</strong> at <a href="https://www.blizzard.com" target="_blank">Blizzard Entertainment</a> in Irvine, California.
               <div className="greyUnderline wavyDivider" style={{ marginBottom: '20px' }} />
               <div className="aboutSectionLetsChat">
                 <em>Have a question or an intriguing idea? Lose my number? Am I ignoring your LinkedIn messages? </em>
