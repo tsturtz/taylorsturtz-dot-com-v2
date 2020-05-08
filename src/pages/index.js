@@ -573,19 +573,13 @@ class BlogIndex extends Component {
               <em>I am always open to chat about new opportunities</em>.
             </p> */}
             <p>
-              To reach me you could try me on social media...
+              To reach me you can use social media
               <br />
               <span className="mdi mdi-twitter socialIconsContact" style={{ verticalAlign: 'sub', color: '#4b4b4b', lineHeight: '1.2' }} />
-              &nbsp;I'm fairly active on Twitter
-              (<a href="https://twitter.com/taylorsturtz" target="_blank" style={{ lineHeight: 1 }}>
-                <span>@taylorsturtz</span>
-              </a>)
+              <a href="https://twitter.com/taylorsturtz" target="_blank" style={{ lineHeight: 1 }}> <span>@taylorsturtz</span></a>
               <br />
               <span className="mdi mdi-linkedin-box socialIconsContact" style={{ verticalAlign: 'sub', color: '#4b4b4b', lineHeight: '1.2' }} />
-              &nbsp;not so much on LinkedIn
-              (<a href="https://linkedin.com/in/taylorsturtz" target="_blank" style={{ lineHeight: 1 }}>
-                <span>/in/taylorsturtz</span>
-              </a>)
+              <a href="https://linkedin.com/in/taylorsturtz" target="_blank" style={{ lineHeight: 1 }}> <span>/taylorsturtz</span></a>
             </p>
             <form
               action="https://us-central1-contact-form-249703.cloudfunctions.net/contact-form2"
@@ -594,7 +588,7 @@ class BlogIndex extends Component {
                 this.setState({ isSubmittingContact: true })
               }}
             >
-              <span>...or better yet send me an email directly:</span>
+              <span>or better yet send me an email directly:</span>
               <div style={{ display: 'flex', marginTop: '10px' }}>
                 <div style={{ width: '50%' }}>
                   <label htmlFor="name" style={{ ...contactFormLabelStyles }}>Name</label>

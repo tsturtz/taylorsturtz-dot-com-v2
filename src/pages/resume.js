@@ -19,7 +19,6 @@ const skills = [
   'AngularJS',
   'Angular',
   'jQuery',
-  'Vue.js',
   'HTML5',
   'CSS3 / SASS',
   'REST / GraphQL',
@@ -35,6 +34,7 @@ const skills = [
   'Unit Testing',
   'Agile / Scrum',
   'Golang',
+  'Java / Spring',
 ];
 
 class Resume extends PureComponent {
@@ -118,13 +118,26 @@ class Resume extends PureComponent {
                   <h3 id="title" style={{ margin: '0 0 10px 0' }}><strong>Experience</strong></h3>
                 </blockquote>
                 <hr style={{ marginBottom: '8px' }} />
+                {/* Blizzard */}
+                <p style={{ margin: 0 }}>
+                  <span>
+                    <strong>Software Engineer</strong> &bull; <em>Blizzard Entertainment</em>
+                    <br />
+                    <small>
+                      <em>May 2020 - present &bull; Irvine, CA</em>
+                    </small>
+                  </span>
+                </p>
+                <ul style={{ marginTop: '10px', marginBottom: '15px', position: 'relative', left: '15px', width: 'calc(100% - 15px)' }}>
+                  <li style={{ margin: 0 }}>TBD</li>
+                </ul>
                 {/* Restaurant365 */}
                 <p style={{ margin: 0 }}>
                   <span>
                     <strong>Software Engineer</strong> &bull; <em>Restaurant365</em>
                     <br />
                     <small>
-                      <em>October 2019 - present &bull; Irvine, CA</em>
+                      <em>October 2019 - May 2020 &bull; Irvine, CA</em>
                     </small>
                   </span>
                 </p>
@@ -136,10 +149,10 @@ class Resume extends PureComponent {
                 {/* Ytel */}
                 <p style={{ margin: 0 }}>
                   <span>
-                    <strong>Software Engineer</strong> &bull; <em>Ytel</em>
+                    <strong>Software Developer</strong> &bull; <em>Ytel</em>
                     <br />
                     <small>
-                      <em>March 2017 - Sept 2019 (2 years 7 months) &bull; Foothill Ranch, CA</em>
+                      <em>March 2017 - Sept 2019 &bull; Foothill Ranch, CA</em>
                     </small>
                   </span>
                 </p>
@@ -151,46 +164,17 @@ class Resume extends PureComponent {
                   <li style={{ margin: 0 }}>Wrote GitLab CI and Node.js scripts to drive forward DevOps culture and improve productivity and performance through automation.</li>
                   <li style={{ margin: 0 }}>Managed DNS, migrated, configured, and maintained web projects on an optimized LEMP stack virtual machine.</li>
                 </ul>
-                {/* Freelance */}
-                {/* <p style={{ margin: 0 }}>
-                  <span>
-                    <strong>Web Designer/Developer</strong> &bull; <em>Freelance</em>
-                    <br />
-                    <small>
-                      <em>July 2016 - Oct 2016 &bull; Irvine, CA</em>
-                    </small>
-                  </span>
-                </p>
-                <ul style={{ marginTop: '10px', marginBottom: '15px', position: 'relative', left: '15px', width: 'calc(100% - 15px)' }}>
-                  <li style={{ margin: 0 }}>
-                    Newport Coast real estate website:&nbsp;
-
-                    <em className="annackermanPrint">annackerman.com</em>
-                    <a className="annackermanWeb" href="http://annackerman.com" target="_blank">
-                      <em>annackerman.com</em>
-                    </a>
-                  </li>
-                  <li style={{ margin: 0 }}>
-                    Love Formula card game website:&nbsp;
-                    <em className="loverformulaPrint">loveformulagame.com</em>
-                    <a className="loverformulaWeb" href="http://www.loveformulagame.com" target="_blank">
-                      <em>loveformulagame.com</em>
-                    </a>
-                  </li>
-                </ul> */}
                 {/* MMG */}
                 <p style={{ margin: 0 }}>
                   <span>
                     <strong>Design Team Lead</strong> &bull; <em>MMG INTL</em>
                     <br />
                     <small>
-                      <em>July 2011 - Oct 2016 (5 years 4 months) &bull; Orange, CA</em>
+                      <em>July 2011 - Oct 2016 &bull; Orange, CA</em>
                     </small>
                   </span>
                 </p>
                 <ul style={{ marginTop: '10px', marginBottom: '20px', position: 'relative', left: '15px', width: 'calc(100% - 15px)' }}>
-                  <li style={{ margin: 0 }}>Led design team projects, contributed HTML/CSS for client websites, and maintained an OpenCart ecommerce platform.</li>
-                  <li style={{ margin: 0 }}>Laid out 27 quarterly magazines for 7-Eleven FOAs in LA, San Diego, and Denver.</li>
                 </ul>
 
                 {/* EDUCATION */}
@@ -215,7 +199,7 @@ class Resume extends PureComponent {
                 {/* CSULB */}
                 <p style={{ margin: 0, display: 'flex', justifyContent: 'space-between', lineHeight: 1.4 }}>
                   <span>
-                    <strong>BA, Art History</strong> &bull; <em>California State University</em>
+                    <strong>B.A., Art History</strong> &bull; <em>California State University</em>
                   </span>
                   <span><em>2012</em> &bull; Long Beach, CA</span>
                 </p>
@@ -302,9 +286,9 @@ class Resume extends PureComponent {
                       <strong>LinkedIn</strong>
                       <br />
                       <small>
-                        <em className="linkedinPrint">/in/taylorsturtz</em>
+                        <em className="linkedinPrint">taylorsturtz</em>
                         <a className="linkedinWeb" href="https://linkedin.com/in/taylorsturtz" target="_blank">
-                          <em>/in/taylorsturtz</em>
+                          <em>taylorsturtz</em>
                         </a>
                       </small>
                     </span>
