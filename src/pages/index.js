@@ -14,6 +14,7 @@ import todoGif from '../assets/todoOPT.gif'
 import realValueGif from '../assets/realValueOPT.gif'
 import bbtvGif from '../assets/bbtvOPT.gif'
 import soccer6Png from '../assets/soccer6BotScreenshot.png'
+import yourTeamSoccerMatches from '../assets/yourTeamSoccerMatches.jpg'
 import semanticUiReactCountriesGif from '../assets/semanticUiReactCountriesOPT.gif'
 
 import '@mdi/font/css/materialdesignicons.min.css';
@@ -316,6 +317,31 @@ class BlogIndex extends Component {
                   </div>
                 </Fragment>
               )}
+              {lightboxIndex === 8 && (
+                <Fragment>
+                  <img
+                    src={yourTeamSoccerMatches}
+                    alt="Your Team Soccer Matches"
+                    style={lightboxStyles}
+                  />
+                  <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                    <a
+                      className="whiteLink"
+                      href="https://getbitbar.com/plugins/sports"
+                      target="_blank"
+                    >
+                      bitbar <span className="mdi mdi-open-in-new" />
+                    </a>
+                    <a
+                      className="whiteLink"
+                      href="https://github.com/tsturtz/your-team-soccer-matches"
+                      target="_blank"
+                    >
+                      GitHub <span className="mdi mdi-open-in-new" />
+                    </a>
+                  </div>
+                </Fragment>
+              )}
             </Fragment>
           )}
         </div>
@@ -499,7 +525,7 @@ class BlogIndex extends Component {
                 <span className="mdi mdi-arrow-right" />
                 <div style={{ paddingRight: rhythm(1), lineHeight: '1.5' }}>
                   <p className="projectTitle">Soccer6 Slack Bot</p>
-                  <p className="projectSubtitle">Golang / GoQuery (web scraper)</p>
+                  <p className="projectSubtitle">Web scraper bot (Golang)</p>
                 </div>
               </div>
             </div>
@@ -516,7 +542,24 @@ class BlogIndex extends Component {
                 <span className="mdi mdi-arrow-right" />
                 <div style={{ paddingRight: rhythm(1), lineHeight: '1.5' }}>
                   <p className="projectTitle">Semantic UI React Countries</p>
-                  <p className="projectSubtitle">Node / npm (CLI tool)</p>
+                  <p className="projectSubtitle">CLI tool (Node - npm package)</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid12">
+              <div
+                className="projectItem"
+                lightboxindex="8"
+                onClick={this.setLightboxIndex}
+                onKeyUp={(e) => { if (e.which === 13 || e.which === 32) this.setLightboxIndex(e); }}
+                role="button"
+                tabIndex="0"
+              >
+                <span className="mdi mdi-arrow-right" />
+                <div style={{ paddingRight: rhythm(1), lineHeight: '1.5' }}>
+                  <p className="projectTitle">Your Team ⚽️ Soccer Matches</p>
+                  <p className="projectSubtitle">MacOS menu bar app (Node / bitbar / shell scripts)</p>
                 </div>
               </div>
             </div>
