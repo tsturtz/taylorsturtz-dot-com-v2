@@ -1,7 +1,7 @@
 body {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(../assets/memphis-white-teal-black-pattern.svg);
   background-size: 240px;
-  background-blend-mode: lighten;
+  /* background-blend-mode: lighten; */
 }
 img, span.gatsby-resp-image-background-image {
   border-radius: 10px !important;

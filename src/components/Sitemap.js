@@ -17,6 +17,8 @@ class Sitemap extends PureComponent {
             display: 'flex',
             margin: '0 auto',
             maxWidth: rhythm(26),
+            zIndex: 1000,
+            position: 'relative',
           }}
         >
           <a href="/#projects" className="sitemapLinkContainer">
