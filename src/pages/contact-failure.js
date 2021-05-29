@@ -5,7 +5,7 @@ import 'typeface-bitter'
 import { rhythm } from '../utils/typography'
 import FooterBio from '../components/FooterBio'
 import Layout from '../components/Layout'
-import profilePic from '../assets/profile-pics/taylorsturtz-mischief.png'
+import profilePic from '../assets/profile-pics/taylorsturtz-london.png'
 
 class ContactFailure extends PureComponent {
   render() {

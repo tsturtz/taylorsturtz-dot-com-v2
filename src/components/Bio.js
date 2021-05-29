@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 // Import typefaces
 import 'typeface-bitter'
 
-import profilePic from '../assets/profile-pics/taylorsturtz-mischief.png'
+import profilePic from '../assets/profile-pics/taylorsturtz-london.png'
 import { rhythm } from '../utils/typography'
 
 class Bio extends Component {

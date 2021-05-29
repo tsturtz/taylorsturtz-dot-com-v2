@@ -8,7 +8,7 @@ import Layout from '../components/Layout'
 import { rhythm, scale } from '../utils/typography'
 import { pillStyles } from '../utils/consts'
 
-import profilePic from '../assets/profile-pics/taylorsturtz-mischief.png'
+import profilePic from '../assets/profile-pics/taylorsturtz-london.png'
 
 class BlogPostTemplate extends Component {
   render() {

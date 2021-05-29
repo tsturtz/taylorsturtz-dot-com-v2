@@ -69,7 +69,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/assets/profile-pics/taylorsturtz-mischief.png`,
+        icon: `src/assets/profile-pics/taylorsturtz-london.png`,
       },
     },
     // offline support (service worker) - this must come AFTER gatsby-plugin-manifest

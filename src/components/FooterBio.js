@@ -1,6 +1,6 @@
 import React, { PureComponent, Fragment } from 'react'
 import 'typeface-bitter'
-import profilePic from '../assets/profile-pics/taylorsturtz-mischief.png'
+import profilePic from '../assets/profile-pics/taylorsturtz-london.png'
 import { rhythm } from '../utils/typography'
 import Sitemap from '../components/Sitemap'
 

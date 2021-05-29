@@ -5,7 +5,7 @@ import Layout from '../components/Layout'
 import FooterBio from '../components/FooterBio'
 import Bio from '../components/Bio'
 import lostGif from '../assets/lost.gif'
-import profilePic from '../assets/profile-pics/taylorsturtz-mischief.png'
+import profilePic from '../assets/profile-pics/taylorsturtz-london.png'
 
 class NotFoundPage extends PureComponent {
   render() {

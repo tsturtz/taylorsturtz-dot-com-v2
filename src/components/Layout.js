@@ -63,6 +63,7 @@ class Layout extends Component {
             marginRight: 'auto',
             maxWidth: rhythm(26),
             padding: `0 ${rhythm(3 / 4)}`,
+            background: '#fff',
           }}
         >
           <div

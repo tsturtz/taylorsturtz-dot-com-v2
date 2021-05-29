@@ -1,8 +1,8 @@
-/* body {
-  background-image: url(../assets/pattern.png);
-  background-color: rgba(155, 0, 255, 1);
+body {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(../assets/memphis-white-teal-black-pattern.svg);
+  background-size: 240px;
   background-blend-mode: lighten;
-} */
+}
 img, span.gatsby-resp-image-background-image {
   border-radius: 10px !important;
 }
