@@ -1,5 +1,7 @@
 body {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(../assets/memphis-white-teal-black-pattern.svg);
+  background: url(../assets/memphis-white-teal-black-pattern.svg);
+  background: linear-gradient(0deg, rgba(31, 223, 142, 0.3), rgba(242, 188, 51, 0.3)), url(../assets/memphis-white-teal-black-pattern.svg);
+  /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../assets/memphis-white-teal-black-pattern.svg); */
   background-size: 240px;
   /* background-blend-mode: lighten; */
 }
