@@ -72,13 +72,14 @@ class BlogIndex extends Component {
         {/* SUBMITTING CONTACT LOADER */}
         {isSubmittingContact && (
           <Fragment>
-            <div style={{ position: 'fixed', backgroundColor: 'rgba(0,0,0,0.75)', height: '100vh', width: '100vw' }} />
+            <div style={{ position: 'fixed', backgroundColor: 'rgba(0,0,0,0.75)', height: '100vh', width: '100vw', zIndex: 1001 }} />
             <div
               style={{
                 position: 'fixed',
                 left: '50%',
                 top: '50%',
                 transform: 'translate(-50%, -50%)',
+                zIndex: 1002,
               }}
             >
               <span className="mdi mdi-loading rotating" style={{ color: '#FFF', fontSize: '3rem' }} />
@@ -89,7 +90,7 @@ class BlogIndex extends Component {
         {/* LIGHTBOX */}
         {lightboxIndex !== null && (
           <div
-            style={{ position: 'fixed', backgroundColor: 'rgba(0,0,0,0.75)', height: '100vh', width: '100vw' }}
+            style={{ position: 'fixed', backgroundColor: 'rgba(0,0,0,0.75)', height: '100vh', width: '100vw', zIndex: 1001, }}
             lightboxindex="null"
             onClick={this.setLightboxIndex}
           />
@@ -100,6 +101,7 @@ class BlogIndex extends Component {
             left: '50%',
             top: '50%',
             transform: 'translate(-50%, -50%)',
+            zIndex: 1002,
           }}
         >
           {lightboxIndex !== null && (
@@ -363,9 +365,8 @@ class BlogIndex extends Component {
               <br /><br />
               {/* pioneering front-end web projects */}
               I currently work as a <strong>Software Engineer</strong> at <a href="https://www.blizzard.com" target="_blank">Blizzard Entertainment</a> in Irvine, California.
-              <div className="greyUnderline wavyDivider" style={{ marginBottom: '20px' }} />
-              <div className="aboutSectionLetsChat">
-                <em>Have a question or an intriguing idea? Lose my number? Am I ignoring your LinkedIn messages? </em>
+              <div className="aboutSectionLetsChat" style={{ marginTop: '20px' }}>
+                <em style={{ background: 'rgba(255, 255, 255, 1)', padding: '10px 20px' }}>Have a question or an intriguing idea? Lose my number? LinkedIn messages not getting through? </em>
                 <a href="#contact" className="messageMeBtn">
                   {/* <span className="mdi mdi-message-text" /> */}
                   🤙 Let's chat!
@@ -376,12 +377,12 @@ class BlogIndex extends Component {
 
           {/* PROJECTS */}
           <h2 id="projects" className="sectionTitle">Projects</h2>
-          <div className="yellowUnderline wavyDivider" style={{ position: 'relative', top: '-10px', zIndex: '-1' }} />
+          <div className="yellowUnderline wavyDivider" />
 
           <p style={{ marginBottom: '10px' }}>
             <em style={{ color: '#ababab' }}>
               A handful of my personal and open source projects; check my
-              <a href="https://twitter.com/taylorsturtz" target="_blank">
+              <a href="https://twitter.com/taylorsturtz" target="_blank" style={{ position: 'relative', zIndex: 100 }}>
                 &nbsp;
                 <span className="mdi mdi-github-circle" style={{ marginRight: '2px', fontSize: '1.2rem', position: 'relative', top: '3px', zIndex: '-1' }} />
                 GitHub
@@ -567,8 +568,8 @@ class BlogIndex extends Component {
           </div>
 
           {/* BLOG */}
-          <h2 id="blog" className="sectionTitle">Blog</h2>
-          <div className="yellowUnderline wavyDivider" style={{ marginBottom: '20px', position: 'relative', top: '-10px', zIndex: '-1' }} />
+          {/* <h2 id="blog" className="sectionTitle">Blog</h2>
+          <div className="yellowUnderline wavyDivider" />
           {posts.map(({ node }, blogIndex, blogArr) => {
             const title = node.frontmatter.title || node.fields.slug
 
@@ -606,11 +607,11 @@ class BlogIndex extends Component {
                 )}
               </div>
             )
-          })}
+          })} */}
 
           {/* CONTACT */}
           <h2 id="contact" className="sectionTitle">Contact</h2>
-          <div className="yellowUnderline wavyDivider" style={{ marginBottom: '10px', position: 'relative', top: '-10px', zIndex: '-1' }} />
+          <div className="yellowUnderline wavyDivider" />
           <div className="contactForm">
             {/* <p>
               <em>I am always open to chat about new opportunities</em>.
@@ -646,8 +647,8 @@ class BlogIndex extends Component {
               <label htmlFor="message" style={{ ...contactFormLabelStyles }}>Message</label>
               <textarea rows="3" id="body" name="body" style={{ ...contactFormInputStyles, minWidth: '100%', maxWidth: '100%' }} required />
               <div className="formSubmitRow">
-                <strong>Recruiters: <em>in-house recruiters only please!</em> ❤️</strong>
-                <input type="submit" name="Submit" className="greenTheme submitButton" />
+                <strong style={{ background: 'rgba(255, 255, 255, 1)', padding: '10px 20px' }}>Recruiters: <em>in-house recruiters only please!</em> ❤️</strong>
+                <input type="submit" name="Submit" value="Send email" className="greenTheme submitButton" />
               </div>
             </form>
           </div>

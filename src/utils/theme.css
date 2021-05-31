@@ -1,9 +1,7 @@
 body {
   background: url(../assets/memphis-white-teal-black-pattern.svg);
   background: linear-gradient(0deg, rgba(31, 223, 142, 0.3), rgba(242, 188, 51, 0.3)), url(../assets/memphis-white-teal-black-pattern.svg);
-  /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../assets/memphis-white-teal-black-pattern.svg); */
   background-size: 240px;
-  /* background-blend-mode: lighten; */
 }
 img, span.gatsby-resp-image-background-image {
   border-radius: 10px !important;
@@ -36,6 +34,7 @@ h2 {
   margin-bottom: 0;
   width: 100px;
   border-radius: 50% !important;
+  z-index: 1;
 }
 .bioGreeting {
   padding-bottom: 5px;
@@ -85,7 +84,7 @@ h2 {
 .sitemapLinkContainer {
   overflow: hidden;
   white-space: nowrap;
-  width: 25%;
+  width: 33.33%;
   text-align: center;
   position: relative;
 }
@@ -145,25 +144,14 @@ h2 {
 
 .aboutSection {
   margin: 40px 0 60px;
-  padding: 30px;
-  background-image: radial-gradient(rgba(54, 181, 162, 1) 15%, transparent 16%), radial-gradient(rgba(54, 181, 162, 1) 15%, transparent 16%);
-  background-size: 10px 10px;
 }
 .aboutSection p {
   background: #FFF;
-  padding: 20px;
   margin: 0;
 }
-.contactForm {
-  margin: 20px 0 40px;
-  padding: 30px;
-  background-image: radial-gradient(rgba(54, 181, 162, 1) 15%, transparent 16%), radial-gradient(rgba(54, 181, 162, 1) 15%, transparent 16%);
-  background-size: 10px 10px;
-}
-.contactForm form, .contactForm p {
-  background: #FFF;
-  padding: 20px;
-  margin: 0 0 30px;
+.contactForm p {
+  padding-top: 10px;
+  margin-bottom: 30px;
 }
 .contactForm form {
   margin: 0;
@@ -210,6 +198,9 @@ h2 {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+  padding: 30px;
+  background-image: radial-gradient(rgba(54, 181, 162, 1) 15%, transparent 16%), radial-gradient(rgba(54, 181, 162, 1) 15%, transparent 16%);
+  background-size: 10px 10px;
 }
 
 .footerBioContainer {
@@ -702,6 +693,7 @@ pre[data-line] {
     ;
     height: 600px;
     padding-bottom: 150px;
+    margin-bottom: 150px;
   }
 
   .grid6 { grid-area: l6; }

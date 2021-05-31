@@ -17,7 +17,7 @@ class Sitemap extends PureComponent {
             display: 'flex',
             margin: '0 auto',
             maxWidth: rhythm(26),
-            zIndex: 1000,
+            zIndex: 900,
             position: 'relative',
           }}
         >
@@ -26,11 +26,11 @@ class Sitemap extends PureComponent {
             <div className="sitemapLinkUnderline">-----------</div>
             <div className="sitemapLinkUnderlineOverlay" />
           </a>
-          <a href="/#blog" className="sitemapLinkContainer">
+          {/* <a disabled href="/#blog" className="sitemapLinkContainer">
             <span className="sitemapLink">Blog</span>
             <div className="sitemapLinkUnderline">-----------</div>
             <div className="sitemapLinkUnderlineOverlay" />
-          </a>
+          </a> */}
           <a href="/#contact" className="sitemapLinkContainer">
             <span className="sitemapLink">Contact</span>
             <div className="sitemapLinkUnderline">-----------</div>

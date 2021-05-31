@@ -62,16 +62,12 @@ class Layout extends Component {
             marginLeft: 'auto',
             marginRight: 'auto',
             maxWidth: rhythm(26),
-            padding: `0 ${rhythm(3 / 4)}`,
+            padding: `0 ${rhythm(1.5)}`,
             background: '#fff',
           }}
         >
           <div
-            style={{
-              borderTop: '2px solid #36B5A2',
-              paddingTop: '10px',
-              borderBottom: '2px solid #f3bc34',
-            }}
+            style={{ paddingTop: '10px' }}
           >
             {header}
             {children}

@@ -47,7 +47,8 @@ class Resume extends PureComponent {
             marginLeft: 'auto',
             marginRight: 'auto',
             maxWidth: rhythm(26),
-            padding: '20px 0',
+            padding: `10px ${rhythm(1.5)}`,
+            background: '#fff',
           }}
         >
           <div className="topNav">
@@ -67,7 +68,7 @@ class Resume extends PureComponent {
                 </span>
               </div>
             </div>
-            <div className="yellowUnderline wavyDivider" style={{ position: 'relative', zIndex: '-1', marginBottom: '10px' }} />
+            <div className="yellowUnderline wavyDivider" />
           </div>
           <div className="resumeContent">
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
