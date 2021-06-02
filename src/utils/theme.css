@@ -2,6 +2,7 @@ body {
   background: url(../assets/memphis-white-teal-black-pattern.svg);
   background: linear-gradient(0deg, rgba(31, 223, 142, 0.3), rgba(242, 188, 51, 0.3)), url(../assets/memphis-white-teal-black-pattern.svg);
   background-size: 240px;
+  min-height: 100vh;
 }
 img, span.gatsby-resp-image-background-image {
   border-radius: 10px !important;
@@ -148,6 +149,9 @@ h2 {
 .aboutSection p {
   background: #FFF;
   margin: 0;
+}
+.contactForm {
+  margin-bottom: 50px;
 }
 .contactForm p {
   padding-top: 10px;
