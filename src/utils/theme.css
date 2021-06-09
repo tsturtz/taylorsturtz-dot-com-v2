@@ -499,8 +499,8 @@ pre[data-line] {
   display: inline-block;
 }
 #resume p, #resume li {
-  line-height: 1.2;
-  font-size: 0.85rem;
+  line-height: 1.3;
+  font-size: 0.8rem;
 }
 #resume .resume-contact-items {
   font-size: 1rem !important;

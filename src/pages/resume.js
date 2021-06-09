@@ -12,29 +12,23 @@ const sectionMargins = {
 
 const skills = [
   'JavaScript / TypeScript',
-  'Node.js',
   'React',
   'Redux',
+  'Node.js',
   'React Native',
   'AngularJS',
   'Angular',
   'jQuery',
   'HTML',
   'CSS3 / SASS',
-  'REST / GraphQL',
   'Git',
-  'Linux',
-  'Unit Testing',
-  'Agile / Scrum',
-  'Firebase',
-  'CI/CD',
-  'Serverless',
-  'AWS / Azure / GCP',
-  'MongoDB',
+  'Testing',
+  'Agile',
+  'Serverless / Cloud',
+  'Firebase / MongoDB',
+  'Java',
   'PHP / Laravel',
-  'Webpack / Gulp / Grunt',
-  'Golang',
-  'Java / Spring',
+  'Go',
 ];
 
 class Resume extends PureComponent {
@@ -78,21 +72,21 @@ class Resume extends PureComponent {
                   <h3 id="title" style={{ margin: 0 }}><strong>Software Engineer / Irvine, CA</strong></h3>
                 </blockquote>
               </div>
-              <div id="contactInfo" style={{ margin: '11px 0 0 0', textAlign: 'right', width: '32%' }}>
-                <h3 className="resume-contact-items" style={{ margin: '0 0 5px 0', display: 'flex', justifyContent: 'space-between' }}>
-                  <span className="mdi mdi-phone" style={{ color: '#ababab' }} />
+              <div id="contactInfo" style={{ margin: '11px 0 0 0', textAlign: 'right' }}>
+                <h3 className="resume-contact-items" style={{ margin: '0 0 5px 0', display: 'flex', justifyContent: 'flex-end' }}>
                   <span className="phoneNumberPrint">949-500-3960</span>
                   <a className="phoneNumberWeb" href="tel:949-500-3960">949-500-3960</a>
+                  <span className="mdi mdi-phone" style={{ color: '#ababab', marginLeft: 10 }} />
                 </h3>
-                <h3 className="resume-contact-items" style={{ margin: '0 0 5px 0', display: 'flex', justifyContent: 'space-between' }}>
-                  <span className="mdi mdi-link-variant" style={{ color: '#ababab' }} />
+                <h3 className="resume-contact-items" style={{ margin: '0 0 5px 0', display: 'flex', justifyContent: 'flex-end' }}>
                   <span className="websitePrint">taylorsturtz.com</span>
                   <a className="websiteWeb" href="https://taylorsturtz.com" target="_blank">taylorsturtz.com</a>
+                  <span className="mdi mdi-link-variant" style={{ color: '#ababab', marginLeft: 10 }} />
                 </h3>
-                <h3 className="resume-contact-items" style={{ margin: '0 0 5px 0', display: 'flex', justifyContent: 'space-between' }}>
-                  <span className="mdi mdi-at" style={{ color: '#ababab' }} />
-                    <span className="emailPrint">taylorsturtz@gmail.com</span>
-                    <a className="emailWeb" href="mailto:taylorsturtz@gmail.com">taylorsturtz@gmail.com</a>
+                <h3 className="resume-contact-items" style={{ margin: '0 0 5px 0', display: 'flex', justifyContent: 'flex-end' }}>
+                  <span className="emailPrint">taylorsturtz@gmail.com</span>
+                  <a className="emailWeb" href="mailto:taylorsturtz@gmail.com">taylorsturtz@gmail.com</a>
+                  <span className="mdi mdi-at" style={{ color: '#ababab', marginLeft: 10 }} />
                 </h3>
               </div>
             </div>
@@ -103,7 +97,7 @@ class Resume extends PureComponent {
 
             {/* SKILLS */}
             <blockquote style={{ ...sectionMargins }}>
-              <h3 id="title" style={{ margin: '0 0 10px 0' }}><strong>Skills</strong><small>&nbsp;(in order of expertise / familiarity)</small></h3>
+              <h3 id="title" style={{ margin: '0 0 10px 0' }}><strong>Skills</strong><small>&nbsp;(roughly in order of familiarity)</small></h3>
             </blockquote>
             <hr style={{ marginBottom: '8px' }} />
             <div style={{ width: '100%' }}>
@@ -130,7 +124,10 @@ class Resume extends PureComponent {
                   </span>
                 </p>
                 <ul style={{ marginTop: '10px', marginBottom: '15px', position: 'relative', left: '15px', width: 'calc(100% - 15px)' }}>
-                  <li style={{ margin: 0 }}>TBD</li>
+                  <li style={{ margin: 0 }}>Designed and developed internal web tools (using React and TypeScript) that serve Activision's and Blizzard's game titles and impact millions of users.</li>
+                  <li style={{ margin: 0 }}>Maintained existing systems, including debugging and feature development, concise documentation, prompt live operations support, and major application releases.</li>
+                  <li style={{ margin: 0 }}>Ensured product quality with collaborative feature planning and code review, as well as thorough unit and scenario testing (using Jest and Selenium/Java).</li>
+                  <li style={{ margin: 0 }}>Organized recurring front-end focused engineering meetings for improved team cohesion and knowledge distribution.</li>
                 </ul>
                 {/* Restaurant365 */}
                 <p style={{ margin: 0 }}>
@@ -143,27 +140,42 @@ class Resume extends PureComponent {
                   </span>
                 </p>
                 <ul style={{ marginTop: '10px', marginBottom: '15px', position: 'relative', left: '15px', width: 'calc(100% - 15px)' }}>
-                  <li style={{ margin: 0 }}>Developed features using Typescript, React, AngularJS, and Node.js.</li>
-                  <li style={{ margin: 0 }}>Created PDF manipulation microservices and deployed them to AWS and Azure using the Serverless Framework and GitLab CI.</li>
-                  <li style={{ margin: 0 }}>Provided thorough code reviews, improved deployment processes, and greatly improved developer experience by enabling end-to-end, cross-platform local development.</li>
+                  <li style={{ margin: 0 }}>Developed new features (using TypeScript, React, Redux/Saga, and Node.js) and maintained existing codebases (using AngularJS and C#) for accounting software used in more than 12,000 restaurants.</li>
+                  <li style={{ margin: 0 }}>Set up GitLab CI pipeline to deploy serverless functions to AWS and Azure.</li>
+                  <li style={{ margin: 0 }}>Improved error-prone legacy code and deployment processes with extensive debugging and documentation updates.</li>
+                  <li style={{ margin: 0 }}>Greatly improved developer experience by simplifying end-to-end cross-platform local development.</li>
                 </ul>
                 {/* Ytel */}
                 <p style={{ margin: 0 }}>
                   <span>
-                    <strong>Software Developer</strong> &bull; <em>Ytel</em>
+                    <strong>Software Engineer</strong> &bull; <em>Ytel</em>
                     <br />
                     <small>
-                      <em>March 2017 - Sept 2019 &bull; Foothill Ranch, CA</em>
+                      <em>May 2017 - Sept 2019 &bull; Lake Forest, CA</em>
                     </small>
                   </span>
                 </p>
                 <ul style={{ marginTop: '10px', marginBottom: '15px', position: 'relative', left: '15px', width: 'calc(100% - 15px)' }}>
+                  <li style={{ margin: 0 }}>Led development of React/Redux messaging campaign applications and maintained legacy apps written in PHP Laravel, Vue.js, and AngularJS.</li>
                   <li style={{ margin: 0 }}>Built SSO and user management systems using JWTs and GraphQL.</li>
                   <li style={{ margin: 0 }}>Developed an interface for plotting and managing interactive nodes in a tree structure (similar to an org chart) on browser canvas.</li>
-                  <li style={{ margin: 0 }}>Led development of React/Redux messaging campaign applications and maintained legacy apps written in PHP Laravel, Vue.js, and AngularJS.</li>
-                  {/* <li style={{ margin: 0 }}>Introduced unit-testing to client-side code bases and maintained healthy coverage.</li> */}
-                  <li style={{ margin: 0 }}>Wrote GitLab CI and Node.js scripts to drive forward DevOps culture and improve productivity and performance through automation.</li>
+                  <li style={{ margin: 0 }}>Introduced unit-testing to client-side code bases and maintained healthy coverage.</li>
+                  <li style={{ margin: 0 }}>Wrote GitLab CI and Node.js scripts to improve productivity, performance, and save the company thousands by pruning unused data from external services.</li>
+                </ul>
+                {/* Ytel */}
+                <p style={{ margin: 0 }}>
+                  <span>
+                    <strong>Web Developer</strong> &bull; <em>Ytel</em>
+                    <br />
+                    <small>
+                      <em>March 2017 - May 2017 &bull; Lake Forest, CA</em>
+                    </small>
+                  </span>
+                </p>
+                <ul style={{ marginTop: '10px', marginBottom: '15px', position: 'relative', left: '15px', width: 'calc(100% - 15px)' }}>
+                  <li style={{ margin: 0 }}>Wireframed and built static marketing static websites using Jekyll and Firebase Auth/DB.</li>
                   <li style={{ margin: 0 }}>Managed DNS, migrated, configured, and maintained web projects on an optimized LEMP stack virtual machine.</li>
+                  <li style={{ margin: 0 }}>Developed interfaces for office televisions to welcome clients by name visiting the office.</li>
                 </ul>
                 {/* MMG */}
                 <p style={{ margin: 0 }}>
@@ -174,35 +186,6 @@ class Resume extends PureComponent {
                       <em>July 2011 - Oct 2016 &bull; Orange, CA</em>
                     </small>
                   </span>
-                </p>
-                <ul style={{ marginTop: '10px', marginBottom: '20px', position: 'relative', left: '15px', width: 'calc(100% - 15px)' }}>
-                </ul>
-
-                {/* EDUCATION */}
-                <blockquote style={{ ...sectionMargins }}>
-                  <h3 id="title" style={{ margin: '0 0 10px 0' }}><strong>Education</strong></h3>
-                </blockquote>
-                <hr style={{ marginBottom: '8px' }} />
-                {/* LearningFuze */}
-                <p style={{ margin: 0, display: 'flex', justifyContent: 'space-between', lineHeight: 1.4 }}>
-                  <span>
-                    <strong>Web Development</strong> &bull; <em>LearningFuze</em>
-                  </span>
-                  <span><em>2016</em> &bull; Irvine, CA</span>
-                </p>
-                {/* OCC */}
-                <p style={{ margin: 0, display: 'flex', justifyContent: 'space-between', lineHeight: 1.4 }}>
-                  <span>
-                    <strong>Web Design</strong> &bull; <em>Orange Coast College</em>
-                  </span>
-                  <span><em>2014</em> &bull; Costa Mesa, CA</span>
-                </p>
-                {/* CSULB */}
-                <p style={{ margin: 0, display: 'flex', justifyContent: 'space-between', lineHeight: 1.4 }}>
-                  <span>
-                    <strong>B.A., Art History</strong> &bull; <em>California State University</em>
-                  </span>
-                  <span><em>2012</em> &bull; Long Beach, CA</span>
                 </p>
               </div>
 
@@ -215,7 +198,7 @@ class Resume extends PureComponent {
                   <h3 id="title" style={{ margin: '0 0 10px 0' }}><strong>Awards</strong></h3>
                 </blockquote>
                 <hr style={{ marginBottom: '8px' }} />
-                {/* BAMF */}
+                  {/* BAMF */}
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <span className="mdi mdi-trophy-award" style={{ fontSize: '1.3rem', color: '#ababab', marginRight: '10px' }} />
                   <p style={{ marginBottom: 0 }}>
@@ -228,7 +211,7 @@ class Resume extends PureComponent {
                     </span>
                   </p>
                 </div>
-                {/* ACADEMIC LISTS */}
+                  {/* ACADEMIC LISTS */}
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <span className="mdi mdi-seal" style={{ fontSize: '1.3rem', color: '#ababab', marginRight: '10px' }} />
                   <p style={{ marginBottom: 0 }}>
@@ -247,7 +230,7 @@ class Resume extends PureComponent {
                   <h3 id="title" style={{ margin: '0 0 10px 0' }}><strong>On the Web</strong></h3>
                 </blockquote>
                 <hr style={{ marginBottom: '8px' }} />
-                {/* GitHub */}
+                  {/* GitHub */}
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <span className="mdi mdi-github-circle" style={{ fontSize: '1.3rem', color: '#ababab', marginRight: '10px' }} />
                   <p style={{ marginBottom: 0 }}>
@@ -263,7 +246,7 @@ class Resume extends PureComponent {
                     </span>
                   </p>
                 </div>
-                {/* Twitter */}
+                  {/* Twitter */}
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <span className="mdi mdi-twitter" style={{ fontSize: '1.3rem', color: '#ababab', marginRight: '10px' }} />
                   <p style={{ marginBottom: 0 }}>
@@ -279,7 +262,7 @@ class Resume extends PureComponent {
                     </span>
                   </p>
                 </div>
-                {/* LinkedIn */}
+                  {/* LinkedIn */}
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <span className="mdi mdi-linkedin-box" style={{ fontSize: '1.3rem', color: '#ababab', marginRight: '10px' }} />
                   <p style={{ marginBottom: 0 }}>
@@ -296,13 +279,64 @@ class Resume extends PureComponent {
                   </p>
                 </div>
 
-                {/* LANGUAGES */}
+                {/* EDUCATION */}
                 <blockquote style={{ ...sectionMargins }}>
-                  <h3 id="title" style={{ margin: '0 0 10px 0' }}><strong>Languages</strong></h3>
+                  <h3 id="title" style={{ margin: '0 0 10px 0' }}><strong>Education</strong></h3>
                 </blockquote>
                 <hr style={{ marginBottom: '8px' }} />
-                {/* English */}
+                  {/* LearningFuze */}
+                <div style={{ display: 'flex', alignItems: 'center', paddingBottom: 10 }}>
+                  <span className="mdi mdi-code-braces" style={{ fontSize: '1.3rem', color: '#ababab', marginRight: '10px' }} />
+                  <p style={{ marginBottom: 0 }}>
+                    <span>
+                      <strong>Web Development</strong>
+                      <br />
+                      <em>LearningFuze</em>
+                      <br />
+                      <small>
+                        <span>Irvine, CA &bull; <em>2016</em></span>
+                      </small>
+                    </span>
+                  </p>
+                </div>
+                  {/* OCC */}
+                <div style={{ display: 'flex', alignItems: 'center', paddingBottom: 10 }}>
+                  <span className="mdi mdi-xml" style={{ fontSize: '1.3rem', color: '#ababab', marginRight: '10px' }} />
+                  <p style={{ marginBottom: 0 }}>
+                    <span>
+                      <strong>Web Design</strong>
+                      <br />
+                      <em>Orange Coast College</em>
+                      <br />
+                      <small>
+                        <span>Costa Mesa, CA &bull; <em>2014</em></span>
+                      </small>
+                    </span>
+                  </p>
+                </div>
+                  {/* CSULB */}
                 <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <span className="mdi mdi-pillar" style={{ fontSize: '1.3rem', color: '#ababab', marginRight: '10px' }} />
+                  <p style={{ marginBottom: 0 }}>
+                    <span>
+                      <strong>B.A., Art History</strong>
+                      <br />
+                      <em>California State University</em>
+                      <br />
+                      <small>
+                        <span>Long Beach, CA &bull; <em>2012</em></span>
+                      </small>
+                    </span>
+                  </p>
+                </div>
+
+                {/* LANGUAGES */}
+                {/* <blockquote style={{ ...sectionMargins }}>
+                  <h3 id="title" style={{ margin: '0 0 10px 0' }}><strong>Languages</strong></h3>
+                </blockquote>
+                <hr style={{ marginBottom: '8px' }} /> */}
+                  {/* English */}
+                {/* <div style={{ display: 'flex', alignItems: 'center' }}>
                   <span className="mdi mdi-message-text" style={{ fontSize: '1.3rem', color: '#ababab', marginRight: '10px' }} />
                   <p style={{ marginBottom: 0 }}>
                     <span>
@@ -313,9 +347,9 @@ class Resume extends PureComponent {
                       </small>
                     </span>
                   </p>
-                </div>
-                {/* German */}
-                <div style={{ display: 'flex', alignItems: 'center' }}>
+                </div> */}
+                  {/* German */}
+                {/* <div style={{ display: 'flex', alignItems: 'center' }}>
                   <span className="mdi mdi-message-bulleted" style={{ fontSize: '1.3rem', color: '#ababab', marginRight: '10px' }} />
                   <p style={{ marginBottom: 0 }}>
                     <span>
@@ -326,9 +360,9 @@ class Resume extends PureComponent {
                       </small>
                     </span>
                   </p>
-                </div>
-                {/* Spanish */}
-                <div style={{ display: 'flex', alignItems: 'center' }}>
+                </div> */}
+                  {/* Spanish */}
+                {/* <div style={{ display: 'flex', alignItems: 'center' }}>
                   <span className="mdi mdi-message-processing" style={{ fontSize: '1.3rem', color: '#ababab', marginRight: '10px' }} />
                   <p style={{ marginBottom: 0 }}>
                     <span>
@@ -339,15 +373,15 @@ class Resume extends PureComponent {
                       </small>
                     </span>
                   </p>
-                </div>
+                </div> */}
 
                 {/* INTERESTS */}
-                <blockquote style={{ ...sectionMargins }}>
+                {/* <blockquote style={{ ...sectionMargins }}>
                   <h3 id="title" style={{ margin: '0 0 10px 0' }}><strong>Interests</strong></h3>
                 </blockquote>
-                <hr style={{ marginBottom: '8px' }} />
+                <hr style={{ marginBottom: '8px' }} /> */}
                 {/* Soccer */}
-                <div style={{ display: 'flex', alignItems: 'center' }}>
+                {/* <div style={{ display: 'flex', alignItems: 'center' }}>
                   <span className="mdi mdi-soccer" style={{ fontSize: '1.3rem', color: '#ababab', marginRight: '10px' }} />
                   <p style={{ marginBottom: 0 }}>
                     <span>
@@ -358,9 +392,9 @@ class Resume extends PureComponent {
                       </small>
                     </span>
                   </p>
-                </div>
+                </div> */}
                 {/* Music */}
-                <div style={{ display: 'flex', alignItems: 'center' }}>
+                {/* <div style={{ display: 'flex', alignItems: 'center' }}>
                   <span className="mdi mdi-airplane-takeoff" style={{ fontSize: '1.3rem', color: '#ababab', marginRight: '10px' }} />
                   <p style={{ marginBottom: 0 }}>
                     <span>
@@ -373,7 +407,7 @@ class Resume extends PureComponent {
                       </small>
                     </span>
                   </p>
-                </div>
+                </div> */}
 
               </div>
             </div>
