@@ -1,17 +1,19 @@
 import React, { PureComponent, Fragment } from 'react'
 import { rhythm } from '../utils/typography'
 import resumePdf from '../assets/TAYLOR_STURTZ_RESUME.pdf'
+import FooterBio from '../components/FooterBio'
 import '@mdi/font/css/materialdesignicons.min.css'
 import 'typeface-bitter'
 
 const sectionMargins = {
   marginRight: 0,
-  marginBottom: '8px',
-  marginTop: '15px',
+  marginBottom: '5px',
+  marginTop: '10px',
 }
 
 const skills = [
-  'JavaScript / TypeScript',
+  'JavaScript',
+  'TypeScript',
   'React',
   'Redux',
   'Node.js',
@@ -24,8 +26,9 @@ const skills = [
   'Git',
   'Testing',
   'Agile',
-  'Serverless / Cloud',
-  'Firebase / MongoDB',
+  'Serverless',
+  'Firebase',
+  'MongoDB',
   'Java',
   'PHP / Laravel',
   'Go',
@@ -50,7 +53,7 @@ class Resume extends PureComponent {
               <a href="/" style={{ display: 'flex', alignItems: 'center' }}>
                 <span className="mdi mdi-arrow-left" />&nbsp;Back to site
               </a>
-              <div className="topNavButtons">
+              <div className="topNavButtons" style={{ zIndex: 1 }}>
                 <a href={resumePdf} download="TAYLOR_STURTZ_RESUME" className="resumeDownloadBtn">
                   <span className="mdi mdi-file-download" />&nbsp;Download (PDF)
                 </a>
@@ -91,20 +94,9 @@ class Resume extends PureComponent {
               </div>
             </div>
             <hr style={{ marginBottom: '8px' }} />
-            <p style={{ marginBottom: '20px', lineHeight: 1.4 }}>
+            <p style={{ marginBottom: '5px', lineHeight: 1.4 }}>
               <em>I write <span className="empatheticCodePrint">empathetic code</span><a className="empatheticCodeWeb" href="https://www.benjaminjohnson.me/blog/empathetic-code/" target="_blank">empathetic code</a> and build applications that people connect with directly. Regardless of the platform, solving difficult problems and building smooth user experiences is my jam.</em>
             </p>
-
-            {/* SKILLS */}
-            <blockquote style={{ ...sectionMargins }}>
-              <h3 id="title" style={{ margin: '0 0 10px 0' }}><strong>Skills</strong><small>&nbsp;(roughly in order of familiarity)</small></h3>
-            </blockquote>
-            <hr style={{ marginBottom: '8px' }} />
-            <div style={{ width: '100%' }}>
-              {skills.map((skill) => (
-                <span className="skills">{skill}</span>
-              ))}
-            </div>
 
             <div style={{ display: 'flex' }}>
               <div style={{ width: '65%' }}>
@@ -193,11 +185,21 @@ class Resume extends PureComponent {
 
               <div style={{ width: '32%' }}>
 
+                {/* SKILLS */}
+                <blockquote style={{ ...sectionMargins }}>
+                  <h3 id="title" style={{ margin: '0 0 10px 0' }}><strong>Skills</strong></h3>
+                </blockquote>
+                <hr style={{ marginBottom: '5px' }} />
+                <div style={{ width: '100%' }}>
+                  {skills.map((skill) => (
+                    <span className="skills">{skill}</span>
+                  ))}
+                </div>
                 {/* AWARDS */}
                 <blockquote style={{ ...sectionMargins }}>
                   <h3 id="title" style={{ margin: '0 0 10px 0' }}><strong>Awards</strong></h3>
                 </blockquote>
-                <hr style={{ marginBottom: '8px' }} />
+                <hr style={{ marginBottom: '5px' }} />
                   {/* BAMF */}
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <span className="mdi mdi-trophy-award" style={{ fontSize: '1.3rem', color: '#ababab', marginRight: '10px' }} />
@@ -225,11 +227,11 @@ class Resume extends PureComponent {
                   </p>
                 </div>
 
-                {/* ON THE WEB */}
+                {/* SOCIAL */}
                 <blockquote style={{ ...sectionMargins }}>
-                  <h3 id="title" style={{ margin: '0 0 10px 0' }}><strong>On the Web</strong></h3>
+                  <h3 id="title" style={{ margin: '0 0 10px 0' }}><strong>Social</strong></h3>
                 </blockquote>
-                <hr style={{ marginBottom: '8px' }} />
+                <hr style={{ marginBottom: '5px' }} />
                   {/* GitHub */}
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <span className="mdi mdi-github-circle" style={{ fontSize: '1.3rem', color: '#ababab', marginRight: '10px' }} />
@@ -411,6 +413,9 @@ class Resume extends PureComponent {
 
               </div>
             </div>
+          </div>
+          <div className="resumeWebFooter">
+            <FooterBio showButtons={false} />
           </div>
         </div>
       </Fragment>

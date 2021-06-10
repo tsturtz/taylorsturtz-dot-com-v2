@@ -503,8 +503,8 @@ pre[data-line] {
   display: inline-block;
 }
 #resume p, #resume li {
-  line-height: 1.3;
-  font-size: 0.8rem;
+  line-height: 1.25;
+  font-size: 0.7rem;
 }
 #resume .resume-contact-items {
   font-size: 1rem !important;
@@ -597,7 +597,7 @@ pre[data-line] {
 
 /* PRINT */
 @media print {
-  #resume .topNav {
+  #resume .topNav, #resume .resumeWebFooter {
     display: none;
   }
   #resume .phoneNumberPrint, #resume .websitePrint, #resume .emailPrint, #resume .empatheticCodePrint, #resume .annackermanPrint, #resume .loverformulaPrint, #resume .githubPrint, #resume .twitterPrint, #resume .linkedinPrint {
