@@ -72,7 +72,7 @@ class Resume extends PureComponent {
               <div id="nameAndTitle">
                 <h1 style={{ margin: '0 0 10px 0' }}>Taylor Sturtz</h1>
                 <blockquote style={{ marginBottom: '10px' }}>
-                  <h3 id="title" style={{ margin: 0 }}><strong>Software Engineer / Irvine, CA</strong></h3>
+                  <h3 id="title" style={{ margin: 0 }}><strong>Senior Software Engineer / Irvine, CA</strong></h3>
                 </blockquote>
               </div>
               <div id="contactInfo" style={{ margin: '11px 0 0 0', textAlign: 'right' }}>
