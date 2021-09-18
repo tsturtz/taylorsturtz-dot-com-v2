@@ -363,7 +363,7 @@ class BlogIndex extends Component {
             <p>
               I'm a self-motivated software engineer from Irvine, CA with a background in design. I write <a href="https://www.benjaminjohnson.me/blog/empathetic-code/" target="_blank">empathetic code</a> and build full-stack applications that people connect with directly. Regardless of the platform, solving difficult problems and building <span className="wavy" data-text="smooth">smooth</span> user experiences is my jam.
               <br /><br />
-              I currently work as a <strong>Software Engineer</strong> at <a href="https://www.blizzard.com" target="_blank">Blizzard Entertainment</a> in Irvine, California.
+              I currently work as a <strong>Senior Software Engineer</strong> at <a href="https://www.blizzard.com" target="_blank">Blizzard Entertainment</a> in Irvine, California.
               <div className="aboutSectionLetsChat" style={{ marginTop: '20px' }}>
                 <em style={{ background: 'rgba(255, 255, 255, 1)', padding: '10px 20px' }}>Have a question or an intriguing idea? Lose my number? LinkedIn messages not getting through? </em>
                 <a href="#contact" className="messageMeBtn">
