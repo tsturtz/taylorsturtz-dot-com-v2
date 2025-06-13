@@ -6,7 +6,7 @@ module.exports = {
     title: 'Taylor Sturtz',
     author: 'Taylor Sturtz',
     description: 'Taylor Sturtz',
-    siteUrl: 'https://taylorsturtz.com',
+    siteUrl: 'https://v2.taylorsturtz.com',
   },
   plugins: [
     // markdown file support
