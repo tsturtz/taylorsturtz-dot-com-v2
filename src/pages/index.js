@@ -126,7 +126,7 @@ class BlogIndex extends Component {
               {lightboxIndex === 0 && (
                 <Fragment>
                   <iframe
-                    src="https://taylorsturtz.com"
+                    src="https://v2.taylorsturtz.com"
                     style={{
                       ...lightboxStyles,
                       width: '1000px',
@@ -142,10 +142,10 @@ class BlogIndex extends Component {
                     <a
                       style={{ zIndex: 1 }}
                       className="whiteLink"
-                      href="https://taylorsturtz.com"
+                      href="https://v2.taylorsturtz.com"
                       target="_blank"
                     >
-                      taylorsturtz.com <span className="mdi mdi-open-in-new" />
+                      v2.taylorsturtz.com <span className="mdi mdi-open-in-new" />
                     </a>
                     <a
                       style={{ zIndex: 1 }}
